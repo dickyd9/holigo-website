@@ -1,11 +1,11 @@
 <template>
-  <H1>Beranda</H1>
+  <Hero/>
+  <Why/>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import Hero from '.././components/beranda/Hero.vue'
+import Why from '.././components/beranda/Why.vue'
 </script>
 
 <style>

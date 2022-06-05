@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <div class="bg-gray-100">
       <nav
         class="
@@ -22,6 +22,7 @@
             "
             >Logo
           </router-link>
+
           <!-- Mobile menu button -->
           <div @click="showMenu = !showMenu" class="flex md:hidden">
             <button
@@ -71,18 +72,33 @@
             <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Karir </li>
           </router-link>
 
+          <div>
+            <Toggle v-model="value" class="my-toggle-red">
+              <template v-slot:label="{ checked, classList }">
+                <span :class="classList.label">{{ checked ? 'IND' : 'EN' }}</span>
+              </template>
+            </Toggle>
+          </div>
+
         </ul>
       </nav>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
+import Toggle from '@vueform/toggle'
 export default {
+  components: {
+      Toggle,
+    },
   data() {
     return {
       showMenu: false,
+      value: true,
     };
   },
 };
 </script>
+
+<style src="@vueform/toggle/themes/default.css"></style>
