@@ -61,7 +61,7 @@
         >
 
           <router-link to="/">
-            <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Beranda </li>
+            <li class="text-sm font-bold text-gray-800 hover:text-blue-400" > Beranda </li>
           </router-link>
 
           <router-link to="/about">
@@ -102,3 +102,12 @@ export default {
 </script>
 
 <style src="@vueform/toggle/themes/default.css"></style>
+
+<style>
+
+  .exact-active-link {
+      border-bottom: 2px #42b983 solid;
+      color: #42b983;
+  }
+
+</style>
