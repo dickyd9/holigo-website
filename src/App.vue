@@ -9,10 +9,8 @@ import Footer from "./components/Footer.vue";
     <Navbar/>
       <div
         class="
-          full
           container
           px-6
-          py-8
           mx-auto
           md:block 
           md:justify-between 
@@ -22,13 +20,14 @@ import Footer from "./components/Footer.vue";
         <RouterView />
       </div>
       
-    <Footer/>
+    <!-- <Footer/> -->
   </div>
 </template>
 
 <style>
 #app {
   font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
   margin: 0 auto;
   font-weight: normal;
 }

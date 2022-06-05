@@ -1,88 +1,87 @@
 <template>
-  <header>
-    <div class="bg-gray-100">
-      <nav
+  <header class="sticky top-0 backdrop-blur-sm">
+    <nav
+      class="
+        container
+        px-6
+        pt-5
+        mx-auto
+        md:flex md:justify-between md:items-center
+      "
+    >
+      <div class="flex items-center justify-between">
+        <router-link
+          to="/"
+          class="
+            text-xl
+            font-bold
+            text-gray-800
+            md:text-2xl
+            hover:text-blue-400
+          "
+          >Logo
+        </router-link>
+
+        <!-- Mobile menu button -->
+        <div @click="showMenu = !showMenu" class="flex md:hidden">
+          <button
+            type="button"
+            class="
+              text-gray-800
+              hover:text-gray-400
+              focus:outline-none focus:text-gray-400
+            "
+          >
+            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <ul
+        :class="showMenu ? 'flex' : 'hidden'"
         class="
-          container
-          px-6
-          py-8
-          mx-auto
-          md:flex md:justify-between md:items-center
+          flex-col
+          mt-8
+          pb-100
+          space-y-4
+          md:flex
+          md:space-y-0
+          md:flex-row
+          md:items-center
+          md:space-x-10
+          md:mt-0
         "
       >
-        <div class="flex items-center justify-between">
-          <router-link
-            to="/"
-            class="
-              text-xl
-              font-bold
-              text-gray-800
-              md:text-2xl
-              hover:text-blue-400
-            "
-            >Logo
-          </router-link>
 
-          <!-- Mobile menu button -->
-          <div @click="showMenu = !showMenu" class="flex md:hidden">
-            <button
-              type="button"
-              class="
-                text-gray-800
-                hover:text-gray-400
-                focus:outline-none focus:text-gray-400
-              "
-            >
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path
-                  fill-rule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-              </svg>
-            </button>
-          </div>
+        <router-link to="/">
+          <li class="text-sm font-bold text-gray-800 hover:text-blue-400" > Beranda </li>
+        </router-link>
+
+        <router-link to="/about">
+          <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Tentang Kami </li>
+        </router-link>
+
+        <router-link to="/karir">
+          <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Karir </li>
+        </router-link>
+
+        <div>
+          <Toggle v-model="value" class="my-toggle-red">
+            <template v-slot:label="{ checked, classList }">
+              <span :class="classList.label">{{ checked ? 'IND' : 'EN' }}</span>
+            </template>
+          </Toggle>
         </div>
 
-
-        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <ul
-          :class="showMenu ? 'flex' : 'hidden'"
-          class="
-            flex-col
-            mt-8
-            space-y-4
-            md:flex
-            md:space-y-0
-            md:flex-row
-            md:items-center
-            md:space-x-10
-            md:mt-0
-          "
-        >
-
-          <router-link to="/">
-            <li class="text-sm font-bold text-gray-800 hover:text-blue-400" > Beranda </li>
-          </router-link>
-
-          <router-link to="/about">
-            <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Tentang Kami </li>
-          </router-link>
-
-          <router-link to="/karir">
-            <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Karir </li>
-          </router-link>
-
-          <div>
-            <Toggle v-model="value" class="my-toggle-red">
-              <template v-slot:label="{ checked, classList }">
-                <span :class="classList.label">{{ checked ? 'IND' : 'EN' }}</span>
-              </template>
-            </Toggle>
-          </div>
-
-        </ul>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   </header>
 </template>
 

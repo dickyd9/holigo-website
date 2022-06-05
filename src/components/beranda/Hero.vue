@@ -1,7 +1,7 @@
 <template>
-  <section class="mt-auto md:flex flex-wrap ">
-    <div class="py-5 px-5 basis-1/2 items-center ">
-      <div class="grid py-48 place-content-center ">
+  <section class="h-screen grid md:flex flex-wrap ">
+    <div class="grid basis-1/2">
+      <div class="flex flex-col justify-center">
         <h1 class="text-h1 font-black max-w-md">
           Holigo simplify your <span class="text-primary-brand">Lifestyle</span>
         </h1>
@@ -10,8 +10,8 @@
         </span>
       </div>
     </div>
-    <div class="basis-1/2 pt-5">
-      <div class="md:justify-items-center ">
+    <div class="grid basis-1/2">
+      <div class="md:justify-items-center">
         <img 
             class="object-contain h-full w-fit" 
             src="../.././assets/img/illustration/exmp.png" 
