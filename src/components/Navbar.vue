@@ -4,7 +4,7 @@
       class="
         container
         px-6
-        pt-5
+        py-5
         mx-auto
         md:flex md:justify-between md:items-center
       "

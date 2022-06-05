@@ -1,8 +1,8 @@
 <template>
-  <section class="h-screen grid md:flex flex-wrap ">
+  <section class="h-[90vh] grid md:flex flex-wrap ">
     <div class="grid basis-1/2">
       <div class="flex flex-col justify-center">
-        <h1 class="text-h1 font-black max-w-md">
+        <h1 class="font-black text-center text-h2 md:text-left md:max-w-3xl md:text-[5rem]">
           Holigo simplify your <span class="text-primary-brand">Lifestyle</span>
         </h1>
         <span class="pt-6 text-h6 font-thin max-w-xl">

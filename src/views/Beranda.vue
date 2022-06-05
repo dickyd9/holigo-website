@@ -1,7 +1,7 @@
 <template>
   <Hero/>
-  <!-- <Content/>
-  <Why/> -->
+  <Content/>
+  <Why/>
 </template>
 
 <script setup>
