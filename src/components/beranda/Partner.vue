@@ -4,7 +4,7 @@
       <div class="container px-6 mx-auto w-full h-56">
         <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 justify-center gap-5">
           <li class="text-center">
-            <a class="font-bold hover:text-primary-brand" v-on:click="toggleTabs(1)" 
+            <a class="font-bold hover:text-primary-brand hover:cursor-pointer" v-on:click="toggleTabs(1)" 
               v-bind:class="{
                 'text-basic-black': openTab !== 1,
                 'border-b-primary-brand': openTab === 1, 
@@ -15,7 +15,7 @@
             </a>
           </li>
           <li class="text-center">
-            <a class="font-bold hover:text-primary-brand" v-on:click="toggleTabs(2)" 
+            <a class="font-bold hover:text-primary-brand hover:cursor-pointer" v-on:click="toggleTabs(2)" 
               v-bind:class="{
                 'text-basic-black': openTab !== 2,
                 'border-b-primary-brand': openTab === 2, 
@@ -26,7 +26,7 @@
             </a>
           </li>
           <li class="text-center">
-            <a class="font-bold hover:text-primary-brand" v-on:click="toggleTabs(3)" 
+            <a class="font-bold hover:text-primary-brand hover:cursor-pointer" v-on:click="toggleTabs(3)" 
               v-bind:class="{
                 'text-basic-black': openTab !== 3,
                 'border-b-primary-brand': openTab === 3, 
@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="text-center">
-            <a class="font-bold hover:text-primary-brand" v-on:click="toggleTabs(4)" 
+            <a class="font-bold hover:text-primary-brand hover:cursor-pointer" v-on:click="toggleTabs(4)" 
               v-bind:class="{
                 'text-basic-black': openTab !== 4,
                 'border-b-primary-brand': openTab === 4, 

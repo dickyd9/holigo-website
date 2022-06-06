@@ -1,7 +1,7 @@
 <template>
-  <section class="h-[70vh] py-10 bg-basic-footer">
-    <div class="container px-6 mx-auto grid justify-items-center">
-      <div class="flex flex-col pb-10 text-center justify-center">
+  <section class="h-[50vh] py-12 bg-basic-footer content-center">
+    <div class="container px-6 mx-auto my-5 grid justify-items-center">
+      <div class="flex flex-col pb-16 text-center justify-center">
           <h1 class="text-h3 font-black text-text-grey5">Kenapa harus holigo?</h1>
           <span class="pt-2 text-text-grey5">Apa yang membuat Holigo berbeda</span>
       </div>
