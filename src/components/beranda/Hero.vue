@@ -1,5 +1,5 @@
 <template>
-  <section class="h-[90vh] grid md:flex flex-wrap ">
+  <section class="container px-6 mx-auto h-[90vh] grid md:flex flex-wrap">
     <div class="grid basis-1/2">
       <div class="flex flex-col justify-center">
         <h1 class="font-black text-center text-h2 md:text-left md:max-w-3xl md:text-[5rem]">
