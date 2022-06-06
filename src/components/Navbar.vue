@@ -13,7 +13,7 @@
         <router-link
           to="/"
           class="
-            text-xl
+            text-h4
             font-bold
             text-gray-800
             md:text-2xl
