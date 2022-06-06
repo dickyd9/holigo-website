@@ -1,11 +1,11 @@
 <template>
-  <H1>Tentang Kami</H1>
+  <Hero/>
+  <Content/>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import Hero from '../components/about/Hero.vue'
+import Content from '../components/about/Content.vue'
 </script>
 
 <style>
