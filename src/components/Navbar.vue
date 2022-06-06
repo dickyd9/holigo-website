@@ -10,17 +10,16 @@
       "
     >
       <div class="flex items-center justify-between">
-        <router-link
-          to="/"
+        <a
+          href="/"
           class="
-            text-h4
+            text-h6
             font-bold
-            text-gray-800
-            md:text-2xl
-            hover:text-blue-400
+            text-text-grey1
+            md:text-h4
           "
           >Logo
-        </router-link>
+        </a>
 
         <!-- Mobile menu button -->
         <div @click="showMenu = !showMenu" class="flex md:hidden">
@@ -61,15 +60,15 @@
       >
 
         <router-link to="/">
-          <li class="text-sm font-bold text-gray-800 hover:text-blue-400" > Beranda </li>
+          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" > Beranda </li>
         </router-link>
 
         <router-link to="/about">
-          <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Tentang Kami </li>
+          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand"> Tentang Kami </li>
         </router-link>
 
         <router-link to="/karir">
-          <li class="text-sm font-bold text-gray-800 hover:text-blue-400"> Karir </li>
+          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand"> Karir </li>
         </router-link>
 
         <div>
@@ -105,8 +104,7 @@ export default {
 <style>
 
   .exact-active-link {
-      border-bottom: 2px #42b983 solid;
-      color: #42b983;
+      border-bottom: #42b983 solid;
   }
 
 </style>

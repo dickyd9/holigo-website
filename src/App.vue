@@ -9,8 +9,6 @@ import Footer from "./components/Footer.vue";
     <Navbar/>
       <div
         class="
-          container
-          px-6
           mx-auto
           md:block 
           md:justify-between 
@@ -20,7 +18,7 @@ import Footer from "./components/Footer.vue";
         <RouterView />
       </div>
       
-    <!-- <Footer/> -->
+    <Footer/>
   </div>
 </template>
 
