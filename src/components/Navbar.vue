@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 backdrop-blur-sm">
+  <header class="fixed top-0 w-full backdrop-blur-sm">
     <nav
       class="
         container

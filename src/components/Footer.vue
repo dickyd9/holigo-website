@@ -1,12 +1,11 @@
 <template>
-  <div class="bg-basic-footer md:block">
+  <div class="bg-basic-footer h-56 md:block">
       <footer
         class="
           container
-          px-6
-          py-6
+          py-12
           mx-auto
-          md:flex md:justify-between md:items-center
+          md:flex md:justify-between md:content-center
         "
       >
       
