@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-full backdrop-blur-sm">
+  <header class="top-0 w-full z-10 md:fixed " :class="{ 'bg-basic-white': !view.topOfPage}">
     <nav
       class="
         container
@@ -46,6 +46,7 @@
       <ul
         :class="showMenu ? 'flex' : 'hidden'"
         class="
+          h-full
           flex-col
           mt-8
           pb-100
@@ -60,15 +61,18 @@
       >
 
         <router-link to="/">
-          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" > Beranda </li>
+          <li class="font-bold text-basic-white hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-if="$route.path == '/about'" > Beranda </li>
+          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Beranda </li>
         </router-link>
 
         <router-link to="/about">
-          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand"> Tentang Kami </li>
+          <li class="font-bold text-basic-white hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-if="$route.path == '/about'" > Tentang Kami </li>
+          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Tentang Kami </li>
         </router-link>
 
         <router-link to="/karir">
-          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand"> Karir </li>
+          <li class="font-bold text-basic-white hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-if="$route.path == '/about'" > Karir </li>
+          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Karir </li>
         </router-link>
 
         <div>
@@ -87,6 +91,7 @@
 <script>
 import Toggle from '@vueform/toggle'
 export default {
+
   components: {
       Toggle,
     },
@@ -94,15 +99,29 @@ export default {
     return {
       showMenu: false,
       value: true,
-    };
+      view: {
+        topOfPage: true
+      }
+    }
   },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll(){
+      if(window.pageYOffset>250){
+        if(this.view.topOfPage) this.view.topOfPage = false
+      } else {
+        if(!this.view.topOfPage) this.view.topOfPage = true
+      }
+    }
+  }
 };
 </script>
 
 <style src="@vueform/toggle/themes/default.css"></style>
 
-<style>
-
+<style scoped>
   .exact-active-link {
       border-bottom: #42b983 solid;
   }

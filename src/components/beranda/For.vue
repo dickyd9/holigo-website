@@ -6,11 +6,11 @@
           <span class="pt-2">Mau produk apa pun, semua udah kami sediain biar lifestyle kamu lebih simple</span>
       </div>
       <div class="flex flex-col pt-10 gap-6 md:flex-row">
-          <div class="max-w-[40rem] rounded overflow-hidden shadow-xl" v-for="card in cards" :key="card">
+          <div class="max-w-[40rem] rounded overflow-hidden shadow-xl" v-for="fr in cardFor" :key="fr.id">
               <div class="px-6 py-4">
-                  <div class="text-h6 font-bold mb-2">{{card.header}}</div>
+                  <div class="text-h6 font-bold mb-2">{{fr.header}}</div>
                   <p class="">
-                  {{card.content}}
+                  {{fr.content}}
                   </p>
               </div>
           </div>
@@ -20,11 +20,12 @@
 </template>
 
 <script>
-import For from '../../assets/data/forItems.json'
+import For from './data/forItems.json'
 export default {
      data() {
     return {
-      cards: For,
+      cardFor: For,
+
     };
   },
 };

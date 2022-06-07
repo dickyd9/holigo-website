@@ -1,11 +1,13 @@
 <template>
-  <H1>Karir</H1>
+  <Hero/>
+  <Culture/>
+  <KarirList/>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import Hero from '../components/karir/Hero.vue'
+import KarirList from '../components/karir/KarirList.vue'
+import Culture from '../components/karir/Culture.vue';
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="beranda">
+  <div id="beranda" class="h-full">
     <Hero/>
     <Content/>
     <Why/>
