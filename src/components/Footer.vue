@@ -15,10 +15,22 @@
       </div>
 
       <div class="h-32 grid basis-1/4 content-start">
-        <h1 class="text-h6 font-bold pb-2 text-text-grey4">Menu</h1>
-        <span class="text-text-grey4">Beranda</span>
-        <span class="text-text-grey4">Tentang Kami</span>
-        <span class="text-text-grey4">Karir</span>
+        <h1 class="text-h6 font-semibold pb-2 text-text-grey4">Menu</h1>
+          <router-link to="/">
+            <span class="text-text-grey4 hover:text-basic-white">Beranda</span>
+          </router-link>
+
+          <span class="text-text-grey4 hover:text-basic-white">
+            <router-link to="/about">
+              Tentang Kami
+            </router-link>
+          </span>
+
+          <span class="text-text-grey4 hover:text-basic-white">
+            <router-link to="/karir">
+              Karir
+            </router-link>
+          </span>
       </div>
 
       <div class="h-32 grid basis-1/4 content-start">
@@ -37,8 +49,8 @@
           <h1>logo</h1>
         </div>
       </div>
-
       </footer>
+      
   </div>
 </template>
 

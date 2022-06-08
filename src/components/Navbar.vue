@@ -1,5 +1,7 @@
 <template>
-  <header class="top-0 w-full z-10 md:fixed " :class="{ 'bg-basic-white': !view.topOfPage}">
+  <header class="top-0 w-full z-10 md:fixed" 
+          :class="{ 'transition ease-in-out duration-300 delay-100 bg-basic-white': !view.topOfPage, 'transition ease-in-out duration-1000 delay-300 invisible': !showNavbar }"
+          >
     <nav
       class="
         container
@@ -10,16 +12,8 @@
       "
     >
       <div class="flex items-center justify-between">
-        <a
-          href="/"
-          class="
-            text-h6
-            font-bold
-            text-text-grey1
-            md:text-h4
-          "
-          >Logo
-        </a>
+        <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="w-36 md:w-20" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
+        <img src="../../public/img/logo/navbar-logo-color.png" alt="" class="w-36 md:w-20" v-else>
 
         <!-- Mobile menu button -->
         <div @click="showMenu = !showMenu" class="flex md:hidden">
@@ -61,27 +55,49 @@
       >
 
         <router-link to="/">
-          <li class="font-bold text-basic-white hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-if="$route.path == '/about'" > Beranda </li>
+          <li class="
+                font-bold 
+                text-basic-white 
+                hover:text-primary-brand 
+                hover:border-b-2 
+                hover:border-b-primary-brand" 
+              v-if="$route.path == '/about'" 
+              :class="{ 'text-basic-black': !view.topOfPage}"> 
+            Beranda 
+            </li>
+
           <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Beranda </li>
         </router-link>
 
         <router-link to="/about">
-          <li class="font-bold text-basic-white hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-if="$route.path == '/about'" > Tentang Kami </li>
+          <li class="
+                font-bold 
+                text-basic-white 
+                hover:text-primary-brand 
+                hover:border-b-2 
+                hover:border-b-primary-brand" 
+              v-if="$route.path == '/about'" 
+              :class="{ 'text-basic-black': !view.topOfPage}"> 
+            Tentang Kami 
+            </li>
+
           <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Tentang Kami </li>
         </router-link>
 
         <router-link to="/karir">
-          <li class="font-bold text-basic-white hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-if="$route.path == '/about'" > Karir </li>
+          <li class="
+                font-bold 
+                text-basic-white 
+                hover:text-primary-brand 
+                hover:border-b-2 
+                hover:border-b-primary-brand" 
+              v-if="$route.path == '/about'" 
+              :class="{ 'text-basic-black': !view.topOfPage}"> 
+            Karir
+            </li>
+
           <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Karir </li>
         </router-link>
-
-        <div>
-          <Toggle v-model="value" class="my-toggle-red">
-            <template v-slot:label="{ checked, classList }">
-              <span :class="classList.label">{{ checked ? 'IND' : 'EN' }}</span>
-            </template>
-          </Toggle>
-        </div>
 
       </ul>
     </nav>
@@ -90,6 +106,7 @@
 
 <script>
 import Toggle from '@vueform/toggle'
+const OFFSET = 60
 export default {
 
   components: {
@@ -99,22 +116,46 @@ export default {
     return {
       showMenu: false,
       value: true,
+      showNavbar: true,
+      lastScrollPosition: 0,
       view: {
         topOfPage: true
       }
     }
   },
-  beforeMount() {
+  mounted(){
+    window.addEventListener('scroll', this.onScroll)
+  },
+
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+
+  beforeMount() { 
     window.addEventListener('scroll', this.handleScroll)
   },
+  
   methods: {
     handleScroll(){
-      if(window.pageYOffset>250){
+      if(window.pageYOffset>10){
         if(this.view.topOfPage) this.view.topOfPage = false
       } else {
         if(!this.view.topOfPage) this.view.topOfPage = true
       }
-    }
+    },
+
+    onScroll () {
+        // Get the current scroll position
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+        // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+        if (currentScrollPosition < OFFSET) {
+          return
+        }
+        // Here we determine whether we need to show or hide the navbar
+        this.showNavbar = currentScrollPosition < this.lastScrollPosition
+        // Set the current scroll position as the last scroll position
+        this.lastScrollPosition = currentScrollPosition
+      }
   }
 };
 </script>

@@ -1,0 +1,43 @@
+[
+    {  
+        "id": 1,
+        "logo": "logo",
+        "header": "Santai Tapi Serius",
+        "content": "Work hard, Play hard bersama -sama "
+    },
+
+    {  
+        "id": 2,
+        "logo": "logo",
+        "header": "Peduli Kesehatan",
+        "content": "Kami peduli dengan kesehatan kamu"
+    },
+
+    {  
+        "id": 3,
+        "logo": "logo",
+        "header": "Semua Disediain",
+        "content": "Laptop, Coffee, dan lainnya kami sediain"
+    },
+
+    {  
+        "id": 4,
+        "logo": "logo",
+        "header": "Peduli Kenyamananmu",
+        "content": "Kamu boleh menggunakan casual yang santai "
+    },
+
+    {  
+        "id": 5,
+        "logo": "logo",
+        "header": "Peduli Hak Kamu",
+        "content": "Kami peduli hak kamu sebagai tenaga kerja"
+    },
+
+    {  
+        "id": 6,
+        "logo": "logo",
+        "header": "Peduli Potensimu",
+        "content": "Kami mau potensi kamu terus berkembang"
+    }
+]

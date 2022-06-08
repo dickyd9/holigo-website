@@ -3,13 +3,13 @@
       <div class="container px-6 mx-auto justify-center text-center">
         <h1 class="text-h3 font-bold">Daftar Lowongan</h1>
         
-        <div id="card" class="p-6 mb-10 drop-shadow-md rounded-3xl overflow-hidden shadow-xl">
+        <div id="card" class="p-6 mb-10 rounded-3xl overflow-hidden shadow-md">
              <form class="flex items-center">   
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative w-full">
                     <input type="text" id="simple-search" 
                     class="
-                    bg-gray-50 
+                    bg-text-grey5
                     border 
                     border-gray-300 
                     text-basic-black 
@@ -22,7 +22,7 @@
                     pl-6 
                     p-2.5 
                     " 
-                    placeholder="Search" 
+                    placeholder="Cari passion kamu" 
                     required>
                 </div>
                 <button type="submit" class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-2xl ">
@@ -35,7 +35,7 @@
             </div>
 
             <div id="category" class="pt-4 flex gap-2">
-                <a href="/" class="px-6 py-3 drop-shadow-md rounded-xl overflow-hidden shadow-xl">
+                <a href="/" class="px-6 py-3 rounded-xl overflow-hidden shadow-md">
                     <h1>Cat1</h1>
                 </a>
             </div>
@@ -43,7 +43,7 @@
       </div>
         <div id="list" class="container px-6 mx-auto mb-20">
             <div class="grid gap-6">    
-                <a href="/" class="flex p-6 shadow-xl rounded-2xl">
+                <a href="/" class="flex p-6 shadow-md rounded-2xl">
                     <h1 class="text-h5 font-bold">1. </h1>
                     <div class="pl-2 w-full">
                         <h1 class="text-h5 font-bold">Legal Manager</h1>

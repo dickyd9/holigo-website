@@ -1,0 +1,23 @@
+[
+    {  
+        "id":0,
+        "title":"Partner",
+        "image": "../../../../public/img/partner/hotel/accor.png",
+        "desc":"accor hotel"
+    },
+
+    {  
+        "id":1,
+        "title":"Partner",
+        "image": "../../../../public/img/partner/hotel/gran-mahakam.png",
+        "desc":"accor hotel"
+    },
+
+    {  
+        "id":2,
+        "title":"Partner",
+        "image": "../../../../public/img/partner/hotel/grand-hyatt.png",
+        "desc":"accor hotel"
+    }
+    
+]

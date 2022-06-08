@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap mb-20">
       <div class="container px-6 mx-auto w-full h-56">
         <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 justify-center gap-5">
           <li class="text-center">
@@ -53,12 +53,11 @@
             <div class="tab-content tab-space">
               <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
                 <div class="grid grid-cols-6 gap-4">
-                  <h1>1</h1>
-                  <h1>1</h1>
-                  <h1>1</h1>
-                  <h1>1</h1>
-                  <h1>1</h1>
-                  <h1>1</h1>
+                      <div class="grid justify-center"  
+                           v-for="partner in partnerList"
+                           :key="partner.id">
+                        <img :src="partner.image" alt="" class="h-20 w-20">
+                      </div>
                 </div>
               </div>
               <div v-bind:class="{'hidden': openTab !== 2, 'block': openTab === 2}">
@@ -102,11 +101,13 @@
 </template>
 
 <script>
+import Partner from './data/partner.json'
 export default {
   name: "brand-tabs",
   data() {
     return {
-      openTab: 1
+      openTab: 1,
+      partnerList: Partner
     }
   },
   methods: {
