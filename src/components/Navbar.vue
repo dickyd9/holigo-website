@@ -1,6 +1,6 @@
 <template>
-  <header class="top-0 w-full z-10 md:fixed" 
-          :class="{ 'transition ease-in-out duration-300 delay-100 bg-basic-white': !view.topOfPage, 'transition ease-in-out duration-1000 delay-300 invisible': !showNavbar }"
+  <header class="top-0 w-full z-10 md:fixed transition ease-in-out duration-50 delay-300" 
+          :class="{ 'transition ease-in-out duration-1000 delay-50 bg-basic-white ': !view.topOfPage, 'transition ease-in-out duration-50 delay-300 opacity-0 -translate-y-6': !showNavbar }"
           >
     <nav
       class="
@@ -12,8 +12,8 @@
       "
     >
       <div class="flex items-center justify-between">
-        <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="w-36 md:w-20" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
-        <img src="../../public/img/logo/navbar-logo-color.png" alt="" class="w-36 md:w-20" v-else>
+        <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="w-36 md:w-24" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
+        <img src="../../public/img/logo/navbar-logo-color.png" alt="" class="w-36 md:w-24" v-else>
 
         <!-- Mobile menu button -->
         <div @click="showMenu = !showMenu" class="flex md:hidden">
@@ -98,26 +98,26 @@
 
           <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Karir </li>
         </router-link>
-
+        <div class="w-14 h-8 flex items-center bg-gray-300 rounded-full p-1" :class="{ 'bg-green-400': toggleActive}" >      
+          <div class="bg-primary-brand w-6 h-6 rounded-full shadow-md grid content-center justify-center" :class="{ 'translate-x-6': toggleActive}">
+              <span class="text-[12px] text-basic-white select-none"> En</span>
+          </div>
+        </div>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
-import Toggle from '@vueform/toggle'
-const OFFSET = 60
+const OFFSET = 0
 export default {
-
-  components: {
-      Toggle,
-    },
   data() {
     return {
       showMenu: false,
       value: true,
       showNavbar: true,
       lastScrollPosition: 0,
+      toggleActive: false,
       view: {
         topOfPage: true
       }
@@ -137,7 +137,7 @@ export default {
   
   methods: {
     handleScroll(){
-      if(window.pageYOffset>10){
+      if(window.pageYOffset>0){
         if(this.view.topOfPage) this.view.topOfPage = false
       } else {
         if(!this.view.topOfPage) this.view.topOfPage = true
@@ -148,7 +148,7 @@ export default {
         // Get the current scroll position
         const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
         // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-        if (currentScrollPosition < OFFSET) {
+        if (currentScrollPosition < 0) {
           return
         }
         // Here we determine whether we need to show or hide the navbar

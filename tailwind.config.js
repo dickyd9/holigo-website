@@ -8,13 +8,24 @@ module.exports = {
       sans: ['Plus Jakarta Sans', 'sans-serif'],
     },
     fontSize: {
-      h1 : ['3.5rem', '72px'],
-      h2 : ['3rem', 'auto'],
-      h3 : ['2.25rem', 'auto'],
-      h4 : ['1.625rem', '40px'],
-      h5 : ['1.5rem', 'auto'],
-      h6 : ['1.25rem', '32px'],
-      h7 : ['1.25rem', '32px'],
+      h1 : ['3.5rem', '72px', 'bold'],
+      h2 : ['3rem', 'auto', 'bold'],
+      h3 : ['2.25rem', 'auto', 'bold'],
+      h4 : ['1.625rem', '40px', 'bold'],
+      h5 : ['1.5rem', 'auto', 'bold'],
+      h6 : ['1.25rem', '32px', 'bold'],
+      h7 : ['1.25rem', '32px', 'medium'],
+
+      body1 : ['1.125rem', 'auto', 'medium'],
+      body2 : ['1.125rem', 'auto', 'regular'],
+      body3 : ['1rem', '24px', 'medium'],
+      body4 : ['1rem', '24px', 'regular'],
+
+      p1 : ['0.875rem', 'auto', 'medium'],
+      p2 : ['0.875rem', 'auto', 'regular'],
+      p3 : ['0.75rem', 'auto', 'regular'],
+
+      btn : ['1rem', '24px', 'bold'],
     },
      
     fontWeight: {
@@ -43,14 +54,6 @@ module.exports = {
         "green-l20": '#24FF3E',
         "green-l40": '#BDFFC5',
         "green-l50": '#E6F6E8',
-      },
-
-      'secondary': {
-        "orange-pastel": '#FFD36E',
-        "banana-yellow": '#FFE162',
-        "watermelon": '#FD5D5D',
-        "purple-pastel": '#C799F3',
-        "blue": '#70D3FF',
       },
 
       'basic': {

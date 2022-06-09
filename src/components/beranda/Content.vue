@@ -1,6 +1,6 @@
 <template>
-  <section class="h-full px-10 mt-auto">
-      <div class="container px-6 mx-auto mb-24 flex">
+  <section class="md:h-full px-10 mt-auto">
+      <div class="container px-6 mx-auto mb-24 md:flex">
         <div class="basis-1/2 items-center ">
             <img src="../../assets/img/illustration/exmp.png" alt="">
         </div>

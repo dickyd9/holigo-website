@@ -19,7 +19,7 @@ import BottomCard from "./components/BottomCard.vue"
         <RouterView />
       </div>
       
-    <BottomCard/>
+    <!-- <BottomCard/> -->
       
     <Footer/>
   </div>

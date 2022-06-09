@@ -1,0 +1,19 @@
+[
+    {  
+        "id": 1,
+        "header": "Santai Tapi Serius",
+        "content": "Work hard, Play hard bersama - sama"
+    },
+
+    {
+        "id": 2,
+        "header": "Peduli Kenyamananmu",
+        "content": "Kamu boleh menggunakan casual yang santai "
+    },
+
+    {
+        "id": 3,
+        "header": "Peduli Kesehatan",
+        "content": "Kami peduli dengan kesehatan kamu"
+    }
+]
