@@ -1,5 +1,5 @@
 <template>
-  <section id="heroAbout" class="h-[100vh] grid md:flex flex-wrap bg-primary-green-l-20">
+  <section :style="{backgroundImage:'url(../../assets/img/AboutUs/hero-background.png)'}" class="h-[100vh] grid md:flex flex-wrap">
         <div class="container px-6 mx-auto">
             <div class="grid justify-items-center items-center py-52">
                 <h1 class="font-black text-center text-h2 text-basic-white md:max-w-3xl md:text-h1">
@@ -15,8 +15,12 @@
 
 <script>
 export default {
-
-}
+    data() {
+        return {
+            image: { backgroundImage: "../../assets/img/About us/about us background.png')})" }
+        };
+    }
+};
 </script>
 
 <style>
