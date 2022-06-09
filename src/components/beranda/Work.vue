@@ -1,5 +1,5 @@
 <template>
-  <section class="h-full bg-basic-footer">
+  <section id="work" class="h-full">
       <div class="container px-6 mx-auto my-20 py-12">
         <div id="text" class="text-center text-text-grey6">
             <div class="text-h3 font-bold">
@@ -32,5 +32,8 @@ export default {
 </script>
 
 <style>
-
+#work {
+  background-image: url("../../assets/img/Home/Backgrund/background_2.png");
+  background-size: 100vw;
+}
 </style>

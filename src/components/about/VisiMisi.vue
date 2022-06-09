@@ -1,5 +1,5 @@
 <template>
-  <section class="container px-6 mx-auto text-center">
+  <section class="container px-6 mx-auto my-20 text-center">
       <h1 class="text-h3 font-bold">Mau yang terbaik untuk kami</h1>
       <h1 class="text-h6 pt-2">Kami selalu melihat ke depan dan memberikan yang terbaik untuk semua kebutuhan kamu</h1>
       <div class="py-12 flex gap-4 px-12">

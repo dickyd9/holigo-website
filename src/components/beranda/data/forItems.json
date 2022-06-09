@@ -1,25 +1,25 @@
 [
     {  
         "id": 1,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Booking Hotel",
+        "content": "Gak usah bingung nyari tempat tinggal holiday kamu, langsung aja cari dari sini."
     },
 
     {
         "id": 2,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Tiket Pesawat",
+        "content": "Up up here we go! Terbang kemana pun tinggal langsung pilih. "
     },
 
     {
         "id": 3,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Pulsa & Paket Data",
+        "content": "Gak ada lagi kata 'abis kuota' atau 'abis pulsa', langsung isi ulang disini aja."
     },
 
     {
         "id": 4,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Isi Ulang & Tagihan",
+        "content": "Gak perlu ngantri di loket atau bayar tagihan yang ribet, bisa langsung online."
     }
 ]

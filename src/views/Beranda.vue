@@ -4,9 +4,10 @@
     <Content/>
     <Why/>
     <For/>
-    <!-- <Customize/> -->
+    <Customize/>
     <Partner/>
     <Work/>
+    <BottomCard/>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import For from '.././components/beranda/For.vue'
 import Partner from '.././components/beranda/Partner.vue'
 import Customize from '.././components/beranda/Customize.vue'
 import Work from '.././components/beranda/Work.vue'
+import BottomCard from '.././components/BottomCard.vue'
 </script>
 
 <style>

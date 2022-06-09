@@ -1,25 +1,26 @@
 [
     {  
         "id": 1,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "image": "../img/About us/website illust-berkembang bersama waktu color 1.png",
+        "header": "Holigo - Sahabat Holiday kamu",
+        "content": "Memberikan one-stop solution untuk semua kebutuhan kamu. Tiket pesawat, hotel, PPOB, dan sampai pembelian pulsa tersedia dalam satu platform simple yang gampang buat digunakan semua orang. Solusi liburan anti repot dan anti mahal!"
     },
 
     {
         "id": 2,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Mudah, Murah, Meriah",
+        "content": "Memberikan one-stop solution untuk semua kebutuhan kamu. Tiket pesawat, hotel, PPOB, dan sampai pembelian pulsa tersedia dalam satu platform simple yang gampang buat digunakan semua orang. Solusi liburan anti repot dan anti mahal!"
     },
 
     {
         "id": 3,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Selalu siap menemani",
+        "content": "Kenyamanan dalam transaksi menjadi prioritas Holigo. Pintu Holigo selalu terbuka 24 jam setiap hari. Apa pun pertanyaannya, Customer Service officer Holigo siap dihubungi kapan pun dan di mana pun. "
     },
 
     {
         "id": 4,
-        "header": 23,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "Berkembang bersama waktu",
+        "content": "Holigo selalu berinovasi dalam pengembangan teknologi untuk terus mengikuti adaptasi teknologi Indonesia agar mudah dan nyaman digunakan. Travelling sekarang jadi simple dan mudah!"
     }
 ]
