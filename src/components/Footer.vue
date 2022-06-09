@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-basic-footer h-60 md:block">
+  <div class="bg-basic-footer h-96 md:block">
       <footer
         class="
           container
@@ -13,8 +13,8 @@
             md:flex md:justify-between md:content-center">
         
         <div class="h-32 basis-1/2 grid content-start">
-          <h2>logo</h2>
-          <h2>toggle</h2>
+          <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="h-14 mb-2">
+          <Toggle/>
         </div>
 
         <div class="h-32 grid basis-1/4 content-start">
@@ -38,19 +38,28 @@
 
         <div class="h-32 grid basis-1/4 content-start">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Kontak Kami</h1>
-            <div class="flex flex-col">
-              <span class="text-text-grey4">Email</span>
-              <span class="text-text-grey4">Telpon</span>
-              <span class="text-text-grey4">Alamat</span>
+            <div class="flex flex-col gap-2">
+              <div class="text-text-grey4 flex gap-2">
+                <img src="../assets/img/icon/email.png" alt="" class="h-4"/>
+                Email
+              </div>
+              <div class="text-text-grey4 flex gap-2">
+                <img src="../assets/img/icon/Wa.png" alt="" class="h-4"/>
+                Email
+              </div>
+              <div class="text-text-grey4 flex gap-2">
+                <img src="../assets/img/icon/Loc.png" alt="" class="h-4"/>
+                Jl. Bukit Golf I No.17, Lengkong Karya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15310
+              </div>
             </div>
         </div>
 
         <div class="h-32 grid basis-1/4 content-start">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Social Media</h1>
-          <div class="flex gap-1">
-            <h1>logo</h1>
-            <h1>logo</h1>
-            <h1>logo</h1>
+          <div class="flex gap-4">
+            <img src="../assets/img/icon/Ig.png" alt="" class="h-5">
+            <img src="../assets/img/icon/Tw.png" alt="" class="h-5">
+            <img src="../assets/img/icon/Fb.png" alt="" class="h-5">
           </div>
         </div>
       </div>
@@ -64,10 +73,8 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import Toggle from './Toggle.vue'
 </script>
 
 <style>
