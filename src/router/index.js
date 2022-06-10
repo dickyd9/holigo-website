@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Beranda from "../views/Beranda.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,7 +12,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => import("../views/Beranda.vue"),
+      component: Beranda,
     },
     {
       path: "/about",

@@ -8,11 +8,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-        toggleActive: false,
-        }
+  name: 'Toggle',
+  props: {
+    type: {
+      type: String,
+    },
+  },
+  data(){
+    return {
+     toggleActive: true,   
     }
+  }
 }
 </script>
 

@@ -3,21 +3,25 @@
     <div class="container px-6 mx-auto md:pt-20 md:flex flex-wrap">
       <div class="grid basis-1/2">
         <div class="flex flex-col justify-center">
-          <h1 class="font-black max-w-lg text-center text-h3 md:text-left md:text-h1"> {{heroItem.header}}  <span class="text-primary-brand">Lifestyle</span>
-            
-            <img :src="heroItem.pattern" alt="" class="absolute w-20 md:left-[70vh] lg:top-[25vh] lg:left-[65vh]">
-          </h1>
+          <div class="font-black md:text-left text-h3 md:text-h1"> 
+           <div class="pb-2 flex"> 
+             {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-14 md:h-14" />
+           </div>
+            <div class="text-primary-brand flex flex-wrap">
+              {{heroItem.header2}}
+            </div>
+          </div>
           <span class="pt-6 text-body1 font-medium max-w-lg text-center md:text-left ">
             {{heroItem.body}}
           </span>
-          <div class="flex pt-6 gap-6 max-w-lg">
-            <div class="flex" v-for="productList in product">
-              <div id="icon" class="pr-2 w-20">
+          <div class="flex pt-6 max-w-lg md:gap-6">
+            <div class="flex" v-for="productList in product" :key="productList.id">
+              <div id="icon" class="pr-2 w-12 md:w-20">
                 <img :src="productList.img" alt="">
               </div>
               <div id="text">
-                <div class="text-h4 font-semibold">{{productList.title}}</div>
-                <div class="text-body3 font-medium max-w-s">{{productList.body}}</div>
+                <div class="font-semibold text-h6 md:text-h4">{{productList.title}}</div>
+                <div class="font-medium text-body4 md:text-body3">{{productList.body}}</div>
               </div>
             </div>
           </div>
@@ -41,7 +45,8 @@ export default {
   data() {
     return {
       heroItem: {
-        header: 'Holigo simplify your',
+        header1: 'Holigo simplify',
+        header2: 'your lifestyle',
         body: 'simple nyaman dan dapat di andalkan untuk kebutuhan traveling kamu.',
         pattern: "src/assets/img/Home/pattern-1.png",
         image: "src/assets/img/Home/website illust-hero color 1.png"

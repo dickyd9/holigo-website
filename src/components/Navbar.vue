@@ -1,6 +1,6 @@
 <template>
   <header class="top-0 w-full z-10 md:fixed transition ease-in-out duration-50 delay-300" 
-          :class="{ 'transition ease-in-out duration-1000 delay-50 bg-basic-white ': !view.topOfPage, 'transition ease-in-out duration-50 delay-300 opacity-0 -translate-y-6': !showNavbar }"
+          :class="{ 'transition ease-in-out duration-900 delay-50 bg-basic-white ': !view.topOfPage, 'transition ease-in-out duration-50 delay-300 opacity-0 -translate-y-6': !showNavbar }"
           >
     <nav
       class="

@@ -1,23 +1,24 @@
 <template>
-  <div class="bg-basic-footer h-96 md:block">
+  <div class="bg-basic-footer h-80 md:block">
       <footer
         class="
           container
-          pt-12
+          pt-8
           mx-auto
-          bottom-0
         "
       >
         <div class="
+        
             border-b-2
+            pb-8
             md:flex md:justify-between md:content-center">
         
-        <div class="h-32 basis-1/2 grid content-start">
+        <div class="basis-1/2 grid content-start">
           <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="h-14 mb-2">
-          <Toggle/>
+          <Toggle></Toggle>
         </div>
 
-        <div class="h-32 grid basis-1/4 content-start">
+        <div class="grid basis-1/4 content-start">
           <h1 class="text-h6 font-semibold pb-2 text-text-grey4">Menu</h1>
             <router-link to="/">
               <span class="text-text-grey4 hover:text-basic-white">Beranda</span>
@@ -36,7 +37,7 @@
             </span>
         </div>
 
-        <div class="h-32 grid basis-1/4 content-start">
+        <div class="grid basis-1/4 content-start">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Kontak Kami</h1>
             <div class="flex flex-col gap-2">
               <div class="text-text-grey4 flex gap-2">
@@ -54,7 +55,7 @@
             </div>
         </div>
 
-        <div class="h-32 grid basis-1/4 content-start">
+        <div class="grid basis-1/4 content-start">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Social Media</h1>
           <div class="flex gap-4">
             <img src="../assets/img/icon/Ig.png" alt="" class="h-5">
@@ -73,8 +74,8 @@
   </div>
 </template>
 
-<script setup>
-import Toggle from './Toggle.vue'
+<script>
+import Toggle from '@/components/Toggle.vue'
 </script>
 
 <style>
