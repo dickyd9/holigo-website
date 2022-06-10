@@ -7,8 +7,8 @@
            <div class="pb-2 flex"> 
              {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-14 md:h-14" />
            </div>
-            <div class="text-primary-brand flex flex-wrap">
-              {{heroItem.header2}}
+            <div class="text-basic-black flex flex-wrap">
+              your <div class="text-primary-brand pl-4"> {{heroItem.header2}}</div>
             </div>
           </div>
           <span class="pt-6 text-body1 font-medium max-w-lg text-center md:text-left ">
@@ -46,7 +46,7 @@ export default {
     return {
       heroItem: {
         header1: 'Holigo simplify',
-        header2: 'your lifestyle',
+        header2: ' lifestyle',
         body: 'simple nyaman dan dapat di andalkan untuk kebutuhan traveling kamu.',
         pattern: "src/assets/img/Home/pattern-1.png",
         image: "src/assets/img/Home/website illust-hero color 1.png"

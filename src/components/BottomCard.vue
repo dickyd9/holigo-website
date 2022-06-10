@@ -1,7 +1,6 @@
 <template>
-  <section id="cardBtm" class="grid justify-center py-20">
-      <div class="grid h-[22rem] w-full" 
-      :style="{'background-image': `url(${(bg)})`, 'background-size': '100vw'}">
+  <section class="grid justify-center py-20">
+      <div id="card" :style="{'background-image': `url(${(bg)})`, 'background-size': '100vw'}"  class="grid h-[22rem] w-full" >
         <div class="relative pl-96 pr-24 justify-center">
           <div class="pt-32 w-full flex flex-col">
             <h1 class="text-h2 font-bold">Worth the Wait</h1>
@@ -14,11 +13,11 @@
 
 <script>
 export default {
-  name: "cardBtm",
+  name: "card",
   data() {
-    return{
-      bg: "src/assets/img/Home/download card.png",
-    }
+    return {
+      bg: "src/assets/img/Home/download card.png"
+    };
   }
 };
 </script>

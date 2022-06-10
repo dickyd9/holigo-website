@@ -1,12 +1,12 @@
 <template>
-  <section class="h-full">
+  <section class="h-full mb-44">
       <div class="h-screen container px-6 mx-auto grid py-24 md:flex flex-wrap">
           <div class="grid basis-1/2 content-center">
                 <h1 class="text-[4rem] font-black">
-                  Yuk, unlock potensi kamu bareng kami!
+                  {{header}}
                 </h1>
                 <span class="text-h6 max-w-xl">
-                    Sigap, siap, santai, serius. Belajar dan asah kemampuan bersama-sama. 
+                    {{body}}
                 </span>
 
                 <div id="search" class="pt-6 max-w-lg">
@@ -42,8 +42,8 @@
           </div>
           <div class="grid basis-1/2 content-center justify-center">
             <img 
-                class="object-contain h-full w-fit" 
-                src="../.././assets/img/illustration/exmp.png" 
+                class="object-contain h-[560px]" 
+                :src="image" 
                 alt=""
             >
           </div>
@@ -52,9 +52,14 @@
 </template>
 
 <script>
-
 export default {
-    
+    data() {
+        return {
+            header: "Yuk, unlock potensi kamu bareng kami!",
+            body: "Sigap, siap, santai, serius. Belajar dan asah kemampuan bersama-sama.",
+            image: "src/assets/img/Careers/website illust-unlock your potential color 2.png"
+        }
+    }
 };
 </script>
 
