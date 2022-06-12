@@ -1,5 +1,5 @@
 <template>
-  <section class="md:h-full px-10 mt-auto">
+  <section class="md:h-full lg:h-full px-10 mt-auto">
       <div class="container px-6 mx-auto my-24 md:flex">
         <div class="basis-1/2 items-center ">
           <div class="w-full grid justify-center">

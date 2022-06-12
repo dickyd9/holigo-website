@@ -1,11 +1,12 @@
 <template>
   <section class="md:h-screen">
     <div class="container px-6 mx-auto md:pt-20 md:flex flex-wrap">
-      <div class="grid basis-1/2">
+      <div
+           class="transform transition-all translate-y-12 ease-out grid basis-1/2">
         <div class="flex flex-col justify-center">
           <div class="font-black md:text-left text-h3 md:text-h1"> 
            <div class="pb-2 flex"> 
-             {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-14 md:h-14" />
+             {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
            </div>
             <div class="text-basic-black flex flex-wrap">
               your <div class="text-primary-brand pl-4"> {{heroItem.header2}}</div>
@@ -41,7 +42,11 @@
 </template>
 
 <script>
+import { AOS } from 'aos';
 export default {
+  onMounted() {
+    AOS.init();
+  },
   data() {
     return {
       heroItem: {

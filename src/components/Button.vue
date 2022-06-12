@@ -6,11 +6,10 @@
       font-bold 
       text-text-grey6 
       bg-primary-brand  
-      w-full 
+      w-40
       px-6 
       py-3 
-      rounded-3xl 
-      w-40">
+      rounded-3xl">
     <slot />
   </button>
 </template>

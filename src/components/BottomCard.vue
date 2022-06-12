@@ -1,13 +1,17 @@
 <template>
-  <section class="grid justify-center py-20">
-      <div id="card" :style="{'background-image': `url(${(bg)})`, 'background-size': '100vw'}"  class="grid h-[22rem] w-full" >
-        <div class="relative pl-96 pr-24 justify-center">
-          <div class="pt-32 w-full flex flex-col">
-            <h1 class="text-h2 font-bold">Worth the Wait</h1>
-            <h1>Heading to your phone soon!</h1>
+  <section class="grid justify-center mb-16">
+    <div class="container px-6 mx-auto">
+      <div
+        class="bg-[url('src/assets/img/Home/Backgrund/download-card.png')] bg-cover md:w-[150vh] md:h-[70vh] grid"
+      >
+        <div class="grid pl-[80vh] content-center">
+          <div class="grid">
+            <h1 class="text-h1 font-bold">Worth the Wait</h1>
+            <h1 class="text-body1">Heading to your phone soon!</h1>
           </div>
         </div>
       </div>
+    </div>
   </section>
 </template>
 
@@ -16,12 +20,10 @@ export default {
   name: "card",
   data() {
     return {
-      bg: "src/assets/img/Home/download card.png"
+      bg: "src/assets/img/Home/Backgrund/download-card.png",
     };
-  }
+  },
 };
 </script>
 
-<style>
-
-</style>
+<style></style>
