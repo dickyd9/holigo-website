@@ -1,5 +1,5 @@
 <template>
-  <section id="custom" class="w-full grid justify-center my-20 h-96">
+  <section id="custom" class="w-full grid justify-center mb-96 my-20 md:mb-20 h-96">
       <div class="container px-12 mx-auto " :style="{
                     'background-image': `url(${(bg)})`,
                     'background-size': '100%'}">

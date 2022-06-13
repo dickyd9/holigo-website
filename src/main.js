@@ -4,7 +4,7 @@ import { store } from "./stores"
 import App from "./App.vue";
 import router from "./router";
 import './index.css';
-import 'aos/dist/aos.css'
+
 
 const app = createApp(App);
 

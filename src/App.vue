@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div id="app" class="bg-white">
+  <div id="app" class="bg-basic-white scroll-smooth">
     <Navbar/>
       <div
         class="

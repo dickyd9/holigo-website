@@ -12,20 +12,20 @@
       </div>
 
       <div id="text" class="pt-10 flex justify-between">
-        <span class="grid content-center"> prev </span>
+        <span class="grid content-center text-right"> <img :src="arrowLeft" alt="" class="h-12"> </span>
 
         <div class="flex gap-2">
           <div
-            class="grid pt-6 pl-4 shadow-md bg-basic-white rounded-2xl md:h-[236px] md:w-[368px]"
+            class="grid pt-6 pb-16 px-4 shadow-md bg-basic-white rounded-2xl md:h-[236px] md:w-[368px]"
             v-for="work in card"
             :key="work.id"
           >
-            <img :src="work.img" alt="" class="w-32" />
+            <img :src="work.img" alt="" class="w-28" />
             <h1 class="text-h6 font-semibold">{{ work.header }}</h1>
             <span class="text-body4 font-medium">{{ work.content }}</span>
           </div>
         </div>
-        <span class="grid content-center text-right"> next </span>
+        <span class="grid content-center text-right"> <img :src="arrowRight" alt="" class="h-12"> </span>
       </div>
     </div>
 
@@ -50,6 +50,9 @@ export default {
       bg: "src/assets/img/Home/Backgrund/background_2.png",
       header: "kerja di holigo karena...",
       body: "Alasan kenapa kamu cocok tumbuh bareng Holigo",
+
+      arrowLeft: "src/assets/img/icon/pagination_icon_left.png",
+      arrowRight: "src/assets/img/icon/pagination_icon_right.png",
 
       card: [
         {

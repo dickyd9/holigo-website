@@ -3,20 +3,20 @@
     id="why"
     class="h-full py-12 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-auto md:bg-cover" 
   >
-    <div class="container px-6 mx-auto mt-12 justify-items-center">
+    <div class="container px-6 mx-auto mt-20 md:mt-12 justify-items-center">
       <div class="flex flex-col pb-6 text-center justify-center md:pb-16">
         <h1 class="text-h3 font-black text-text-grey6">{{header}}</h1>
         <span class="pt-2 text-text-grey6">
           {{body}}</span>
       </div>
-      <div class="flex flex-col mt-12 gap-12 md:gap-6 md:mt-12 md:flex-row">
+      <div class="flex flex-col mt-12 gap-24 pb-16 pt-12 md:gap-4 md:mt-12 md:flex-row">
         <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
           <img
             :src="cardItem.image"
             alt=""
-            class="w-36 absolute left-4 bottom-36 md:bottom-48"
+            class="w-36 absolute left-4 bottom-40 md:bottom-56"
           />
-          <div class="pt-20 md:pt-6">
+          <div class="pt-6 md:pt-6">
             <h1 class="text-h6 font-bold mb-2 text-basic-black">
               {{ cardItem.header }}
             </h1>

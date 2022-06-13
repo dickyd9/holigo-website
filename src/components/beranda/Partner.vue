@@ -66,20 +66,20 @@
               <div
                 v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }"
               >
-                <div class="grid grid-cols-6 gap-4">
+                <div class="grid grid-cols-6 gap-y-6">
                   <div
                     class="grid justify-center"
                     v-for="transport in transportList"
                     :key="transport.id"
                   >
-                    <img :src="transport.img" alt="" class="h-20 w-20" />
+                    <img :src="transport.img" alt="" class="md:h-20 md:w-20" />
                   </div>
                 </div>
               </div>
               <div
                 v-bind:class="{ hidden: openTab !== 2, block: openTab === 2 }"
               >
-                <div class="grid grid-cols-6 gap-4">
+                <div class="grid grid-cols-6 gap-y-6">
                   <div
                     class="grid justify-center"
                     v-for="hotel in hotelList"
@@ -92,7 +92,7 @@
               <div
                 v-bind:class="{ hidden: openTab !== 3, block: openTab === 3 }"
               >
-                <div class="grid grid-cols-6 gap-4">
+                <div class="grid grid-cols-6 gap-y-6">
                   <div
                     class="grid justify-center"
                     v-for="pp in ppList"
@@ -105,7 +105,7 @@
               <div
                 v-bind:class="{ hidden: openTab !== 4, block: openTab === 4 }"
               >
-                <div class="grid grid-cols-6 gap-4">
+                <div class="grid grid-cols-6 gap-y-6">
                   <div
                     class="grid justify-center"
                     v-for="tagihan in tagihanList"

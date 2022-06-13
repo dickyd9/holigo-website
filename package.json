@@ -16,10 +16,13 @@
     "aos": "^2.3.4",
     "feather-icons": "^4.29.0",
     "flowbite": "^1.4.7",
+    "hooper": "^0.3.4",
     "pinia": "^2.0.14",
     "vue": "^3.2.37",
     "vue-feather": "^2.0.0",
     "vue-router": "^4.0.15",
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-animate-onscroll": "^1.0.6",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

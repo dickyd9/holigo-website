@@ -6,15 +6,15 @@
         <span class="pt-2">{{ body }}</span>
       </div>
       <div
-        class="flex flex-col mt-12 gap-12 content-center md:gap-6 md:mt-20 md:flex-row"
+        class="flex flex-col mt-20 gap-24 content-center md:gap-6 md:mt-20 md:flex-row"
       >
       <Card class="relative" v-for="fr in card" :key="fr.id">
           <img
             :src="fr.image"
             alt=""
-            class="w-36 absolute left-6 bottom-36 md:bottom-44"
+            class="w-36 absolute left-6 bottom-40 md:bottom-56"
           />
-          <div class="pt-16 md:pt-6">
+          <div class="pt-8 md:pt-6">
             <h1 class="text-h6 font-bold mb-2 text-basic-black">
               {{ fr.header }}
             </h1>

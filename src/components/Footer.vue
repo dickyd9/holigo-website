@@ -10,7 +10,7 @@
         <div class="
         
             border-b-2
-            pb-8
+            pb-16
             md:flex md:justify-between md:content-center">
         
         <div class="basis-1/2 grid content-start">
@@ -39,18 +39,10 @@
 
         <div class="grid basis-1/4 content-start">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Kontak Kami</h1>
-            <div class="flex flex-col gap-2">
-              <div class="text-text-grey4 flex gap-2">
-                <img src="../assets/img/icon/email.png" alt="" class="h-4"/>
-                Email
-              </div>
-              <div class="text-text-grey4 flex gap-2">
-                <img src="../assets/img/icon/Wa.png" alt="" class="h-4"/>
-                Email
-              </div>
-              <div class="text-text-grey4 flex gap-2">
-                <img src="../assets/img/icon/Loc.png" alt="" class="h-4"/>
-                Jl. Bukit Golf I No.17, Lengkong Karya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15310
+            <div class="flex flex-col gap-2" v-for="contactList in contact " :key="contactList.id">
+              <div class="text-text-grey4 flex gap-2 h-10">
+                <img :src="contactList.icon" alt="" class="h-6"/>
+                {{contactList.content}}
               </div>
             </div>
         </div>
@@ -75,7 +67,31 @@
 </template>
 
 <script>
-import Toggle from '@/components/Toggle.vue'
+export default{
+  data() {
+    return {
+      contact: [
+        {
+          id: 1,
+          icon: "src/assets/img/icon/email.png",
+          content: "Email"
+        },
+
+        {
+          id: 2,
+          icon: "src/assets/img/icon/wa.png",
+          content: "Whatsapp"
+        },
+
+        {
+          id: 3,
+          icon: "src/assets/img/icon/loc.png",
+          content: "Jl. Bukit Golf I No.17, Lengkong Karya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15310"
+        },
+      ]
+    }
+  }
+}
 </script>
 
 <style>

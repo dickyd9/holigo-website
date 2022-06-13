@@ -36,7 +36,9 @@
                         </button>
                     </form>
                     <button type="submit" class="pt-5 text-primary-brand"> 
-                        Lihat semua lowongan 
+                        <div class="flex gap-2">
+                        Lihat semua lowongan <img :src="icon" alt="" class="h-6 hover:w-8">
+                        </div>
                     </button>
                 </div>
           </div>
@@ -57,7 +59,8 @@ export default {
         return {
             header: "Yuk, unlock potensi kamu bareng kami!",
             body: "Sigap, siap, santai, serius. Belajar dan asah kemampuan bersama-sama.",
-            image: "src/assets/img/Careers/website illust-unlock your potential color 2.png"
+            image: "src/assets/img/Careers/website illust-unlock your potential color 2.png",
+            icon: "src/assets/img/icon/arrow right.png"
         }
     }
 };
