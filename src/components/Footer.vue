@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-basic-footer h-80 md:block">
+  <div class="bg-basic-footer block h-[100vh] md:h-full">
       <footer
         class="
           container
@@ -10,18 +10,19 @@
         <div class="
         
             border-b-2
-            pb-16
+            pl-2
+            md:pb-16
             md:flex md:justify-between md:content-center">
         
-        <div class="basis-1/2 grid content-start">
-          <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="h-14 mb-2">
-          <Toggle></Toggle>
+        <div class="basis-1/2 grid content-start pb-2 md:pb-0">
+          <img src="../../public/img/logo/navbar-logo-white.png" alt="" class=" h-10 md:h-14 mb-2">
+          <Toggle/>
         </div>
 
-        <div class="grid basis-1/4 content-start">
+        <div class="grid basis-1/4 content-start pb-10 md:pb-0">
           <h1 class="text-h6 font-semibold pb-2 text-text-grey4">Menu</h1>
             <router-link to="/">
-              <span class="text-text-grey4 hover:text-basic-white">Beranda</span>
+              <span class="text-text-grey4 hover:text-basic-white gap-6">Beranda</span>
             </router-link>
 
             <span class="text-text-grey4 hover:text-basic-white">
@@ -37,9 +38,9 @@
             </span>
         </div>
 
-        <div class="grid basis-1/4 content-start">
+        <div class="grid basis-1/4 content-start pb-12">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Kontak Kami</h1>
-            <div class="flex flex-col gap-2" v-for="contactList in contact " :key="contactList.id">
+            <div class="flex flex-grid md:flex-col gap-2" v-for="contactList in contact " :key="contactList.id">
               <div class="text-text-grey4 flex gap-2 h-10">
                 <img :src="contactList.icon" alt="" class="h-6"/>
                 {{contactList.content}}
@@ -47,7 +48,7 @@
             </div>
         </div>
 
-        <div class="grid basis-1/4 content-start">
+        <div class="grid basis-1/4 content-start pb-6 md:pb-0">
           <h1 class="text-h6 font-bold pb-2 text-text-grey4">Social Media</h1>
           <div class="flex gap-4">
             <img src="../assets/img/icon/Ig.png" alt="" class="h-5">
@@ -56,10 +57,10 @@
           </div>
         </div>
       </div>
-      <div class="flex my-4 h-6 justify-center gap-2">
-        <img src="../../public/img/icnWhite.png" alt="" class="h-6">
-        <div class="text-body2 text-text-grey6">Holigo</div>
-        <div class="text-body2 text-text-grey6">© 2022. All Right Reserved</div>
+      <div class="flex my-4 md:h-6 justify-center gap-2">
+        <img src="../../public/img/icnWhite.png" alt="" class="h-6 md:h-6">
+        <div class="md:text-body2 text-text-grey6">Holigo</div>
+        <div class="md:text-body2 text-text-grey6">© 2022. All Right Reserved</div>
       </div>
       </footer>
       
@@ -67,6 +68,7 @@
 </template>
 
 <script>
+import Toggle from '../components/Toggle.vue'
 export default{
   data() {
     return {

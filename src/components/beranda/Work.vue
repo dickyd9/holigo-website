@@ -11,10 +11,10 @@
         <div class="text-body2">{{ body }}</div>
       </div>
 
-      <div id="text" class="pt-10 flex justify-between">
+      <div id="text" class="grid md:pt-10 md:flex md:justify-between">
         <span class="grid content-center text-right"> <img :src="arrowLeft" alt="" class="h-12"> </span>
 
-        <div class="flex gap-2">
+        <div class="md:flex md:gap-2">
           <div
             class="grid pt-6 pb-16 px-4 shadow-md bg-basic-white rounded-2xl md:h-[236px] md:w-[368px]"
             v-for="work in card"

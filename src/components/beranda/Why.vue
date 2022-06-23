@@ -9,7 +9,7 @@
         <span class="pt-2 text-text-grey6">
           {{body}}</span>
       </div>
-      <div class="flex flex-col mt-12 gap-24 pb-16 pt-12 md:gap-4 md:mt-12 md:flex-row">
+      <div class="flex flex-col mt-12 gap-24 pb-16 pt-12 md:gap-4 md:mt-2 md:flex-row">
         <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
           <img
             :src="cardItem.image"
