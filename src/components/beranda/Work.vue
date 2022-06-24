@@ -11,10 +11,43 @@
         <div class="text-body2">{{ body }}</div>
       </div>
 
-      <div id="text" class="grid md:pt-10 md:flex md:justify-between">
-        <span class="grid content-center text-right"> <img :src="arrowLeft" alt="" class="h-12"> </span>
+      <div id="text" class="grid md:pt-10 md:flex md:justify-center">
 
-        <div class="md:flex md:gap-2">
+        <vueper-slides
+          class="no-shadow w-12 md:w-full px-20 pb-6"
+          :visible-slides="3"
+          :slide-ratio="1 / 4"
+          :dragging-distance="70">
+
+          <template #arrow-left>
+            <img :src="arrowLeft" alt="arrowleft" class="h-12">
+          </template>
+
+          <template #arrow-right>
+            <img :src="arrowRight" alt="arrowright" class="h-12">
+          </template>
+
+          <vueper-slide 
+            v-for="i in 9"
+            :key="i"
+            :title="i.toString()"
+          />
+<!-- 
+          <template #bullet>
+            <img 
+              :src="arrowRight" 
+              alt="arrowright" 
+              class="h-6">
+          </template> -->
+
+        </vueper-slides>
+
+      </div>
+    </div>
+  </section>
+</template>
+
+<!-- <div class="md:flex md:gap-2">
           <div
             class="grid pt-6 pb-16 px-4 shadow-md bg-basic-white rounded-2xl md:h-[236px] md:w-[368px]"
             v-for="work in card"
@@ -24,27 +57,15 @@
             <h1 class="text-h6 font-semibold">{{ work.header }}</h1>
             <span class="text-body4 font-medium">{{ work.content }}</span>
           </div>
-        </div>
-        <span class="grid content-center text-right"> <img :src="arrowRight" alt="" class="h-12"> </span>
-      </div>
-    </div>
-
-    <div
-      id="stepper"
-      class="container px-6 mx-auto mb-20 grid justify-center py-10"
-    >
-      <ul class="dots flex gap-6">
-        <li>List</li>
-        <li>List</li>
-        <li>List</li>
-      </ul>
-    </div>
-  </section>
-</template>
+        </div> -->
 
 <script>
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
+
 export default {
   name: "work",
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
       bg: "src/assets/img/Home/Backgrund/background_2.png",
@@ -81,4 +102,23 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.vueperslides__bullet .default {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  box-shadow: none;
+  transition: 0.3s;
+  width: 16px;
+  height: 16px;
+}
+
+.vueperslides__bullet--active .default {background-color: #42b983;}
+
+.vueperslides__bullet span {
+  display: block;
+  color: #fff;
+  font-size: 10px;
+  opacity: 0.8;
+}
+</style>

@@ -1,19 +1,25 @@
 <template>
-  <section class="md:h-screen">
-    <div class="container px-6 mx-auto md:pt-20 md:flex flex-wrap">
+
+<MqResponsive target="md-xl">
+  <section class="h-screen pt-28">
+    <div class="flex container px-6 mx-auto">
+      <!-- grid left -->
       <div class="grid basis-1/2 transition ease-in-out duration-300 ">
         <div class="flex flex-col justify-center">
-          <div class="font-black text-center md:text-left text-h3 md:text-h1"> 
-           <div class="pb-2 flex"> 
+          <div class="text-h1 font-black text-center">
+            <!-- Text Title -->
+            <div class="pb-2 flex"> 
              {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
            </div>
-            <div class="text-basic-black flex flex-wrap">
+           <div class="text-basic-black flex flex-wrap">
               your <div class="text-primary-brand pl-4"> {{heroItem.header2}}</div>
-            </div>
+           </div>
           </div>
+          <!-- Text body -->
           <span class="pt-6 text-body1 font-medium max-w-lg text-center md:text-left ">
             {{heroItem.body}}
           </span>
+          <!-- Product Flex -->
           <div class="flex pt-6 max-w-lg md:gap-6">
             <div class="flex" v-for="productList in product" :key="productList.id">
               <div id="icon" class="pr-2 w-12 md:w-20">
@@ -27,10 +33,11 @@
           </div>
         </div>
       </div>
+      <!-- grid right -->
       <div class="grid basis-1/2">
-        <div class="md:justify-items-center">
+        <div class="justify-items-center">
           <img 
-              class="h-96 my-20 w-fit md:my-0 md:h-full" 
+              class="h-[80vh]" 
               :src="heroItem.image" 
               alt=""
           >
@@ -38,14 +45,63 @@
       </div>
     </div>
   </section>
+</MqResponsive>
+
+<MqResponsive :target="['xs']">
+  <section class="">
+    <div class="grid container px-6 mx-auto">
+      <!-- grid left -->
+      <div class="flex justify-center basis-1/2">
+          <img 
+              class="h-[33vh] pb-4" 
+              :src="heroItem.image" 
+              alt=""
+          >
+      </div>
+      <!-- grid right -->
+      <div class="grid basis-1/2 transition ease-in-out duration-300 ">
+        <div class="grid gap-4">
+          <!-- Text Title -->
+          <div class="text-h4 font-black text-left">
+            <div class="flex"> 
+             {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
+           </div>
+           <div class="text-basic-black flex flex-wrap">
+              your <div class="text-primary-brand pl-4"> {{heroItem.header2}}</div>
+           </div>
+          </div>
+          <!-- Text body -->
+          <span class="text-body4 font-medium text-left ">
+            {{heroItem.body}}
+          </span>
+
+          <!-- Product Flex -->
+          <div class="flex gap-2 justify-center pt-6">
+            <div class="flex" v-for="productList in product" :key="productList.id">
+              <div id="icon" class="pr-2 w-14">
+                <img :src="productList.img" alt="">
+              </div>
+              <div id="text">
+                <div class="font-semibold text-[20px]">{{productList.title}}</div>
+                <div class="font-medium text-[12px]">{{productList.body}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MqResponsive>
+
 </template>
 
 <script>
-import { AOS } from 'aos';
+import { MqResponsive } from "vue3-mq";
+
 export default {
-  onMounted() {
-    AOS.init();
-  },
+  components: {
+        MqResponsive
+    },
   data() {
     return {
       heroItem: {
