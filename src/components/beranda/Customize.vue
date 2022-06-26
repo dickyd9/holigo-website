@@ -1,5 +1,36 @@
 <template>
-    <MqResponsive target="md-xl">
+<MqResponsive :target="['xl']">
+    <section id="custom" 
+             class="w-full grid justify-center py-20 mb-20">
+
+        <div class="container w-screen h-[600px] " 
+             :style="{ 'background-image': `url(${(bg)})`, 'background-size': '100%'}">
+
+             <div class="flex mt-24 mx-20">
+                <div class="max-w-[700px] justify-around">
+                    <h1 class="text-h1 font-bold"> 
+                        <span class="text-primary-brand">Costumize</span> {{header}}
+                    </h1>
+
+                    <h1 class="text-body3 pt-4">
+                        {{body}}
+                    </h1>
+                    
+                    <div class="mt-6">
+                        <Button>Request Trip</Button>
+                    </div>
+                </div>
+                <div class="w-full grid content-center justify-center">
+                    <img 
+                        :src="image" 
+                        alt=""
+                        class="h-[50vh]">
+                </div>
+            </div>
+        </div>
+    </section>
+</MqResponsive>
+<MqResponsive :target="['lg']">
     <section id="custom" 
              class="w-full grid justify-center py-16">
 
@@ -29,34 +60,7 @@
             </div>
         </div>
     </section>
-    </MqResponsive>
-  <!-- <section id="custom" class="w-full grid justify-center mb-96 my-20 md:mb-20 h-96">
-      <div class="container px-12 mx-auto " :style="{
-                    'background-image': `url(${(bg)})`,
-                    'background-size': '100%'}">
-        <div class="flex mt-8">
-            <div class="max-w-[40vw] justify-around">
-                <h1 class="text-h2 font-bold"> 
-                    <span class="text-primary-brand">Costumize</span> {{header}}
-                </h1>
-
-                <h1 class="text-body2 pt-4">
-                    {{body}}
-                </h1>
-                
-                <div class="mt-6">
-                    <Button>Request Trip</Button>
-                </div>
-            </div>
-            <div class="w-full grid content-center justify-center">
-                <img 
-                    :src="image" 
-                    alt=""
-                    class="h-80">
-            </div>
-        </div>
-      </div>
-  </section> -->
+</MqResponsive>
 </template>
 
 <script>

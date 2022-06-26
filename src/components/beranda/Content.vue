@@ -1,5 +1,21 @@
 <template>
-  <MqResponsive target="md-xl">
+  <MqResponsive :target="['xl']">
+    <section class="h-full px-10">
+      <div class="container px-6 mx-auto md:my-24 md:flex">
+        <div class="basis-1/2 items-center">
+          <img :src="image" alt="" class="w-[586px]"/>
+        </div>
+        <div class="grid basis-1/2 content-center">
+            <img :src="style" class="w-20 pb-6">
+            <div class="text-h2 font-black">{{header}}</div>
+            <span class="pt-2 text-body3">{{body}}</span>
+            <Button type="button" class="cursor-pointer mt-6">Selengkapnya</Button>
+        </div>
+      </div>
+    </section>
+  </MqResponsive>
+
+  <MqResponsive :target="['lg']">
     <section class="h-full px-10">
       <div class="container px-6 mx-auto md:my-24 md:flex">
         <div class="basis-1/2 items-center">

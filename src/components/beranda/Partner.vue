@@ -1,4 +1,144 @@
 <template>
+<MqResponsive :target="['xl']">
+    <section>
+    <div class="flex flex-wrap">
+      <div class="container px-6 mx-auto w-full mb-20">
+        <!-- Header Tab Start -->
+        <ul
+          class="flex mb-0 list-none flex-wrap pt-3 pb-4 justify-center gap-6"
+        >
+        <!-- Tab1 -->
+          <li class="text-center">
+            <a
+              class="font-bold hover:text-primary-brand hover:cursor-pointer"
+              v-on:click="toggleTabs(1)"
+              v-bind:class="{
+                'text-basic-black text-h3': openTab !== 1,
+                'border-b-primary-brand': openTab === 1,
+                'border-b-2': openTab === 1,
+              }"
+            >
+              Transportasi
+            </a>
+          </li>
+        <!-- Tab2 -->
+          <li class="text-center">
+            <a
+              class="font-bold hover:text-primary-brand hover:cursor-pointer"
+              v-on:click="toggleTabs(2)"
+              v-bind:class="{
+                'text-basic-black': openTab !== 2,
+                'border-b-primary-brand': openTab === 2,
+                'border-b-2': openTab === 2,
+              }"
+            >
+              Hotel
+            </a>
+          </li>
+        <!-- Tab3 -->
+          <li class="text-center">
+            <a
+              class="font-bold hover:text-primary-brand hover:cursor-pointer"
+              v-on:click="toggleTabs(3)"
+              v-bind:class="{
+                'text-basic-black': openTab !== 3,
+                'border-b-primary-brand': openTab === 3,
+                'border-b-2': openTab === 3,
+              }"
+            >
+              Pulsa & Paket data
+            </a>
+          </li>
+        <!-- Tab4 -->
+          <li class="text-center">
+            <a
+              class="font-bold hover:text-primary-brand hover:cursor-pointer"
+              v-on:click="toggleTabs(4)"
+              v-bind:class="{
+                'text-basic-black': openTab !== 4,
+                'border-b-primary-brand': openTab === 4,
+                'border-b-2': openTab === 4,
+              }"
+            >
+              Tagihan & Isi Ulang
+            </a>
+          </li>
+        </ul>
+        <!-- Header Tab End -->
+        
+        <!-- Content Tab Start -->
+        <div
+          class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6"
+        >
+          <div class="py-10 flex-auto">
+            <div class="tab-content tab-space">
+              <!-- Content tab1 -->
+              <div
+                v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }"
+              >
+                <div class="grid grid-cols-6 gap-y-6">
+                  <div
+                    class="grid justify-center"
+                    v-for="transport in transportList"
+                    :key="transport.id"
+                  >
+                    <img :src="transport.img" alt="" class="h-28 w-28" />
+                  </div>
+                </div>
+              </div>
+              <!-- Content tab2 -->
+              <div
+                v-bind:class="{ hidden: openTab !== 2, block: openTab === 2 }"
+              >
+                <div class="grid grid-cols-6 gap-y-6">
+                  <div
+                    class="grid justify-center"
+                    v-for="hotel in hotelList"
+                    :key="hotel.id"
+                  >
+                    <img :src="hotel.img" alt="" class="h-28 w-28" />
+                  </div>
+                </div>
+              </div>
+              <!-- Content tab3 -->
+              <div
+                v-bind:class="{ hidden: openTab !== 3, block: openTab === 3 }"
+              >
+                <div class="grid grid-cols-6 gap-y-6">
+                  <div
+                    class="grid justify-center"
+                    v-for="pp in ppList"
+                    :key="pp.id"
+                  >
+                    <img :src="pp.img" alt="" class="h-28 w-28" />
+                  </div>
+                </div>
+              </div>
+              <!-- Content tab4 -->
+              <div
+                v-bind:class="{ hidden: openTab !== 4, block: openTab === 4 }"
+              >
+                <div class="grid grid-cols-6 gap-y-6">
+                  <div
+                    class="grid justify-center"
+                    v-for="tagihan in tagihanList"
+                    :key="tagihan.id"
+                  >
+                    <img :src="tagihan.img" alt="" class="h-28 w-28" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Tab End -->
+
+      </div>
+    </div>
+  </section>
+</MqResponsive>
+
+<MqResponsive :target="['lg']">
   <section>
     <div class="flex flex-wrap">
       <div class="container px-6 mx-auto w-full">
@@ -121,11 +261,22 @@
       </div>
     </div>
   </section>
+</MqResponsive>
+
+<MqResponsive :target="['sm']">
+
+</MqResponsive>
+
+
 </template>
 
 <script>
+import { MqResponsive } from "vue3-mq";
 export default {
   name: "brand-tabs",
+  components: {
+        MqResponsive
+    },
   data() {
     return {
       openTab: 1,

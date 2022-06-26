@@ -1,5 +1,65 @@
 <template>
-  <MqResponsive target="md-xl">
+  <MqResponsive :target="['xl']">
+    <section class="h-full py- mb-24 content-center">
+      <div class="container px-6 mx-auto my-5">
+        <div class="text-center justify-center pb-16">
+          <h1 class="text-h3 font-black">{{ header }}</h1>
+          <span class="pt-2">{{ body }}</span>
+        </div>
+        <div
+          class="flex flex-row my-16 gap-5"
+        >
+        <Card class="relative" v-for="fr in card" :key="fr.id">
+            <img
+              :src="fr.image"
+              alt=""
+              class="w-40 absolute pb-5 left-2 bottom-32"
+            />
+            <div class="pt-10 pb-5 px-5">
+              <h1 class="text-h6 font-bold mb-2 text-basic-black">
+                {{ fr.header }}
+              </h1>
+              <p class="text-basic-black">
+                {{ fr.content }}
+              </p>
+            </div>
+        </Card>
+        </div>
+      </div>
+    </section>
+  </MqResponsive>
+
+  <MqResponsive :target="['lg']">
+    <section class="h-full py-16 content-center">
+      <div class="container px-6 mx-auto my-5">
+        <div class="text-center justify-center pb-16">
+          <h1 class="text-h3 font-black">{{ header }}</h1>
+          <span class="pt-2">{{ body }}</span>
+        </div>
+        <div
+          class="flex flex-row mt-10 gap-5"
+        >
+        <Card class="relative" v-for="fr in card" :key="fr.id">
+            <img
+              :src="fr.image"
+              alt=""
+              class="w-24 absolute pb-5 left-4 bottom-28"
+            />
+            <div class="pt-10 pb-5 px-5">
+              <h1 class="text-h6 font-bold mb-2 text-basic-black">
+                {{ fr.header }}
+              </h1>
+              <p class="text-basic-black">
+                {{ fr.content }}
+              </p>
+            </div>
+        </Card>
+        </div>
+      </div>
+    </section>
+  </MqResponsive>
+
+  <MqResponsive :target="['sm']">
     <section class="h-full py-16 content-center">
       <div class="container px-6 mx-auto my-5">
         <div class="text-center justify-center pb-16">

@@ -12,7 +12,14 @@ const app = createApp(App);
 app.use(router);
 app.use(store);
 app.use(Vue3Mq, {
-    preset: 'tailwind'
+    preset: 'tailwind',
+    breakpoints: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1366,
+        xl: 1903,
+    }
 });
 
 app.use(store).mount("#app");

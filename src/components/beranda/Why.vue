@@ -1,5 +1,70 @@
 <template>
-  <MqResponsive target="md-xl">
+  <MqResponsive :target="['xl']">
+    <section
+      id="why"
+      class="h-full py-20 mb-24 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
+    >
+    
+      <div class="container px-6 mx-auto mt-12 justify-items-center">
+        <div class="flex flex-col pb-16 text-center justify-center">
+          <h1 class="text-h1 font-black text-text-grey6">{{header}}</h1>
+          <span class="pt-2 text-body3 text-text-grey6">
+            {{body}}</span>
+        </div>
+        <div class="flex flex-row my-16 gap-5">
+          <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
+            <img
+              :src="cardItem.image"
+              alt=""
+              class="w-40 absolute pb-5 left-2 bottom-36"
+            />
+            <div class="pt-16 h-56 px-5">
+              <h1 class="text-body2 font-bold mb-4 text-basic-black">
+                {{ cardItem.header }}
+              </h1>
+              <p class="text-basic-black text-p1">
+                {{ cardItem.content }}
+              </p>
+            </div>
+          </Card>
+        </div>
+    </div>
+    </section>
+  </MqResponsive>
+
+  <MqResponsive :target="['lg']">
+    <section
+      id="why"
+      class="h-full py-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
+    >
+      <div class="container px-6 mx-auto mt-12 justify-items-center">
+        <div class="flex flex-col pb-6 text-center justify-center md:pb-16">
+          <h1 class="text-h1 font-black text-text-grey6">{{header}}</h1>
+          <span class="pt-2 text-body3 text-text-grey6">
+            {{body}}</span>
+        </div>
+        <div class="flex flex-row mt-10 pb-24 gap-5">
+          <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
+            <img
+              :src="cardItem.image"
+              alt=""
+              class="w-24 absolute pb-5 left-4 bottom-28"
+            />
+            <div class="pt-10 pb-5 px-5">
+              <h1 class="text-body2 font-bold mb-4 text-basic-black">
+                {{ cardItem.header }}
+              </h1>
+              <p class="text-basic-black text-p1">
+                {{ cardItem.content }}
+              </p>
+            </div>
+          </Card>
+        </div>
+    </div>
+    </section>
+  </MqResponsive>
+
+  <MqResponsive :target="['sm']">
     <section
       id="why"
       class="h-full py-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
