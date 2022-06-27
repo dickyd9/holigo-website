@@ -30,9 +30,10 @@
         </div>
     </section>
 </MqResponsive>
+
 <MqResponsive :target="['lg']">
     <section id="custom" 
-             class="w-full grid justify-center py-16">
+             class="w-full grid justify-center py-16 mb-12">
 
         <div class="container w-screen h-[500px] " 
              :style="{ 'background-image': `url(${(bg)})`, 'background-size': '100%'}">

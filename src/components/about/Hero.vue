@@ -1,21 +1,42 @@
 <template>
-  <section id="hero" :style="{'background-image': `url(${(bg)})`,'background-size': '100vw'}" class="h-[100vh] grid md:flex flex-wrap">
-        <div class="container px-6 mx-auto">
-            <div class="grid justify-items-center items-center py-52">
-                <h1 class="font-black text-center text-h2 text-basic-white md:max-w-3xl md:text-h1">
-                    <span class="text-primary-brand">Semua</span> {{header}}
-                </h1>
-                <span class="text-center pt-6 text-body3 font-thin max-w-md text-basic-white">
-                    {{body}}
-                </span>
+    <MqResponsive :target="['lg']">
+    <section id="hero" :style="{'background-image': `url(${(bg)})`,'background-size': '100vw'}" class="h-[100vh] flex flex-wrap">
+            <div class="container px-6 mx-auto">
+                <div class="grid justify-items-center items-center py-52">
+                    <h1 class="font-black text-center text-h2 text-basic-white md:max-w-3xl md:text-h1">
+                        <span class="text-primary-brand">Semua</span> {{header}}
+                    </h1>
+                    <span class="text-center pt-6 text-body3 font-thin max-w-md text-basic-white">
+                        {{body}}
+                    </span>
+                </div>
             </div>
-        </div>
-  </section>
+    </section>
+    </MqResponsive>
+
+    <MqResponsive :target="['xs']">
+        <section id="hero" :style="{'background-image': `url(${(bg)})`,'background-size': '100vw'}" class="h-[100vh] flex flex-wrap">
+                <div class="container px-6 mx-auto">
+                    <div class="grid justify-items-center items-center py-72">
+                        <h1 class="font-black text-center text-h4 text-basic-white md:max-w-3xl md:text-h1">
+                            <span class="text-primary-brand">Semua</span> {{header}}
+                        </h1>
+                        <span class="text-center pt-6 text-p1 font-thin max-w-md text-basic-white">
+                            {{body}}
+                        </span>
+                    </div>
+                </div>
+        </section>
+    </MqResponsive>
 </template>
 
 <script>
+import { MqResponsive } from "vue3-mq";
 export default {
     name: "hero",
+    components:{
+        MqResponsive
+    },
     data() {
         return {
             bg: "src/assets/img/AboutUs/hero-background.png",

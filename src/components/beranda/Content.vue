@@ -32,7 +32,7 @@
   </MqResponsive>
 
   <MqResponsive :target="['xs']">
-    <section class="h-full px-5  pt-20">
+    <section class="h-full px-5 py-20">
       <div class="container px-6 mx-auto ">
         <!-- image -->
         <div class="basis-1/2 items-center flex justify-center">

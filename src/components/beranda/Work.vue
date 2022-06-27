@@ -57,7 +57,7 @@
 <MqResponsive :target="['lg']">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover"
+    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
   >
     <div class="container mx-auto pt-20">
       <div id="text" class="text-center text-text-grey6">
@@ -67,10 +67,10 @@
         <div class="text-body2">{{ body }}</div>
       </div>
 
-      <div id="text" class="grid md:pt-10 md:flex md:justify-center">
+      <div id="text" class="pt-10 flex justify-center">
 
         <vueper-slides
-          class="no-shadow w-full px-20 pb-6"
+          class="no-shadow w-full px-16 pb-2"
           :visible-slides="3"
           :slide-ratio="1 / 4"
           :dragging-distance="70"
@@ -90,52 +90,96 @@
           >
           <template #content>
             <div class="vueperslide__content-wrapper">
-              <div class="grid bg-basic-white rounded-3xl p-10 h-72">
+              <div class="grid bg-basic-white rounded-3xl p-5 w-[368px] h-[236px]">
                 <div>
-                  <img :src="work.img" alt="" class="w-28" />
+                  <img :src="work.img" alt="" class="w-24" />
                 </div>
-                <div class="pt-6 text-left">
+                <div class="pt-4 text-left">
                   <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
-                  <div class="vueperslide__content text-h6 font-thin">{{ work.content }}</div>
+                  <div class="vueperslide__content text-body3 font-thin">{{ work.content }}</div>
+                </div>
+              </div>
+            </div>
+          </template>
+          </vueper-slide>
+
+          <template #bullet>
+
+          </template>
+        </vueper-slides>
+      </div>
+        <div class="flex justify-center">
+          <Button class="mb-28">
+            Yuk, Gabung!
+          </Button>
+        </div>
+    </div>
+  </section>
+</MqResponsive>
+
+<MqResponsive :target="['xs']">
+  <section
+    id="work"
+    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
+  >
+    <div class="container mx-auto pt-20">
+      <div id="text" class="text-center text-text-grey6">
+        <div class="text-h4 font-bold">
+          <span class="text-primary-brand">Mending</span> {{ header }}
+        </div>
+      </div>
+
+      <div id="text" class="pt-10 flex justify-center">
+        <vueper-slides
+          class="no-shadow w-full px-2 pb-2"
+          :bulletsOutside="true"
+          :arrows="false"
+          :visible-slides="1"
+          :slide-ratio="1 / 2"
+          :dragging-distance="120"
+          :gap="1">
+
+          <vueper-slide 
+            v-for="(work, i) in card"
+            :key="i"
+          >
+          <template #content>
+            <div class="vueperslide__content-wrapper">
+              <div class="grid bg-basic-white rounded-3xl px-4 py-4 w-[350px] h-[200px]">
+                <div>
+                  <img :src="work.img" alt="" class="w-16" />
+                </div>
+                <div class="py-4 text-left">
+                  <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
+                  <div class="vueperslide__content text-body3 font-thin">{{ work.content }}</div>
                 </div>
               </div>
             </div>
           </template>
           </vueper-slide>
         </vueper-slides>
-
       </div>
+        <div class="flex justify-center">
+          <Button class="mb-28">
+            Yuk, Gabung!
+          </Button>
+        </div>
     </div>
   </section>
-</MqResponsive>
-
-<MqResponsive :target="['sm']">
-
 </MqResponsive>
 
   
 </template>
 
-<!-- <div class="md:flex md:gap-2">
-          <div
-            class="grid pt-6 pb-16 px-4 shadow-md bg-basic-white rounded-2xl md:h-[236px] md:w-[368px]"
-            v-for="work in card"
-            :key="work.id"
-          >
-            <img :src="work.img" alt="" class="w-28" />
-            <h1 class="text-h6 font-semibold">{{ work.header }}</h1>
-            <span class="text-body4 font-medium">{{ work.content }}</span>
-          </div>
-        </div> -->
-
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 import { MqResponsive } from "vue3-mq";
+import Button from '@/components/Button.vue'
 
 export default {
   name: "work",
-  components: { VueperSlides, VueperSlide, MqResponsive },
+  components: { VueperSlides, VueperSlide, MqResponsive, Button },
   data() {
     return {
       currentSlide: 0,
@@ -145,6 +189,8 @@ export default {
 
       arrowLeft: "src/assets/img/icon/pagination_icon_left.png",
       arrowRight: "src/assets/img/icon/pagination_icon_right.png",
+
+
 
       card: [
         {
@@ -170,16 +216,23 @@ export default {
 
         {
           id: 4,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli dengan kesehatan.png",
-          header: "Peduli Kesehatan",
-          content: "Kami peduli dengan kesehatan kamu",
+          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli dengan hakmu.png",
+          header: "Peduli Hak Kamu",
+          content: "Kami peduli hak kamu sebagai tenaga kerja",
         },
 
         {
           id: 5,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli dengan kesehatan.png",
-          header: "Peduli Kesehatan",
-          content: "Kami peduli dengan kesehatan kamu",
+          img: "src/assets/img/Home/Budaya holigo/website illust icon-semua disediakan.png",
+          header: "Semua Disediain",
+          content: "Laptop, coffee, dan lainnya kami sediain",
+        },
+
+        {
+          id: 6,
+          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli potensi.png",
+          header: "Peduli Potensimu",
+          content: "Kami mau potensi kamu terus berkembang",
         },
       ],
     };
@@ -187,20 +240,28 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.vueperslides__bullet {
+    margin-left: 4px;
+    margin-bottom: 32px;
+    padding: 0;
+    border: none;
+    background: none;
+}
 
 .vueperslides__bullet .default {
-  background-color: rgba(158, 158, 158, 0.3);
+  background-color: #E0E0E0;
   border: none;
   box-shadow: none;
-  transition: 0.3s;
+  transition: 0.5s;
+  margin: 0px;
   width: 12px;
   height: 12px;
 }
 
 .vueperslides__bullet--active .default {
-  background-color: #42b983;
-  width: 30px; 
+  background-color: #00BD17;
+  width: 24px; 
 }
 
 .vueperslides__bullet span {

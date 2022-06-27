@@ -12,11 +12,11 @@
             {{body}}</span>
         </div>
         <div class="flex flex-row my-16 gap-5">
-          <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
+          <Card class="relative h-80 w-[298px]" v-for="cardItem in card" :key="cardItem.id">
             <img
               :src="cardItem.image"
               alt=""
-              class="w-40 absolute pb-5 left-2 bottom-36"
+              class="w-40 absolute pb-5 left-2 bottom-60"
             />
             <div class="pt-16 h-56 px-5">
               <h1 class="text-body2 font-bold mb-4 text-basic-black">
@@ -35,22 +35,22 @@
   <MqResponsive :target="['lg']">
     <section
       id="why"
-      class="h-full py-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
+      class="h-full content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover pt-28 pb-56" 
     >
-      <div class="container px-6 mx-auto mt-12 justify-items-center">
-        <div class="flex flex-col pb-6 text-center justify-center md:pb-16">
+      <div class="container px-6 mx-auto justify-items-center">
+        <div class="flex flex-col text-center justify-center pb-24">
           <h1 class="text-h1 font-black text-text-grey6">{{header}}</h1>
           <span class="pt-2 text-body3 text-text-grey6">
             {{body}}</span>
         </div>
-        <div class="flex flex-row mt-10 pb-24 gap-5">
+        <div class="flex flex-row gap-5">
           <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
             <img
               :src="cardItem.image"
               alt=""
-              class="w-24 absolute pb-5 left-4 bottom-28"
+              class="w-24 absolute pb-5 left-4 bottom-32"
             />
-            <div class="pt-10 pb-5 px-5">
+            <div class="pt-16 pb-5 px-5">
               <h1 class="text-body2 font-bold mb-4 text-basic-black">
                 {{ cardItem.header }}
               </h1>
@@ -64,23 +64,63 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['sm']">
+  <MqResponsive :target="['xs']">
     <section
       id="why"
       class="h-full py-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
     >
       <div class="container px-6 mx-auto mt-12 justify-items-center">
-        <div class="flex flex-col pb-6 text-center justify-center md:pb-16">
-          <h1 class="text-h1 font-black text-text-grey6">{{header}}</h1>
-          <span class="pt-2 text-body3 text-text-grey6">
+        <div class="flex flex-col pb-16 text-center justify-center">
+          <h1 class="text-h4 font-black text-text-grey6">{{header}}</h1>
+          <span class="pt-2 text-body4 text-text-grey6">
             {{body}}</span>
         </div>
-        <div class="flex flex-row mt-10 pb-24 gap-5">
-          <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
+        <!-- Card Content -->
+        <div id="text" class="pt-10 flex justify-center">
+        <vueper-slides
+          class="no-shadow w-full px-2 pb-2"
+          :bulletsOutside="true"
+          :arrows="false"
+          :visible-slides="1"
+          :slide-ratio="1 / 2"
+          :dragging-distance="120"
+          :gap="1">
+
+          <vueper-slide 
+            v-for="(cardItem, i) in card"
+            :key="i"
+          >
+          <template #content>
+            <div class="vueperslide__content-wrapper">
+              <div class="grid bg-basic-white rounded-3xl px-4 py-4 w-[350px] h-[200px]">
+                <div>
+                  <img :src="cardItem.image" alt="" class="w-16" />
+                </div>
+                <div class="py-4 text-left">
+                  <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
+                  <div class="vueperslide__content text-body3 font-thin">{{ work.content }}</div>
+                </div>
+              </div>
+            </div>
+          </template>
+          </vueper-slide>
+        </vueper-slides>
+      </div>
+        <!-- <vueper-slides
+          class="no-shadow w-full px-16 pb-2"
+          :visible-slides="3"
+          :slide-ratio="1 / 4"
+          :dragging-distance="70"
+          :gap="1">
+          <vueper-slide 
+            v-for="(cardItem, i) in card"
+            :key="i"
+          >
+          <Card class="relative">
             <img
               :src="cardItem.image"
               alt=""
-              class="w-24 absolute pb-5 left-4 bottom-28"
+              class="w-24 absolute pb-5 left-4 bottom-24"
             />
             <div class="pt-10 pb-5 px-5">
               <h1 class="text-body2 font-bold mb-4 text-basic-black">
@@ -91,8 +131,9 @@
               </p>
             </div>
           </Card>
-        </div>
-    </div>
+          </vueper-slide>
+        </vueper-slides> -->
+      </div>
     </section>
   </MqResponsive>
 </template>

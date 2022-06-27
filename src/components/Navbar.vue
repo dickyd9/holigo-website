@@ -12,8 +12,8 @@
       "
     >
       <div class="flex items-center justify-between">
-        <img src="../../public/img/logo/navbar-logo-white.png" alt="" class="w-36 md:w-24" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
-        <img src="../../public/img/logo/navbar-logo-color.png" alt="" class="w-36 md:w-24" v-else>
+        <img src="/img/logo/navbar-logo-white.png" alt="" class="w-36 md:w-24" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
+        <img src="/img/logo/navbar-logo-color.png" alt="" class="w-36 md:w-24" v-else>
   
         <!-- Mobile menu button -->
         <div @click="showMenu = !showMenu" class="flex md:hidden">

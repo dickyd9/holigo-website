@@ -140,10 +140,22 @@
 
 <MqResponsive :target="['lg']">
   <section>
-    <div class="flex flex-wrap">
-      <div class="container px-6 mx-auto w-full">
+    <div class="grid">
+      <!-- Title -->
+      <div class="flex flex-col text-center mb-10">
+        <span class="text-h1 font-bold">
+          Partner <span class="text-primary-brand">Terpercaya</span>
+        </span>
+        <span class="text-body1 pt-2">
+          Mitra kami yang bisa kamu percaya dari segi keamanan & kenyamanan.
+        </span>
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto w-full mb-20">
+        <!-- Header Tab -->
         <ul
-          class="flex mb-0 list-none flex-wrap pt-3 pb-4 justify-center gap-6"
+          class="flex mb-0 list-none flex-wrap pt-6 pb-6 justify-center gap-6"
         >
           <li class="text-center">
             <a
@@ -199,9 +211,9 @@
           </li>
         </ul>
         <div
-          class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6"
+          class="relative flex flex-col bg-white w-full mb-12"
         >
-          <div class="py-5 flex-auto">
+          <div class="pt-12 flex-auto">
             <div class="tab-content tab-space">
               <div
                 v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }"
@@ -263,7 +275,7 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['sm']">
+<MqResponsive :target="['xs']">
 
 </MqResponsive>
 

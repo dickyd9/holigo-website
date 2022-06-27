@@ -39,13 +39,13 @@
         <div
           class="flex flex-row mt-10 gap-5"
         >
-        <Card class="relative" v-for="fr in card" :key="fr.id">
+        <Card class="relative w-80" v-for="fr in card" :key="fr.id">
             <img
               :src="fr.image"
               alt=""
-              class="w-24 absolute pb-5 left-4 bottom-28"
+              class="w-24 absolute pb-5 left-4 bottom-32"
             />
-            <div class="pt-10 pb-5 px-5">
+            <div class="pt-16 pb-5 px-5">
               <h1 class="text-h6 font-bold mb-2 text-basic-black">
                 {{ fr.header }}
               </h1>
@@ -59,7 +59,7 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['sm']">
+  <MqResponsive :target="['xs']">
     <section class="h-full py-16 content-center">
       <div class="container px-6 mx-auto my-5">
         <div class="text-center justify-center pb-16">
@@ -67,7 +67,7 @@
           <span class="pt-2">{{ body }}</span>
         </div>
         <div
-          class="flex flex-row mt-10 gap-5"
+          class="grid mt-10 gap-5"
         >
         <Card class="relative" v-for="fr in card" :key="fr.id">
             <img
@@ -92,11 +92,15 @@
 
 <script>
 import { MqResponsive } from "vue3-mq";
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 import Card from '../Card.vue'
 export default {
   components:{
     Card,
-    MqResponsive
+    MqResponsive, 
+    VueperSlides, 
+    VueperSlide,
   },
   data() {
     return {
