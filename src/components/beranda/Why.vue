@@ -67,84 +67,64 @@
   <MqResponsive :target="['xs']">
     <section
       id="why"
-      class="h-full py-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
+      class="h-full bg-[url('src/assets/img/Home/Backgrund/background_why_holigo.png')] bg-cover mb-14" 
     >
-      <div class="container px-6 mx-auto mt-12 justify-items-center">
-        <div class="flex flex-col pb-16 text-center justify-center">
+      <div class="container pt-20 mx-auto">
+        
+        <div class="flex flex-col text-center justify-center pb-6">
           <h1 class="text-h4 font-black text-text-grey6">{{header}}</h1>
           <span class="pt-2 text-body4 text-text-grey6">
             {{body}}</span>
         </div>
         <!-- Card Content -->
-        <div id="text" class="pt-10 flex justify-center">
-        <vueper-slides
-          class="no-shadow w-full px-2 pb-2"
-          :bulletsOutside="true"
-          :arrows="false"
-          :visible-slides="1"
-          :slide-ratio="1 / 2"
-          :dragging-distance="120"
-          :gap="1">
+        
+        <div id="text" class="relative flex justify-center">
+          <vueper-slides
+            class="no-shadow w-full px-2 pb-2 relative "
+            :bulletsOutside="true"
+            :arrows="false"
+            :visible-slides="1"
+            :slide-ratio="1 / 2"
+            :dragging-distance="120"
+            :gap="1">
 
-          <vueper-slide 
-            v-for="(cardItem, i) in card"
-            :key="i"
-          >
-          <template #content>
-            <div class="vueperslide__content-wrapper">
-              <div class="grid bg-basic-white rounded-3xl px-4 py-4 w-[350px] h-[200px]">
-                <div>
-                  <img :src="cardItem.image" alt="" class="w-16" />
-                </div>
-                <div class="py-4 text-left">
-                  <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
-                  <div class="vueperslide__content text-body3 font-thin">{{ work.content }}</div>
+            <vueper-slide 
+              v-for="(work, i) in card"
+              :key="i"
+              class="relative"
+            >
+            <template #content>
+              <div class="vueperslide__content-wrapper relative">
+                <div class="relative grid bg-basic-white rounded-3xl px-4 py-4 w-[272px] h-[191px]">
+                    <img :src="work.image" alt="" class="absolute w-16 bottom-40"/>
+                  <div class="py-4 text-left">
+                    <div class="vueperslide__title text-body1 font-bold">{{ work.header }}</div>
+                    <div class="vueperslide__content text-p1 font-thin">{{ work.content }}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </template>
-          </vueper-slide>
-        </vueper-slides>
-      </div>
-        <!-- <vueper-slides
-          class="no-shadow w-full px-16 pb-2"
-          :visible-slides="3"
-          :slide-ratio="1 / 4"
-          :dragging-distance="70"
-          :gap="1">
-          <vueper-slide 
-            v-for="(cardItem, i) in card"
-            :key="i"
-          >
-          <Card class="relative">
-            <img
-              :src="cardItem.image"
-              alt=""
-              class="w-24 absolute pb-5 left-4 bottom-24"
-            />
-            <div class="pt-10 pb-5 px-5">
-              <h1 class="text-body2 font-bold mb-4 text-basic-black">
-                {{ cardItem.header }}
-              </h1>
-              <p class="text-basic-black text-p1">
-                {{ cardItem.content }}
-              </p>
-            </div>
-          </Card>
-          </vueper-slide>
-        </vueper-slides> -->
+            </template>
+            </vueper-slide>
+          </vueper-slides>
+        </div>
+        
+        
       </div>
     </section>
   </MqResponsive>
 </template>
 
 <script>
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 import { MqResponsive } from "vue3-mq";
 import Card from "../Card.vue";
 export default {
   name: "why",
   components: {
     Card,
+    VueperSlides, 
+    VueperSlide,
     MqResponsive
   },
   data() {

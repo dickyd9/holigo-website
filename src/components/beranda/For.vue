@@ -66,24 +66,34 @@
           <h1 class="text-h3 font-black">{{ header }}</h1>
           <span class="pt-2">{{ body }}</span>
         </div>
-        <div
-          class="grid mt-10 gap-5"
-        >
-        <Card class="relative" v-for="fr in card" :key="fr.id">
-            <img
-              :src="fr.image"
-              alt=""
-              class="w-24 absolute pb-5 left-4 bottom-28"
-            />
-            <div class="pt-10 pb-5 px-5">
-              <h1 class="text-h6 font-bold mb-2 text-basic-black">
-                {{ fr.header }}
-              </h1>
-              <p class="text-basic-black">
-                {{ fr.content }}
-              </p>
-            </div>
-        </Card>
+        <div id="text" class="relative flex justify-center">
+          <vueper-slides
+            class="no-shadow w-full px-2 pb-2 relative "
+            :bulletsOutside="true"
+            :arrows="false"
+            :visible-slides="1"
+            :slide-ratio="1 / 2"
+            :dragging-distance="120"
+            :gap="1">
+
+            <vueper-slide 
+              v-for="(work, i) in card"
+              :key="i"
+              class="relative"
+            >
+            <template #content>
+              <div class="vueperslide__content-wrapper relative">
+                <div class="relative grid bg-basic-white rounded-3xl px-4 py-4 w-[272px] h-[191px]">
+                    <img :src="work.image" alt="" class="absolute w-16 bottom-40"/>
+                  <div class="py-4 text-left">
+                    <div class="vueperslide__title text-body1 font-bold">{{ work.header }}</div>
+                    <div class="vueperslide__content text-p1 font-thin">{{ work.content }}</div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            </vueper-slide>
+          </vueper-slides>
         </div>
       </div>
     </section>

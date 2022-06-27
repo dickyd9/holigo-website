@@ -120,7 +120,7 @@
 <MqResponsive :target="['xs']">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
+    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_benefit_holigo.png')] bg-cover mb-14"
   >
     <div class="container mx-auto pt-20">
       <div id="text" class="text-center text-text-grey6">
