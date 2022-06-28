@@ -1,7 +1,8 @@
 <template>
-    <MqResponsive :target="['lg']">
+    <MqResponsive target="xl">
     <section class="h-full px-10 mx-auto my-32">
-        <div class="container px-6 mx-auto flex odd:flex-row even:flex-row-reverse" v-for="content in contentList" :key="content.id">
+        <div class="container px-6 mx-auto flex odd:flex-row even:flex-row-reverse" 
+             v-for="content in contentList" :key="content.id">
             <div class="basis-1/2 grid justify-center ">
                 <img :src="content.image" alt="" class="h-[403px]">
             </div>
@@ -14,7 +15,23 @@
     </section>
     </MqResponsive>
 
-    <MqResponsive :target="['xs']">
+    <MqResponsive target="md-lg">
+    <section class="h-full px-10 mx-auto my-32">
+        <div class="container px-6 mx-auto flex odd:flex-row even:flex-row-reverse" 
+             v-for="content in contentList" :key="content.id">
+            <div class="basis-1/2 grid justify-center ">
+                <img :src="content.image" alt="" class="h-[403px]">
+            </div>
+            <div class="grid basis-1/2 content-center">
+                <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
+                <h1 class="text-h3 font-black">{{content.header}}</h1>
+                <span class="pt-2">{{content.content}}</span>
+            </div>
+        </div>
+    </section>
+    </MqResponsive>
+
+    <MqResponsive target="xs-sm">
     <section class="h-full px-6 mx-auto my-14 text-center">
         <div class="container px-6 mx-auto grid mb-14" v-for="content in contentList" :key="content.id">
             <div class="grid justify-center mb-12">

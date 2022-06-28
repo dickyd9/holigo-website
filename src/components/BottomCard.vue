@@ -33,7 +33,7 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['xs']">
+<MqResponsive target="xs-sm">
   <section class="grid justify-center mb-16">
     <div class="container px-6 mx-auto">
       <div

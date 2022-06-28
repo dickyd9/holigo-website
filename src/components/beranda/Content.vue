@@ -1,7 +1,7 @@
 <template>
   <MqResponsive :target="['xl']">
     <section class="h-full px-10">
-      <div class="container px-6 mx-auto md:my-24 md:flex">
+      <div class="container mx-auto mb-24 flex">
         <div class="basis-1/2 items-center">
           <img :src="image" alt="" class="w-[586px]"/>
         </div>
@@ -15,7 +15,7 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['lg']">
+  <MqResponsive target="md-lg">
     <section class="h-full px-10">
       <div class="container px-6 mx-auto md:my-24 md:flex">
         <div class="basis-1/2 items-center">
@@ -31,7 +31,7 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['xs']">
+  <MqResponsive target="xs-sm">
     <section class="h-full px-5 py-20">
       <div class="container px-6 mx-auto ">
         <!-- image -->

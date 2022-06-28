@@ -1,5 +1,30 @@
 <template>
-  <MqResponsive :target="['lg']">
+  <MqResponsive target="xl">
+    <section class="container px-6 mx-auto mt-32 mb-20 text-center">
+        <h1 class="text-h3 font-bold">{{header}}</h1>
+        <h1 class="text-h6 pt-2">{{body}}</h1>
+
+        <div class="py-12 flex px-12">
+
+          <div class="basis-1/2 rounded-xl bg-[url('/src/assets/img/AboutUS/background/background_visi.png')] bg-cover h-[650px] p-12">
+            <div class="text-h3 font-bold text-basic-white text-left pb-6">Visi kami</div>
+              <ul class="list-disc text-left text-basic-white pl-6 pr-12" v-for="visi in visiList" :key="visi.id">
+                <li class="pb-4">{{visi}}</li>
+              </ul>
+          </div>
+
+          <div class="basis-1/2 rounded-xl bg-[url('/src/assets/img/AboutUS/background/background_misi.png')] bg-cover h-[650px] p-12">
+            <div class="text-h3 font-bold text-basic-white text-left pb-6">Misi kami</div>
+              <ul class="list-disc text-left text-basic-white pl-6 pr-12" v-for="misi in misiList" :key="misi.id">
+                <li class="pb-4">{{misi}}</li>
+              </ul>
+          </div>
+          
+        </div>
+    </section>
+  </MqResponsive>
+
+  <MqResponsive target="md-lg">
     <section class="container px-6 mx-auto mt-32 mb-20 text-center">
         <h1 class="text-h3 font-bold">{{header}}</h1>
         <h1 class="text-h6 pt-2">{{body}}</h1>
@@ -24,7 +49,7 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['xs']">
+  <MqResponsive target="xs-sm">
     <section class="container px-6 mx-auto mt-32 mb-6 text-center">
       <h1 class="text-h4 font-bold">{{header}}</h1>
         <h1 class="text-p1 pt-2">{{body}}</h1>

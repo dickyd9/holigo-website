@@ -1,22 +1,85 @@
 <template>
-  <header class="top-0 w-full z-10 md:fixed transition ease-in-out duration-50 delay-50" 
-          :class="{ 'transition ease-in-out duration-300 delay-50 bg-basic-white ': !view.topOfPage, 'transition ease-in-out duration-50 delay-50 opacity-0 -translate-y-6': !showNavbar }"
-          >
-    <nav
-      class="
+<MqResponsive target="lg-xl">
+  <header class="top-0 w-full z-10 fixed transition ease-in-out duration-50 delay-50"
+  :class="{ 
+    'transition ease-in-out duration-300 delay-50 bg-basic-white ': !view.topOfPage, 
+    'transition ease-in-out duration-50 delay-50 opacity-0 -translate-y-6': !showNavbar 
+    }">
+    
+    <nav class="
         container
         px-6
         py-5
         mx-auto
-        md:flex md:justify-between md:items-center
-      "
-    >
+        flex 
+        justify-between 
+        items-center
+      ">
+
+      
       <div class="flex items-center justify-between">
         <img src="/img/logo/navbar-logo-white.png" alt="" class="w-36 md:w-24" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
         <img src="/img/logo/navbar-logo-color.png" alt="" class="w-36 md:w-24" v-else>
-  
+      </div>
+
+        <ul
+          class="
+            h-full
+            flex-col
+            mt-8
+            pb-100
+            space-y-4
+            md:flex
+            md:space-y-0
+            md:flex-row
+            md:items-center
+            md:space-x-10
+            md:mt-0
+          "
+        >
+          <router-link :to="link.link" v-for="link in nav">
+            <li class="
+                  font-bold 
+                  text-basic-white 
+                  hover:text-primary-brand 
+                  hover:border-b-2 
+                  hover:border-b-primary-brand" 
+                v-if="$route.path == '/about'" 
+                :class="{ 'text-basic-black': !view.topOfPage}"> 
+              {{link.content}} 
+              </li>
+
+            <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> {{link.content}} </li>
+          </router-link>
+          <Toggle/>
+        </ul>
+    </nav>
+
+  </header>
+</MqResponsive>
+
+<MqResponsive target="xs-md">
+  <header 
+        class="top-0 w-full z-10 fixed transition ease-in-out duration-50 delay-50"
+        :class="{ 
+          'transition ease-in-out duration-300 delay-50 bg-basic-white ': !view.topOfPage, 
+          'transition ease-in-out duration-50 delay-50 opacity-0 -translate-y-6': !showNavbar 
+          }">
+    <nav class="
+        container
+        px-6
+        py-5
+        mx-auto
+        flex
+        flex-col 
+        justify-between
+      ">
+      <div class="flex items-center justify-between">
+        <img src="/img/logo/navbar-logo-white.png" alt="" class="w-24" v-if="$route.path == '/about'" :class="{ '../../public/img/logo/navbar-logo-color.png': !view.topOfPage}">
+        <img src="/img/logo/navbar-logo-color.png" alt="" class="w-24" v-else>
+
         <!-- Mobile menu button -->
-        <div @click="showMenu = !showMenu" class="flex md:hidden">
+        <div @click="showMenu = !showMenu" class="flex">
           <button
             type="button"
             class="
@@ -25,95 +88,105 @@
               focus:outline-none focus:text-gray-400
             "
           >
-            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-              <path
-                fill-rule="evenodd"
-                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-              ></path>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </button>
         </div>
       </div>
 
-
-      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-      <ul
-        :class="showMenu ? 'flex' : 'hidden'"
-        class="
-          h-full
+    <!-- if page about -->
+    <ul
+    :class="showMenu ? 'grid' : 'hidden' "
+    class="h-full
           flex-col
           mt-8
           pb-100
-          space-y-4
-          md:flex
-          md:space-y-0
-          md:flex-row
-          md:items-center
-          md:space-x-10
-          md:mt-0
-        "
-      >
-
-        <router-link to="/">
-          <li class="
-                font-bold 
-                text-basic-white 
-                hover:text-primary-brand 
-                hover:border-b-2 
-                hover:border-b-primary-brand" 
-              v-if="$route.path == '/about'" 
-              :class="{ 'text-basic-black': !view.topOfPage}"> 
-            Beranda 
-            </li>
-
-          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Beranda </li>
-        </router-link>
-
-        <router-link to="/about">
-          <li class="
-                font-bold 
-                text-basic-white 
-                hover:text-primary-brand 
-                hover:border-b-2 
-                hover:border-b-primary-brand" 
-              v-if="$route.path == '/about'" 
-              :class="{ 'text-basic-black': !view.topOfPage}"> 
-            Tentang Kami 
-            </li>
-
-          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Tentang Kami </li>
-        </router-link>
-
-        <router-link to="/karir">
-          <li class="
-                font-bold 
-                text-basic-white 
-                hover:text-primary-brand 
-                hover:border-b-2 
-                hover:border-b-primary-brand" 
-              v-if="$route.path == '/about'" 
-              :class="{ 'text-basic-black': !view.topOfPage}"> 
-            Karir
-            </li>
-
-          <li class="font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> Karir </li>
-        </router-link>
-        <div class="w-14 h-8 flex items-center bg-gray-300 rounded-full p-1" :class="{ 'bg-green-400': toggleActive}" >      
-          <div class="bg-primary-brand w-6 h-6 rounded-full shadow-md grid content-center justify-center" :class="{ 'translate-x-6': toggleActive}">
-              <span class="text-[12px] text-basic-white select-none"> En</span>
-          </div>
-        </div>
-      </ul>
+          space-y-4"
+    v-if="$route.path == '/about'"
+    >
+      <router-link :to="link.link" v-for="link in nav">
+        <li class="
+              list-none
+              font-bold
+              text-basic-white 
+              hover:text-primary-brand 
+              hover:border-b-2 
+              hover:border-b-primary-brand" 
+            v-if="$route.path == '/about'" 
+            :class="{ 'text-basic-black': !view.topOfPage}"> 
+          {{link.content}} 
+          </li>
+        <li class="list-none font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> {{link.content}} </li>
+      </router-link>
+      <Toggle/>
+    </ul>
+    <!-- else -->
+    <ul
+    :class="showMenu ? 'grid bg-basic-white' : 'hidden' "
+    class="h-full
+          flex-col
+          mt-8
+          pb-100
+          space-y-4"
+    v-else
+    >
+      <router-link :to="link.link" v-for="link in nav">
+        <li class="
+              list-none
+              font-bold
+              text-basic-white 
+              hover:text-primary-brand 
+              hover:border-b-2 
+              hover:border-b-primary-brand" 
+            v-if="$route.path == '/about'" 
+            :class="{ 'text-basic-black': !view.topOfPage}"> 
+          {{link.content}} 
+          </li>
+        <li class="list-none font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> {{link.content}} </li>
+      </router-link>
+    <Toggle/>
+    </ul>
     </nav>
   </header>
+
+</MqResponsive>
+
+
+
 </template>
 
 <script>
-const OFFSET = 0
+import { MqResponsive } from "vue3-mq";
+import Toggle from '../components/Toggle.vue';
 export default {
+  components: {
+        MqResponsive,
+        Toggle
+    },
   data() {
     return {
+      nav: [
+        {  
+          "id": 1,
+          "link": "/",
+          "content": "Beranda"
+        },
+
+        {  
+          "id": 2,
+          "link": "/about",
+          "content": "Tentang Kami"
+        },
+
+        {  
+          "id": 3,
+          "link": "/karir",
+          "content": "Karir"
+        },
+      ],
       showMenu: false,
+      closeMenu: false,
       value: true,
       showNavbar: true,
       lastScrollPosition: 0,
@@ -160,11 +233,8 @@ export default {
 };
 </script>
 
-<style src="@vueform/toggle/themes/default.css"></style>
 
 <style scoped>
-  .exact-active-link {
-      border-bottom: #42b983 solid;
-  }
+
 
 </style>

@@ -47,7 +47,7 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['lg']">
+<MqResponsive target="md-lg">
   <section class="h-screen pt-28">
     <div class="flex container px-6 mx-auto">
       <!-- grid left -->
@@ -84,7 +84,7 @@
       <div class="grid basis-1/2">
         <div class="justify-items-center">
           <img 
-              class="h-[80vh]" 
+              class="h-full w-full" 
               :src="heroItem.image" 
               alt=""
           >
@@ -94,8 +94,8 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['xs']">
-  <section class="">
+<MqResponsive target="xs-sm">
+  <section class="pt-20">
     <div class="grid container px-6 mx-auto">
       <!-- grid left -->
       <div class="flex justify-center basis-1/2">

@@ -1,5 +1,26 @@
 <template>
-<MqResponsive :target="['lg']">
+<MqResponsive target="xl">
+  <section class="grid justify-center mb-16" >
+    <div class="container px-6 mx-auto">
+      <div
+        class="bg-[url('/src/assets/img/AboutUS/background/background_card_website_1.png')] bg-cover h-[600px] w-auto"
+      >
+        <div class="flex content-center">
+          <div class=" py-20 pl-24">
+            <h1 class="text-h1 font-bold text-left">Siap tumbuhkan potensi kamu bersama?</h1>
+
+            <Button type="button" class="cursor-pointer mt-6">Yuk, Gabung</Button>
+          </div>
+          <div class="basis-1/2">
+            <img :src="bg" alt="" class="h-[500px] pt-10">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MqResponsive>
+
+<MqResponsive target="md-lg">
   <section class="grid justify-center mb-16" >
     <div class="container px-6 mx-auto">
       <div
@@ -20,7 +41,7 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['xs']">
+<MqResponsive target="xs-sm">
   <section class="grid justify-center mb-16" >
     <div class="container px-6 mx-auto">
       <div

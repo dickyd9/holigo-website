@@ -2,7 +2,7 @@
 <MqResponsive :target="['xl']">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-12"
+    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover"
   >
     <div class="container mx-auto pt-24">
       <div id="text" class="text-center text-text-grey6">
@@ -48,8 +48,12 @@
           </template>
           </vueper-slide>
         </vueper-slides>
-
       </div>
+        <div class="flex justify-center">
+          <Button class="mb-28">
+            Yuk, Gabung!
+          </Button>
+        </div>
     </div>
   </section>
 </MqResponsive>
@@ -117,10 +121,10 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['xs']">
+<MqResponsive target="xs-sm">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_benefit_holigo.png')] bg-cover mb-14"
+    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_benefit_holigo.png')] bg-cover mb-8"
   >
     <div class="container mx-auto pt-20">
       <div id="text" class="text-center text-text-grey6">
@@ -145,7 +149,7 @@
           >
           <template #content>
             <div class="vueperslide__content-wrapper">
-              <div class="grid bg-basic-white rounded-3xl px-4 py-4 w-[350px] h-[200px]">
+              <div class="grid bg-basic-white rounded-3xl shadow-xl px-4 py-4 w-[350px] h-[180px]">
                 <div>
                   <img :src="work.img" alt="" class="w-16" />
                 </div>
@@ -160,7 +164,7 @@
         </vueper-slides>
       </div>
         <div class="flex justify-center">
-          <Button class="mb-28">
+          <Button class="mt-8 mb-24">
             Yuk, Gabung!
           </Button>
         </div>
@@ -241,10 +245,17 @@ export default {
 </script>
 
 <style>
+@media only screen and (min-width: 960px) {
+  .vueperslide--active {
+    zoom: 1.1;
+    transition: 2s;
+  }
+}
+
 .vueperslides__bullet {
-    margin-left: 4px;
-    margin-bottom: 32px;
-    padding: 0;
+    margin-left: 1px;
+    bottom: 4rem;
+    margin-bottom: 1px;
     border: none;
     background: none;
 }

@@ -2,7 +2,7 @@
   <MqResponsive :target="['xl']">
     <section
       id="why"
-      class="h-full py-20 mb-24 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
+      class="h-full pt-28 pb-44 mb-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
     >
     
       <div class="container px-6 mx-auto mt-12 justify-items-center">
@@ -12,11 +12,11 @@
             {{body}}</span>
         </div>
         <div class="flex flex-row my-16 gap-5">
-          <Card class="relative h-80 w-[298px]" v-for="cardItem in card" :key="cardItem.id">
+          <Card class="relative h-full w-[400px]" v-for="cardItem in card" :key="cardItem.id">
             <img
               :src="cardItem.image"
               alt=""
-              class="w-40 absolute pb-5 left-2 bottom-60"
+              class="w-40 absolute pb-5 left-2 bottom-28"
             />
             <div class="pt-16 h-56 px-5">
               <h1 class="text-body2 font-bold mb-4 text-basic-black">
@@ -32,7 +32,7 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['lg']">
+  <MqResponsive target="md-lg">
     <section
       id="why"
       class="h-full content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover pt-28 pb-56" 
@@ -64,49 +64,48 @@
     </section>
   </MqResponsive>
 
-  <MqResponsive :target="['xs']">
+  <MqResponsive target="xs-sm">
     <section
       id="why"
-      class="h-full bg-[url('src/assets/img/Home/Backgrund/background_why_holigo.png')] bg-cover mb-14" 
+      class="h-full" 
     >
-      <div class="container pt-20 mx-auto">
+      <div class="container pt-16 pb-32 mx-auto bg-[url('src/assets/img/Home/Backgrund/background_why_holigo.png')] bg-cover">
         
-        <div class="flex flex-col text-center justify-center pb-6">
-          <h1 class="text-h4 font-black text-text-grey6">{{header}}</h1>
-          <span class="pt-2 text-body4 text-text-grey6">
-            {{body}}</span>
+        <div class="flex flex-col text-center justify-center">
+          <h1 class="text-h4 font-black text-text-grey6">{{header}} <span class="text-primary-brand">holigo</span> ?</h1>
+          <span class="pt-4 text-p1 text-text-grey6">{{body}}</span>
         </div>
+
         <!-- Card Content -->
         
-        <div id="text" class="relative flex justify-center">
-          <vueper-slides
-            class="no-shadow w-full px-2 pb-2 relative "
-            :bulletsOutside="true"
-            :arrows="false"
-            :visible-slides="1"
-            :slide-ratio="1 / 2"
-            :dragging-distance="120"
-            :gap="1">
+        <div id="text" class="pt-6 flex justify-center">
+        <vueper-slides
+          class="no-shadow w-full"
+          :bulletsOutside="true"
+          :arrows="false"
+          :visible-slides="1"
+          :slide-ratio="1 / 2"
+          :dragging-distance="120"
+          :gap="1">
 
-            <vueper-slide 
-              v-for="(work, i) in card"
-              :key="i"
-              class="relative"
-            >
-            <template #content>
-              <div class="vueperslide__content-wrapper relative">
-                <div class="relative grid bg-basic-white rounded-3xl px-4 py-4 w-[272px] h-[191px]">
-                    <img :src="work.image" alt="" class="absolute w-16 bottom-40"/>
-                  <div class="py-4 text-left">
-                    <div class="vueperslide__title text-body1 font-bold">{{ work.header }}</div>
-                    <div class="vueperslide__content text-p1 font-thin">{{ work.content }}</div>
-                  </div>
+          <vueper-slide 
+            v-for="(work, i) in card"
+            :key="i"
+          >
+          <template #content>
+            <div class="vueperslide__content-wrapper">
+              <div class="grid pt-10 pb-1 w-[350px] h-[250px]">
+                <div class="relative px-4 pb-2 text-left bg-basic-white rounded-3xl shadow-md">
+                  <img :src="work.image" alt="" class="w-20 absolute left-4 bottom-28" />
+                  <div class="vueperslide__title text-h6 font-bold pt-8">{{ work.header }}</div>
+                  <div class="vueperslide__content text-body3 font-thin pt-1">{{ work.content }}</div>
                 </div>
               </div>
-            </template>
-            </vueper-slide>
-          </vueper-slides>
-        </div>
+            </div>
+          </template>
+          </vueper-slide>
+        </vueper-slides>
+      </div>
         
         
       </div>
@@ -130,7 +129,7 @@ export default {
   data() {
     return {
       bg: "src/assets/img/Home/Backgrund/background_1.png",
-      header: "Kenapa harus holigo?",
+      header: "Kenapa harus",
       body: "Apa yang membuat Holigo berbeda",
 
       card: [
@@ -175,4 +174,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

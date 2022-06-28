@@ -1,6 +1,6 @@
 <template>
 <MqResponsive :target="['xl']">
-  <div class="bg-basic-footer block h-[38vh]">
+  <div class="bg-basic-footer block h-[42vh] pt-12">
       <footer
         class="
           container
@@ -10,15 +10,21 @@
       >
 
       <div class="
-        
+
+            border-b-2
             pl-2
-            md:pb-16
-            md:flex md:justify-between md:content-center">
+            pb-16
+            flex 
+            justify-between 
+            content-center">
         
         <!-- Logo & Toggle -->
         <div class="basis-1/2 grid content-start pb-2 md:pb-0">
-          <img src="/img/logo/navbar-logo-white.png" alt="" class=" h-10 md:h-14 mb-2">
-          <Toggle/>
+          <img src="/img/logo/navbar-logo-white.png" alt="" class=" h-14 mb-12">
+            <div class="grid ">
+              <span class="text-h6 text-basic-white pb-4">Pilih Bahasa</span>
+              <Toggle/>
+            </div>
         </div>
 
         <!-- Menu -->
@@ -67,8 +73,8 @@
   </div>
 </MqResponsive>
 
-<MqResponsive :target="['lg']">
-  <div class="bg-basic-footer block h-[100vh] md:h-[55vh]">
+<MqResponsive target="md-lg">
+  <div class="bg-basic-footer block h-[38vh]">
       <footer
         class="
           container
@@ -81,8 +87,10 @@
         
             border-b-2
             pl-2
-            md:pb-16
-            md:flex md:justify-between md:content-center">
+            pb-16
+            flex 
+            justify-between 
+            content-center">
         
         <!-- Logo & Toggle -->
         <div class="basis-1/2 grid content-start pb-2 md:pb-0">
@@ -136,8 +144,8 @@
   </div>
 </MqResponsive>
 
-<MqResponsive :target="['xs']">
-<div class="bg-basic-footer block h-[60vh]">
+<MqResponsive target="xs-sm">
+<div class="bg-basic-footer block h-[65vh]">
       <footer
         class="
           container
