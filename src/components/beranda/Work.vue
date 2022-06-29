@@ -5,118 +5,133 @@
     class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover"
   >
     <div class="container mx-auto pt-24">
-      <div id="text" class="text-center text-text-grey6">
-        <div class="text-h3 font-bold">
-          <span class="text-primary-brand">Mending</span> {{ header }}
+      
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <div id="text" class="text-center text-text-grey6">
+          <div class="text-h3 font-bold">
+            <span class="text-primary-brand">Mending</span> {{ header }}
+          </div>
+          <div class="text-body2">{{ body }}</div>
         </div>
-        <div class="text-body2">{{ body }}</div>
       </div>
 
-      <div id="text" class="grid md:pt-10 md:flex md:justify-center">
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <div id="text" class="grid md:pt-10 md:flex md:justify-center">
 
-        <vueper-slides
-          class="no-shadow w-full px-20 pb-6"
-          :visible-slides="3"
-          :slide-ratio="1 / 4"
-          :dragging-distance="70"
-          :gap="1">
+          <vueper-slides
+            class="no-shadow w-full px-20 pb-6"
+            :visible-slides="3"
+            :slide-ratio="1 / 4"
+            :dragging-distance="70"
+            :gap="1">
 
-          <template #arrow-left>
-            <img :src="arrowLeft" alt="arrowleft" class="h-12">
-          </template>
+            <template #arrow-left>
+              <img :src="arrowLeft" alt="arrowleft" class="h-12">
+            </template>
 
-          <template #arrow-right>
-            <img :src="arrowRight" alt="arrowright" class="h-12">
-          </template>
+            <template #arrow-right>
+              <img :src="arrowRight" alt="arrowright" class="h-12">
+            </template>
 
-          <vueper-slide 
-            v-for="(work, i) in card"
-            :key="i"
-          >
-          <template #content>
-            <div class="vueperslide__content-wrapper">
-              <div class="grid bg-basic-white rounded-3xl p-10 h-72">
-                <div>
-                  <img :src="work.img" alt="" class="w-28" />
-                </div>
-                <div class="pt-6 text-left">
-                  <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
-                  <div class="vueperslide__content text-h6 font-thin">{{ work.content }}</div>
+            <vueper-slide 
+              v-for="(work, i) in card"
+              :key="i"
+            >
+            <template #content>
+              <div class="vueperslide__content-wrapper">
+                <div class="grid bg-basic-white rounded-3xl p-10 h-72">
+                  <div>
+                    <img :src="work.img" alt="" class="w-28" />
+                  </div>
+                  <div class="pt-6 text-left">
+                    <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
+                    <div class="vueperslide__content text-h6 font-thin">{{ work.content }}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </template>
-          </vueper-slide>
-        </vueper-slides>
+            </template>
+            </vueper-slide>
+          </vueper-slides>
+        </div>
       </div>
+      <div data-aos="fade-up" data-aos-duration="1500">
         <div class="flex justify-center">
           <Button class="mb-28">
             Yuk, Gabung!
           </Button>
         </div>
+      </div>  
     </div>
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['lg']">
+<MqResponsive target="md-lg">
   <section
     id="work"
     class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
   >
     <div class="container mx-auto pt-20">
-      <div id="text" class="text-center text-text-grey6">
-        <div class="text-h3 font-bold">
-          <span class="text-primary-brand">Mending</span> {{ header }}
+      
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <div id="text" class="text-center text-text-grey6">
+          <div class="text-h3 font-bold">
+            <span class="text-primary-brand">Mending</span> {{ header }}
+          </div>
+          <div class="text-body2">{{ body }}</div>
         </div>
-        <div class="text-body2">{{ body }}</div>
       </div>
+      
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <div id="text" class="pt-10 flex justify-center">
 
-      <div id="text" class="pt-10 flex justify-center">
+          <vueper-slides
+            class="no-shadow w-full px-12"
+            :visible-slides="3"
+            :slide-ratio="1 / 4"
+            :dragging-distance="70"
+            :gap="1">
 
-        <vueper-slides
-          class="no-shadow w-full px-16 pb-2"
-          :visible-slides="3"
-          :slide-ratio="1 / 4"
-          :dragging-distance="70"
-          :gap="1">
+            <template #arrow-left>
+              <img :src="arrowLeft" alt="arrowleft" class="h-12">
+            </template>
 
-          <template #arrow-left>
-            <img :src="arrowLeft" alt="arrowleft" class="h-12">
-          </template>
+            <template #arrow-right>
+              <img :src="arrowRight" alt="arrowright" class="h-12">
+            </template>
 
-          <template #arrow-right>
-            <img :src="arrowRight" alt="arrowright" class="h-12">
-          </template>
-
-          <vueper-slide 
-            v-for="(work, i) in card"
-            :key="i"
-          >
-          <template #content>
-            <div class="vueperslide__content-wrapper">
-              <div class="grid bg-basic-white rounded-3xl p-5 w-[368px] h-[236px]">
-                <div>
-                  <img :src="work.img" alt="" class="w-24" />
-                </div>
-                <div class="pt-4 text-left">
-                  <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
-                  <div class="vueperslide__content text-body3 font-thin">{{ work.content }}</div>
+            <vueper-slide 
+              v-for="(work, i) in card"
+              :key="i"
+            >
+            <template #content>
+              <div class="vueperslide__content-wrapper">
+                <div class="grid bg-basic-white rounded-3xl p-4 w-[350px] h-[236px]">
+                  <div>
+                    <img :src="work.img" alt="" class="w-24" />
+                  </div>
+                  <div class="pt-4 text-left">
+                    <div class="vueperslide__title text-h6 font-bold">{{ work.header }}</div>
+                    <div class="vueperslide__content text-body3 font-thin">{{ work.content }}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </template>
-          </vueper-slide>
+            </template>
+            </vueper-slide>
 
-          <template #bullet>
+            <template #bullet>
 
-          </template>
-        </vueper-slides>
+            </template>
+          </vueper-slides>
+        </div>
       </div>
+      <div data-aos="fade-up" data-aos-duration="1500">
         <div class="flex justify-center">
-          <Button class="mb-28">
+          <Button class="mb-28 mt-10">
             Yuk, Gabung!
           </Button>
         </div>
+      </div>
+        
     </div>
   </section>
 </MqResponsive>

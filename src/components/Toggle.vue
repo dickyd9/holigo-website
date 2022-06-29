@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="" >
     <Switch
       v-model="enabled"
       :class="enabled ? 'bg-basic-background' : 'bg-basic-background'"
@@ -10,17 +10,21 @@
         :class="enabled ? 'translate-x-9' : 'translate-x-0'"
         class="pointer-events-none inline-block h-[30px] w-[30px] transform rounded-full bg-primary-brand shadow-lg ring-0 transition duration-200 ease-in-out"
       >
-        <span class="h-full grid content-center text-p3 text-white font-bold">ID</span>
+        <span class="h-full grid content-center text-p3 text-white font-bold">{{enabled ? 'ID' : 'EN'}}</span>
       </span>
         <span class="absolute grid content-center h-full w-full text-p3 px-3 font-bold"
-        :class="enabled ? 'flex justify-start' : 'flex justify-end'">EN</span>
+        :class="enabled ? 'flex justify-start'  : 'flex justify-end'">{{enabled ? 'EN' : 'ID'}}</span>
     </Switch>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Switch } from '@headlessui/vue'
 
 const enabled = ref(false)
+
+watch (enabled, (enabled, prev) => {
+  
+})
 </script>

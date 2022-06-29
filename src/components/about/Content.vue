@@ -3,13 +3,17 @@
     <section class="h-full px-10 mx-auto my-32">
         <div class="container px-6 mx-auto flex odd:flex-row even:flex-row-reverse" 
              v-for="content in contentList" :key="content.id">
-            <div class="basis-1/2 grid justify-center ">
-                <img :src="content.image" alt="" class="h-[403px]">
+             <div data-aos="fade-up" data-aos-duration="1500">
+                <div class="basis-1/2 grid justify-center ">
+                    <img :src="content.image" alt="" class="h-[403px]">
+                </div>
             </div>
-            <div class="grid basis-1/2 content-center">
-                <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
-                <h1 class="text-h3 font-black">{{content.header}}</h1>
-                <span class="pt-2">{{content.content}}</span>
+            <div data-aos="fade-up" data-aos-duration="1500">\
+                <div class="grid basis-1/2 content-center">
+                    <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
+                    <h1 class="text-h3 font-black">{{content.header}}</h1>
+                    <span class="pt-2">{{content.content}}</span>
+                </div>
             </div>
         </div>
     </section>
@@ -19,14 +23,18 @@
     <section class="h-full px-10 mx-auto my-32">
         <div class="container px-6 mx-auto flex odd:flex-row even:flex-row-reverse" 
              v-for="content in contentList" :key="content.id">
-            <div class="basis-1/2 grid justify-center ">
-                <img :src="content.image" alt="" class="h-[403px]">
-            </div>
-            <div class="grid basis-1/2 content-center">
-                <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
-                <h1 class="text-h3 font-black">{{content.header}}</h1>
-                <span class="pt-2">{{content.content}}</span>
-            </div>
+                <div class="basis-1/2 grid justify-center ">
+                    <div data-aos="fade-up" data-aos-duration="1500">
+                        <img :src="content.image" alt="" class="h-[403px]">
+                    </div>
+                </div>
+                <div class="grid basis-1/2 content-center">
+                    <div data-aos="fade-up" data-aos-duration="1500">
+                        <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
+                        <h1 class="text-h3 font-black">{{content.header}}</h1>
+                        <span class="pt-2">{{content.content}}</span>
+                    </div>
+                </div>
         </div>
     </section>
     </MqResponsive>

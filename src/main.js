@@ -1,14 +1,17 @@
 import { createApp } from "vue";
 import { store } from "./stores"
 import { Vue3Mq } from "vue3-mq";
+// import db from './assets/firebase/init'
 
 import App from "./App.vue";
 import router from "./router";
 import './index.css';
-
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const app = createApp(App);
 
+app.use(AOS.init());
 app.use(router);
 app.use(store);
 app.use(Vue3Mq, {

@@ -16,14 +16,13 @@
                           <div class="relative w-full">
                               <input type="text" id="simple-search" 
                               class="
-                              bg-gray-50 
-                              border 
-                              border-gray-300 
+                              bg-basic-background
+                              border-none
                               text-basic-black 
                               text-sm 
                               rounded-xl 
-                              focus:ring-blue-500 
-                              focus:border-blue-500 
+                              focus:ring-primary-brand
+                              focus:border-primary-brand 
                               block 
                               w-full 
                               pl-6 
@@ -38,7 +37,7 @@
                       </form>
                       <button type="submit" class="pt-5 text-primary-brand"> 
                           <div class="flex gap-2">
-                          Lihat semua lowongan <img :src="icon" alt="" class="h-6 hover:w-8">
+                          Lihat semua lowongan <img :src="icon" alt="" class="h-6 hover:left-8">
                           </div>
                       </button>
                   </div>
@@ -58,6 +57,7 @@
     <section class="h-full mb-44">
         <div class="h-screen container px-6 mx-auto grid py-24 md:flex flex-wrap">
             <div class="grid basis-1/2 content-center">
+                <div data-aos="fade-up" data-aos-duration="1500">
                   <h1 class="text-[4rem] font-black">
                     {{header}}
                   </h1>
@@ -69,41 +69,29 @@
                       <form class="flex items-center">   
                           <label for="simple-search" class="sr-only">Search</label>
                           <div class="relative w-full">
-                              <input type="text" id="simple-search" 
-                              class="
-                              bg-gray-50 
-                              border 
-                              border-gray-300 
-                              text-basic-black 
-                              text-sm 
-                              rounded-xl 
-                              focus:ring-blue-500 
-                              focus:border-blue-500 
-                              block 
-                              w-full 
-                              pl-6 
-                              p-2.5 
-                              " 
-                              placeholder="Search" 
-                              required>
+                              <Input name="search" />
                           </div>
-                          <button type="submit" class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-2xl">
+                          <button 
+                                  class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-2xl">
                               Cari
                           </button>
                       </form>
                       <button type="submit" class="pt-5 text-primary-brand"> 
                           <div class="flex gap-2">
-                          Lihat semua lowongan <img :src="icon" alt="" class="h-6 hover:w-8">
+                          Lihat semua lowongan <img :src="icon" alt="" class="h-6 hover:ml-2 hover:delay-300 hover:duration-300 hover:ease-in-out">
                           </div>
                       </button>
                   </div>
+                </div>
             </div>
             <div class="grid basis-1/2 content-center justify-center">
-              <img 
-                  class="object-contain h-[560px]" 
-                  :src="image" 
-                  alt=""
-              >
+                <div data-aos="fade-up" data-aos-duration="1500">
+                    <img 
+                        class="object-contain h-[560px]" 
+                        :src="image" 
+                        alt=""
+                    >
+                </div>
             </div>
         </div>
     </section>
@@ -168,9 +156,11 @@
 
 <script>
 import { MqResponsive } from "vue3-mq";
+import Input from "../Input.vue";
 export default {
     components: {
-        MqResponsive
+        MqResponsive,
+        Input
     },
     data() {
         return {
@@ -178,6 +168,11 @@ export default {
             body: "Sigap, siap, santai, serius. Belajar dan asah kemampuan bersama-sama.",
             image: "src/assets/img/Careers/website illust-unlock your potential color 2.png",
             icon: "src/assets/img/icon/arrow right.png"
+        }
+    },
+    method: {
+        onSearch() {
+
         }
     }
 };

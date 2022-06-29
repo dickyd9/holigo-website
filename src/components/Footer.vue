@@ -74,7 +74,7 @@
 </MqResponsive>
 
 <MqResponsive target="md-lg">
-  <div class="bg-basic-footer block h-[38vh]">
+  <div class="bg-basic-footer block h-[55vh]">
       <footer
         class="
           container
@@ -95,7 +95,10 @@
         <!-- Logo & Toggle -->
         <div class="basis-1/2 grid content-start pb-2 md:pb-0">
           <img src="/img/logo/navbar-logo-white.png" alt="" class=" h-10 md:h-14 mb-2">
-          <Toggle/>
+            <div class="grid ">
+              <span class="text-h6 text-basic-white pb-4">Pilih Bahasa</span>
+              <Toggle/>
+            </div>
         </div>
 
         <!-- Menu -->
@@ -145,7 +148,7 @@
 </MqResponsive>
 
 <MqResponsive target="xs-sm">
-<div class="bg-basic-footer block h-[65vh]">
+<div class="bg-basic-footer block h-[85vh]">
       <footer
         class="
           container

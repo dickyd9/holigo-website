@@ -1,4 +1,5 @@
 <template>
+<div data-aos="fade-up" data-aos-duration="1500">
 <MqResponsive :target="['xl']">
     <section id="custom" 
              class="w-full grid justify-center py-20 mb-20">
@@ -82,6 +83,7 @@
         </div>
     </section>
 </MqResponsive>
+</div>
 </template>
 
 <script>

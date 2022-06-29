@@ -2,9 +2,11 @@
 import { RouterLink, RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import { MqResponsive } from "vue3-mq";
 
 export default {
   components:{
+    MqResponsive,
     RouterView,
     Navbar,
     Footer,
@@ -15,6 +17,9 @@ export default {
 
 <template>
   <div id="app" class="bg-basic-white scroll-smooth">
+    <MqResponsive target="md-xl">
+      <img src="./assets/img/AboutUs/pattern/illustration_about-us_1.png" alt="" class="absolute h-96 -rotate-90">
+    </MqResponsive>
     <Navbar/>
       <div
         class="
@@ -24,7 +29,7 @@ export default {
           md:items-center
         "
       >
-        <RouterView />
+        <RouterView/>
       </div>
       
     <Footer/>
@@ -38,4 +43,10 @@ export default {
   margin: 0 auto;
   font-weight: normal;
 }
+
+.exact-active-link {
+  border-bottom: 2cm;
+  border-color: #00BD17;
+}
+
 </style>

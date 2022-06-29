@@ -1,7 +1,11 @@
 <template>
   <div id="beranda" class="h-full">
-    <Hero/>
-    <Content/>
+    <div data-aos="fade-up" data-aos-duration="1500">
+      <Hero/>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500">
+      <Content/>
+    </div>
     <Why/>
     <For/>
     <Customize/>
@@ -21,6 +25,7 @@ import Customize from '.././components/beranda/Customize.vue'
 import Work from '.././components/beranda/Work.vue'
 import BottomCard from '.././components/BottomCard.vue'
 </script>
+
 
 <style>
 

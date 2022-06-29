@@ -37,7 +37,7 @@
             md:mt-0
           "
         >
-          <router-link :to="link.link" v-for="link in nav">
+          <router-link :to="link.link" v-for="link in nav" :key="link.id">
             <li class="
                   font-bold 
                   text-basic-white 
@@ -105,7 +105,7 @@
           space-y-4"
     v-if="$route.path == '/about'"
     >
-      <router-link :to="link.link" v-for="link in nav">
+      <router-link :to="link.link" v-for="link in nav" :key="link.id">
         <li class="
               list-none
               font-bold
@@ -131,7 +131,7 @@
           space-y-4"
     v-else
     >
-      <router-link :to="link.link" v-for="link in nav">
+      <router-link :to="link.link" v-for="link in nav" :key="link.id">
         <li class="
               list-none
               font-bold
@@ -149,11 +149,7 @@
     </ul>
     </nav>
   </header>
-
 </MqResponsive>
-
-
-
 </template>
 
 <script>
