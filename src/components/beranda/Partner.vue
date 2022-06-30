@@ -1,5 +1,5 @@
 <template>
-<MqResponsive :target="['xl']">
+<MqResponsive target="xl">
     <section>
     <div class="flex flex-wrap">
       <div class="container px-6 mx-auto w-full mb-20">
@@ -142,17 +142,17 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['lg']">
+<MqResponsive target="md-lg">
   <section>
     <div class="grid">
       <!-- Title -->
       <div data-aos="fade-up" data-aos-duration="1500">
         <div class="flex flex-col text-center mb-10">
           <span class="text-h1 font-bold">
-            Partner <span class="text-primary-brand">Terpercaya</span>
+            Partner <span class="text-primary-brand">{{partner('header2')}}</span>
           </span>
           <span class="text-body1 pt-2">
-            Mitra kami yang bisa kamu percaya dari segi keamanan & kenyamanan.
+            {{partner('body')}}
           </span>
         </div>
       </div>
@@ -164,56 +164,18 @@
           <ul
             class="flex mb-0 list-none flex-wrap pt-6 pb-6 justify-center gap-6"
           >
-            <li class="text-center">
+            <li class="text-center" 
+            v-for="tab in partner('tab')" :key="tab.id">
               <a
                 class="font-bold hover:text-primary-brand hover:cursor-pointer"
-                v-on:click="toggleTabs(1)"
+                v-on:click="toggleTabs(tab.id)"
                 v-bind:class="{
-                  'text-basic-black': openTab !== 1,
-                  'border-b-primary-brand': openTab === 1,
-                  'border-b-2': openTab === 1,
+                  'text-basic-black': openTab !== tab.id,
+                  'border-b-primary-brand': openTab === tab.id,
+                  'border-b-2': openTab === tab.id,
                 }"
               >
-                Transportasi
-              </a>
-            </li>
-            <li class="text-center">
-              <a
-                class="font-bold hover:text-primary-brand hover:cursor-pointer"
-                v-on:click="toggleTabs(2)"
-                v-bind:class="{
-                  'text-basic-black': openTab !== 2,
-                  'border-b-primary-brand': openTab === 2,
-                  'border-b-2': openTab === 2,
-                }"
-              >
-                Hotel
-              </a>
-            </li>
-            <li class="text-center">
-              <a
-                class="font-bold hover:text-primary-brand hover:cursor-pointer"
-                v-on:click="toggleTabs(3)"
-                v-bind:class="{
-                  'text-basic-black': openTab !== 3,
-                  'border-b-primary-brand': openTab === 3,
-                  'border-b-2': openTab === 3,
-                }"
-              >
-                Pulsa & Paket data
-              </a>
-            </li>
-            <li class="text-center">
-              <a
-                class="font-bold hover:text-primary-brand hover:cursor-pointer"
-                v-on:click="toggleTabs(4)"
-                v-bind:class="{
-                  'text-basic-black': openTab !== 4,
-                  'border-b-primary-brand': openTab === 4,
-                  'border-b-2': openTab === 4,
-                }"
-              >
-                Tagihan & Isi Ulang
+                {{tab.name}}
               </a>
             </li>
           </ul>
@@ -283,20 +245,38 @@
   </section>
 </MqResponsive>
 
-<MqResponsive :target="['xs']">
+<MqResponsive target="xs-sm">
 
 </MqResponsive>
 
 
 </template>
 
-<script>
+<script >
 import { MqResponsive } from "vue3-mq";
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import dataPartner from '../../assets/data/beranda/partner.json';
+
+
 export default {
   name: "brand-tabs",
+  setup(){  
+    const store = useStore();
+    const activeLanguage = computed(() => store.getters.activeLanguage);
+
+    const partner = (string) => {
+      return dataPartner[activeLanguage.value][string];
+    }
+
+    return {partner}
+  },
   components: {
         MqResponsive
     },
+  
+  computed: {
+  },
   data() {
     return {
       openTab: 1,

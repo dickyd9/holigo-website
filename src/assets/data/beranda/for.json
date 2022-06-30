@@ -1,0 +1,83 @@
+{
+    "id": {
+        "header": "Dari Kami buat Kamu",
+        "body": "Mau produk apa pun, semua udah kami sediain biar lifestyle kamu lebih simple",
+        "card": [
+            {
+            "id": 1,
+            "image": "src/assets/img/Home/Product us/website illust-hotel 1.png",
+            "header": "Booking Hotel",
+            "content":
+                "Gak usah bingung nyari tempat tinggal holiday kamu, langsung aja cari dari sini."
+            },
+
+            {
+            "id": 2,
+            "image":
+                "src/assets/img/Home/Product us/website illust-tiket pesawat 1.png",
+            "header": "Tiket Pesawat",
+            "content":
+                "Up up here we go! Terbang kemana pun tinggal langsung pilih. "
+            },
+
+            {
+            "id": 3,
+            "image":
+                "src/assets/img/Home/Product us/website illust-pulsa paket data 1.png",
+            "header": "Pulsa & Paket Data",
+            "content":
+                "Gak ada lagi kata 'abis kuota' atau 'abis pulsa', langsung isi ulang disini aja."
+            },
+
+            {
+            "id": 4,
+            "image":
+                "src/assets/img/Home/Product us/website illust icon-tagihan.png",
+            "header": "Isi Ulang & Tagihan",
+            "content":
+                "Gak perlu ngantri di loket atau bayar tagihan yang ribet, bisa langsung online."
+            }
+        ]
+    },
+
+    "en": {
+        "header": "From Us to You",
+        "body": "Whatever you need, we provide it to simplify your lifestyle",
+        "card": [
+            {
+            "id": 1,
+            "image": "src/assets/img/Home/Product us/website illust-hotel 1.png",
+            "header": "Hotel Booking",
+            "content":
+                "Don't stress yourself out on planning where to stay, just book it here!"
+            },
+
+            {
+            "id": 2,
+            "image":
+                "src/assets/img/Home/Product us/website illust-tiket pesawat 1.png",
+            "header": "Flight Ticket",
+            "content":
+                "Up up here we go! Wherever you want to fly, just book & soar with us."
+            },
+
+            {
+            "id": 3,
+            "image":
+                "src/assets/img/Home/Product us/website illust-pulsa paket data 1.png",
+            "header": "Internet Data & Balance",
+            "content":
+                "No more \"Out of Data or Balance\", purchase your phone's connections here."
+            },
+
+            {
+            "id": 4,
+            "image":
+                "src/assets/img/Home/Product us/website illust icon-tagihan.png",
+            "header": "Top up & Bills",
+            "content":
+                "Say goodbye to queuing in front of locket, you can doit all here."
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "id": {
+        "header": "Yuk, unlock potensi kamu bareng kami!",
+        "body": "Sigap, siap, santai, serius. Belajar dan asah kemampuan bersama-sama.",
+        "image": "src/assets/img/Careers/website illust-unlock your potential color 2.png",
+        "icon": "src/assets/img/icon/arrow right.png",
+        "btn": "cari",
+        "lowongan": "Lihat semua lowongan"
+    },
+
+    "en": {
+        "header": "Unlock Your Potential with Us!",
+        "body": "Ready, set, HoliGO! Sharpening skills together.",
+        "image": "src/assets/img/Careers/website illust-unlock your potential color 2.png",
+        "icon": "src/assets/img/icon/arrow right.png",
+        "btn": "Find job",
+        "lowongan": "See all careers"
+    }
+}

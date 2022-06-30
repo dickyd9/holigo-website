@@ -48,7 +48,7 @@
 </MqResponsive>
 
 <MqResponsive target="md-lg">
-  <section class="h-screen pt-28">
+  <section class="h-screen pt-16">
     <div class="flex container px-6 mx-auto">
       <!-- grid left -->
       <div class="grid basis-1/2 transition ease-in-out duration-300 ">
@@ -56,19 +56,22 @@
           <div class="text-h1 font-black text-center">
             <!-- Text Title -->
             <div class="pb-2 flex"> 
-             {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
+              {{ hero('header1') }}
+             <img :src="pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
            </div>
            <div class="text-basic-black flex flex-wrap">
-              your <div class="text-primary-brand pl-4"> {{heroItem.header2}}</div>
+              your  <div class="text-primary-brand pl-4"> 
+                      {{ hero('header2') }}
+                    </div>
            </div>
           </div>
           <!-- Text body -->
           <span class="pt-6 text-body1 font-medium max-w-lg text-center md:text-left ">
-            {{heroItem.body}}
+            {{ hero('body') }}
           </span>
           <!-- Product Flex -->
           <div class="flex pt-6 max-w-lg md:gap-6">
-            <div class="flex" v-for="productList in product" :key="productList.id">
+            <div class="flex" v-for="productList in hero('product')" :key="productList.id">
               <div id="icon" class="pr-2 w-12 md:w-20">
                 <img :src="productList.img" alt="">
               </div>
@@ -85,7 +88,7 @@
         <div class="justify-items-center">
           <img 
               class="h-full w-full" 
-              :src="heroItem.image" 
+              :src="image" 
               alt=""
           >
         </div>
@@ -142,48 +145,20 @@
 
 </template>
 
-<script>
+<script setup>
 import { MqResponsive } from "vue3-mq";
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import dataHero from '../../assets/data/beranda/hero.json';
+const store = useStore();
+const activeLanguage = computed(() => store.getters.activeLanguage);
 
-export default {
-  components: {
-        MqResponsive
-    },
-  data() {
-    return {
-      heroItem: {
-        header1: 'Holigo simplify',
-        header2: ' lifestyle',
-        body: 'simple nyaman dan dapat di andalkan untuk kebutuhan traveling kamu.',
-        pattern: "src/assets/img/Home/pattern-1.png",
-        image: "src/assets/img/Home/website illust-hero color 1.png"
-      },
+const hero = (string) => {
+  return dataHero[activeLanguage.value][string];
+}
 
-      product: [
-        {
-          id: 1,
-          img: "src/assets/img/Home/website illust-15k+ hotel 1.png",
-          title: "15K+",
-          body: "Pilihan Hotel"
-        },
-
-        {
-          id: 2,
-          img: "src/assets/img/Home/website illust-75+ maskapai 1.png",
-          title: "75+",
-          body: "Maskapai Penerbangan"
-        },
-
-        {
-          id: 3,
-          img: "src/assets/img/Home/website illust icon-20+ produk 1.png",
-          title: "20+",
-          body: "Product Kami"
-        }
-      ]
-    }
-  }
-};
+const pattern = "src/assets/img/Home/pattern-1.png"
+const image = "src/assets/img/Home/website illust-hero color 1.png"
 </script>
 
 <style>

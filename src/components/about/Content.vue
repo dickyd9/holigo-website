@@ -22,10 +22,10 @@
     <MqResponsive target="md-lg">
     <section class="h-full px-10 mx-auto my-32">
         <div class="container px-6 mx-auto flex odd:flex-row even:flex-row-reverse" 
-             v-for="content in contentList" :key="content.id">
+             v-for="content in content('card')" :key="content.id">
                 <div class="basis-1/2 grid justify-center ">
                     <div data-aos="fade-up" data-aos-duration="1500">
-                        <img :src="content.image" alt="" class="h-[403px]">
+                        <img :src="content.img" alt="" class="h-[403px]">
                     </div>
                 </div>
                 <div class="grid basis-1/2 content-center">
@@ -41,9 +41,9 @@
 
     <MqResponsive target="xs-sm">
     <section class="h-full px-6 mx-auto my-14 text-center">
-        <div class="container px-6 mx-auto grid mb-14" v-for="content in contentList" :key="content.id">
+        <div class="container px-6 mx-auto grid mb-14" v-for="content in content('card')" :key="content.id">
             <div class="grid justify-center mb-12">
-                <img :src="content.image" alt="" class="h-[230px]">
+                <img :src="content.img" alt="" class="h-[230px]">
             </div>
             <div class="grid content-center">
                 <h1 class="text-h6 font-black">{{content.header}}</h1>
@@ -56,11 +56,23 @@
 
 <script>
 import { MqResponsive } from "vue3-mq";
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import contentList from '../../assets/data/about/content.json';
 export default {
     components:{
         MqResponsive
     },
+    setup() {
+        const store = useStore();
+        const activeLanguage = computed(() => store.getters.activeLanguage);
 
+        const content = (string) => {
+            return contentList[activeLanguage.value][string];
+        }
+
+        return{content}
+    },
     data() {
         return {
         contentList: [

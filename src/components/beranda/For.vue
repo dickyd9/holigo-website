@@ -39,14 +39,14 @@
         <!-- Title -->
         <div data-aos="fade-up" data-aos-duration="1500">
           <div class="text-center justify-center pb-16">
-            <h1 class="text-h3 font-black">{{ header }}</h1>
-            <span class="pt-2">{{ body }}</span>
+            <h1 class="text-h3 font-black">{{ dFor('header') }}</h1>
+            <span class="pt-2">{{ dFor('body') }}</span>
           </div>
         </div>
         <!-- Content -->
         <div data-aos="fade-up" data-aos-duration="1500">
           <div class="flex flex-row mt-10 gap-5">
-          <Card class="relative w-80" v-for="fr in card" :key="fr.id">
+          <Card class="relative w-80" v-for="fr in dFor('card')" :key="fr.id">
               <img
                 :src="fr.image"
                 alt=""
@@ -116,61 +116,21 @@
 </MqResponsive>
 </template>
 
-<script>
+<script setup>
 import { MqResponsive } from "vue3-mq";
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 import Card from '../Card.vue'
-export default {
-  components:{
-    Card,
-    MqResponsive, 
-    VueperSlides, 
-    VueperSlide,
-  },
-  data() {
-    return {
-      header: "Dari Kami buat Kamu",
-      body: "Mau produk apa pun, semua udah kami sediain biar lifestyle kamu lebih simple",
-      card: [
-        {
-          id: 1,
-          image: "src/assets/img/Home/Product us/website illust-hotel 1.png",
-          header: "Booking Hotel",
-          content:
-            "Gak usah bingung nyari tempat tinggal holiday kamu, langsung aja cari dari sini.",
-        },
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import fr from '../../assets/data/beranda/for.json';
+const store = useStore();
+const activeLanguage = computed(() => store.getters.activeLanguage);
 
-        {
-          id: 2,
-          image:
-            "src/assets/img/Home/Product us/website illust-tiket pesawat 1.png",
-          header: "Tiket Pesawat",
-          content:
-            "Up up here we go! Terbang kemana pun tinggal langsung pilih. ",
-        },
+const dFor = (string) => {
+  return fr[activeLanguage.value][string];
+}
 
-        {
-          id: 3,
-          image:
-            "src/assets/img/Home/Product us/website illust-pulsa paket data 1.png",
-          header: "Pulsa & Paket Data",
-          content:
-            "Gak ada lagi kata 'abis kuota' atau 'abis pulsa', langsung isi ulang disini aja.",
-        },
-
-        {
-          id: 4,
-          image:
-            "src/assets/img/Home/Product us/website illust icon-tagihan.png",
-          header: "Isi Ulang & Tagihan",
-          content:
-            "Gak perlu ngantri di loket atau bayar tagihan yang ribet, bisa langsung online.",
-        },
-      ],
-    };
-  },
-};
 </script>
 
 <style></style>

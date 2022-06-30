@@ -21,10 +21,31 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { Switch } from '@headlessui/vue'
+import { useStore } from 'vuex';
+const store = useStore();
 
-const enabled = ref(false)
+const enabled = ref(false);
+
+const languages = [
+ {
+    language : 'id',
+    label : 'ID'
+ },
+ {
+   language : 'en',
+   label : 'EN'
+ }
+];
+
+const changeActiveLanguage = (language) => {
+  store.dispatch('setLanguage', language)
+};
 
 watch (enabled, (enabled, prev) => {
-  
+  if (enabled){
+    changeActiveLanguage('id');
+  } else {
+    changeActiveLanguage('en');
+  }
 })
 </script>

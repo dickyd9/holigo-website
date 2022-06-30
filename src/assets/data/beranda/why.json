@@ -1,0 +1,73 @@
+{
+    "id": {
+        "bg": "src/assets/img/Home/Backgrund/background_1.png",
+        "header": "Kenapa harus",
+        "body": "Apa yang membuat Holigo berbeda",
+
+        "card": [
+            {
+                "id": 1,
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-harga terbaik 1.png",
+                "header": "Harga Terbaik",
+                "content": "Travelling ga perlu mahal! Semua kebutuhan disediakan dengan harga yang budget-friendly."
+            },
+
+            {
+                "id": 2,
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-metode pembayaran variatif 1.png",
+                "header": "Metode pembayaran variatif",
+                "content": "Banyak jalan menuju transaksi berhasil, pilih metode pembayaran sesuai yang kamu mau!"
+            },
+
+            {
+                "id": 3,
+                "header": "Mudah digunakan",
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-mudah digunakan 1.png",
+                "content": "Aplikasinya simple dan gampang untuk digunakan siapa pun, kapan pun, dan di mana pun!"
+            },
+
+            {
+                "id": 4,
+                "header": "Pelayanan 24 Jam",
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-pelayanan 24 jam (1) 1.png",
+                "content": "Customer Service kami siap membantu semua kebutuhan kamu 24 jam setiap harinya!"
+            }
+      ]
+    },
+
+    "en": {
+        "bg": "src/assets/img/Home/Backgrund/background_1.png",
+        "header": "Why",
+        "body": "Whatever you need, Holigo is the answer!",
+
+        "card": [
+            {
+                "id": 1,
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-harga terbaik 1.png",
+                "header": "Budget friendly prices",
+                "content": "Good bye costly traveling. All your traveling needs is here with budget-friendly price."
+            },
+
+            {
+                "id": 2,
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-metode pembayaran variatif 1.png",
+                "header": "Various Payment Methods",
+                "content": "All road for successful payment is here, choose whicheve you like!"
+            },
+
+            {
+                "id": 3,
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-mudah digunakan 1.png",
+                "header": "Easy to Use application",
+                "content": "Simple and easy to use application for anyone, any time, any where!"
+            },
+
+            {
+                "id": 4,
+                "image": "src/assets/img/Home/WhyHoligo/website illust icon-pelayanan 24 jam (1) 1.png",
+                "header": "24/7  customer service",
+                "content": "Our Customer Service officers stand by 24/7 to assist & help you out."
+            }
+      ]
+    }
+}

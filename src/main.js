@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import { store } from "./stores"
 import { Vue3Mq } from "vue3-mq";
-// import db from './assets/firebase/init'
 
 import App from "./App.vue";
 import router from "./router";

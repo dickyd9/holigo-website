@@ -1,0 +1,13 @@
+{
+    "id": {
+        "header": "Daftar Lowongan",
+        "cat": "Pilih Sesuai Kategori",
+        "btn": "cari"
+    },
+
+    "en": {
+        "header": "Job vacancy",
+        "cat": "Find by category",
+        "btn": "Find job"
+    }
+}

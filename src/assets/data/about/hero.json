@@ -1,0 +1,14 @@
+{
+    "id": {
+        "bg": "src/assets/img/AboutUs/hero-background.png",
+        "header1": "Semua",
+        "header2": "kebutuhan dalam satu aplikasi",
+        "body": "One-stop solution untuk semua kebutuhan lifestyle kamu lengkap dalam satu aplikasi yang simple."
+    },
+
+    "en": {
+        "bg": "src/assets/img/AboutUs/hero-background.png",
+        "header2": "One App for all your needs",
+        "body": "Fixed our eyes on the future to provide the best solution for you."
+    }
+}

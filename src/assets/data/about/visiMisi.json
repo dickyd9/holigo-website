@@ -1,0 +1,37 @@
+{
+    "id": {
+        "header": "Mau yang terbaik untuk kamu",
+        "body": "Kami selalu melihat ke depan dan memberikan yang terbaik untuk semua kebutuhan kamu",
+        "visi": "Visi",
+        "misi": "Misi",
+        "visiList": [
+            "Menjadi salah satu aplikasi favorit penyedia jasa wisata terbaik dan terpercaya",
+            "Menjadi aplikasi yang mempunyai fitur lengkap untuk kebutuhan sehari-hari",
+            "Berkontribusi dalam meningkatkan industri pariwisata dan transportasi di Indonesia"
+        ],
+        "misiList": [
+            "Menjalin kerjasama yang baik dengan semua mitra usaha baik domestik maupun internasional",
+            "Memberikan pelayanan yang maksimal dan memuaskan kepada semua pelanggan",
+            "Memberikan kesejahteraan kepada setiap anggota perusahaan",
+            "Menjadi aplikasi yang selalu up to date dalam memberikan keamanan dan kenyamanan"
+        ]
+    },
+
+    "en": {
+        "header": "All the Best for You",
+        "body": "Fixed our eyes on the future to provide the best solution for you.",
+        "visi": "Our Vision",
+        "misi": "Our Mission",
+        "visiList": [
+            "To be one of all-time favorite and trustworthy travel app",
+            "To be one-stop solution with complete feature for every daily needs",
+            "Contribute in increase of Indonesia tourism and transportation advancement in Indonesia"
+        ],
+        "misiList": [
+            "Creating mutualism partnerships with all of our trusted partners, domestically and internationally ",
+            "Providing top-notch service that is satisfactory for all of our clienteles",
+            "Granting maximal welfare to each and every one of Holigo Family member",
+            "Staying up-to-date as an application to provide an easy to use, comfortable and trustworthy digital service"
+        ]
+    }
+}

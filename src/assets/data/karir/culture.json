@@ -1,0 +1,101 @@
+{
+    "id": {
+        "header": "Budaya team",
+        "body": "Team Holigo itu santai tapi selalu siap. Yuk gabung keluarga besar Holigo.",
+
+        "culturList": [
+            {  
+                "id": 1,
+                "image": "src/assets/img/Careers/budaya holigo/website illust-serius tapi santai.png",
+                "header": "Santai Tapi Serius",
+                "content": "Work hard, Play hard bersama -sama "
+            },
+
+            {  
+                "id": 2,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli kenyamanan.png",
+                "header": "Peduli Kenyamananmu",
+                "content": "Kamu boleh menggunakan casual yang santai "
+            },
+
+            {  
+                "id": 3,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli dengan kesehatan.png",
+                "header": "Peduli Kesehatan Kamu",
+                "content": "Kami peduli dengan kesehatan kamu"
+            },
+
+            {  
+                "id": 4,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli dengan hakmu.png",
+                "header": "Peduli Hak Kamu",
+                "content": "Kami peduli hak kamu sebagai tenaga kerja"
+            },
+
+            {  
+                "id": 5,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-semua disediakan.png",
+                "header": "Semua Disediain",
+                "content": "Laptop, Coffee, dan lainnya kami sediain"
+            },
+
+            {  
+                "id": 6,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli potensi.png",
+                "header": "Peduli Potensimu",
+                "content": "Kami mau potensi kamu terus berkembang"
+            }
+        ]
+
+    },
+
+    "en": {
+        "header1": "Holigo's",
+        "header2": "Team Culture",
+        "body": "Lax but responsible. Let's join our big family.",
+
+        "culturList": [
+            {  
+                "id": 1,
+                "image": "src/assets/img/Careers/budaya holigo/website illust-serius tapi santai.png",
+                "header": "Orderly Chill",
+                "content": "Work Hard, Play Hard together."
+            },
+
+            {  
+                "id": 2,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli kenyamanan.png",
+                "header": "Care about Your Comfort",
+                "content": "No stuffy formal work outfit, wear whatever makes you feel comfortable. "
+            },
+
+            {  
+                "id": 3,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli dengan kesehatan.png",
+                "header": "Care for Your Health",
+                "content": "We want you to be healthy without worrying about medical bills"
+            },
+
+            {  
+                "id": 4,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli dengan hakmu.png",
+                "header": "Care about Your Rights",
+                "content": "We acknowledge and heed your rights as employee"
+            },
+
+            {  
+                "id": 5,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-semua disediakan.png",
+                "header": "Everything is Available",
+                "content": "Laptops, Coffees, and many more are available for you"
+            },
+
+            {  
+                "id": 6,
+                "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli potensi.png",
+                "header": "Care about Your Potentials",
+                "content": "We want to grow your potential more and more everyday."
+            }
+        ]
+    }
+}

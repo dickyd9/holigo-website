@@ -5,10 +5,10 @@
                     <div data-aos="fade-up" data-aos-duration="1500">
                     <div class="grid justify-items-center items-center py-80">
                         <h1 class="font-black text-center text-h1 max-w-2xl text-basic-white">
-                            <span class="text-primary-brand">Semua</span> {{header}}
+                            <span class="text-primary-brand">{{hero('header1')}}</span> {{hero('header2')}}
                         </h1>
                         <span class="text-center pt-6 text-body1 font-thin max-w-md text-basic-white">
-                            {{body}}
+                            {{hero('body')}}
                         </span>
                     </div>
                 </div>
@@ -22,10 +22,10 @@
                 <div data-aos="fade-up" data-aos-duration="1500">
                     <div class="grid justify-items-center items-center py-52">
                         <h1 class="font-black text-center text-h2 text-basic-white md:max-w-3xl md:text-h1">
-                            <span class="text-primary-brand">Semua</span> {{header}}
+                            <span class="text-primary-brand">{{hero('header1')}}</span> {{hero('header2')}}
                         </h1>
                         <span class="text-center pt-6 text-body3 font-thin max-w-md text-basic-white">
-                            {{body}}
+                            {{hero('body')}}
                         </span>
                     </div>
                 </div>
@@ -54,10 +54,24 @@
 
 <script>
 import { MqResponsive } from "vue3-mq";
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import dataHero from '../../assets/data/about/hero.json';
+
 export default {
     name: "hero",
     components:{
         MqResponsive
+    },
+    setup() {
+        const store = useStore();
+        const activeLanguage = computed(() => store.getters.activeLanguage);
+
+        const hero = (string) => {
+            return dataHero[activeLanguage.value][string];
+        }
+        
+        return{hero}
     },
     data() {
         return {

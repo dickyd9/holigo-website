@@ -71,16 +71,16 @@
     class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
   >
     <div class="container mx-auto pt-20">
-      
+      <!-- Title -->
       <div data-aos="fade-up" data-aos-duration="1500">
         <div id="text" class="text-center text-text-grey6">
           <div class="text-h3 font-bold">
-            <span class="text-primary-brand">Mending</span> {{ header }}
+            <span class="text-primary-brand">{{work('header1')}}</span> {{ work('header2') }}
           </div>
-          <div class="text-body2">{{ body }}</div>
+          <div class="text-body2">{{ work('body') }}</div>
         </div>
       </div>
-      
+      <!-- Content -->
       <div data-aos="fade-up" data-aos-duration="1500">
         <div id="text" class="pt-10 flex justify-center">
 
@@ -100,7 +100,7 @@
             </template>
 
             <vueper-slide 
-              v-for="(work, i) in card"
+              v-for="(work, i) in work('card')"
               :key="i"
             >
             <template #content>
@@ -127,7 +127,7 @@
       <div data-aos="fade-up" data-aos-duration="1500">
         <div class="flex justify-center">
           <Button class="mb-28 mt-10">
-            Yuk, Gabung!
+            {{work('btn')}}
           </Button>
         </div>
       </div>
@@ -195,10 +195,23 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 import { MqResponsive } from "vue3-mq";
 import Button from '@/components/Button.vue'
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import workList from '../../assets/data/beranda/work.json';
 
 export default {
   name: "work",
   components: { VueperSlides, VueperSlide, MqResponsive, Button },
+  setup(){  
+    const store = useStore();
+    const activeLanguage = computed(() => store.getters.activeLanguage);
+
+    const work = (string) => {
+      return workList[activeLanguage.value][string];
+    }
+
+    return {work}
+  },
   data() {
     return {
       currentSlide: 0,

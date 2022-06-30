@@ -88,9 +88,23 @@
               focus:outline-none focus:text-gray-400
             "
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                 v-if="!showMenu">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              v-else>
+              <line x1="1" y1="11" 
+                    x2="11" y2="1" 
+                    stroke="black" 
+                    stroke-width="2"/>
+                    
+              <line x1="1" y1="1" 
+                    x2="11" y2="11" 
+                    stroke="black" 
+                    stroke-width="2"/>
+          </svg>
           </button>
         </div>
       </div>

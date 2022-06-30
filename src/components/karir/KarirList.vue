@@ -88,7 +88,7 @@
     <section id="karirlist" class="h-full">
       <div data-aos="fade-up" data-aos-duration="1500">
         <div class="container px-6 mx-auto justify-center text-center">
-          <h1 class="text-h3 font-bold">Daftar Lowongan</h1>
+          <h1 class="text-h3 font-bold">{{karir('header')}}</h1>
 
           <div id="card" class="p-6 mb-10 rounded-3xl overflow-hidden shadow-md">
             <form class="flex items-center">
@@ -102,7 +102,7 @@
                 class="
                   p-2.5
                   ml-2
-                  w-20
+                  w-24
                   text-sm
                   font-medium
                   text-white
@@ -110,12 +110,12 @@
                   rounded-2xl
                 "
               >
-                Cari
+                {{karir('btn')}}
               </button>
             </form>
 
             <div class="pt-4 text-left">
-              <h1 class="font-bold">Pilih sesuai kategori</h1>
+              <h1 class="font-bold">{{karir('cat')}}</h1>
             </div>
 
             <div id="category" class="pt-4 flex gap-2">
@@ -158,18 +158,17 @@
   </MqResponsive>
 
   <MqResponsive target="xs-sm">
-    <section class="h-full mb-20">
+    <section id="karirlist" class="h-full mb-20">
       <div data-aos="fade-up" data-aos-duration="1500">
         <div class="container px-6 mx-auto justify-center text-center">
-          <h1 class="text-h5 font-bold">Daftar Lowongan</h1>
+          <h1 class="text-h5 font-bold">{{karir('header')}}</h1>
 
           <div id="card" class="p-6 mb-10 rounded-3xl overflow-hidden shadow-md">
             <form class="flex items-center">
               <label for="simple-search" class="sr-only">Search</label>
               <div class="relative w-full">
                 <input
-                  type="text"
-                  id="simple-search"
+                  v-model="search"
                   class="
                     bg-basic-background
                     border-none
@@ -184,7 +183,7 @@
                   placeholder="Cari passion kamu"
                   required
                 />
-                <div class="absolute top-2 right-2">
+                <!-- <div class="absolute top-2 right-2">
                   <button type="submit" class="">
                     <img
                       src="../../assets/img/Careers/filter.png"
@@ -192,10 +191,11 @@
                       class="h-8"
                     />
                   </button>
-                </div>
+                </div> -->
               </div>
               <button
-                type="submit"
+                type="button"
+                @click="onSearch"
                 class="
                   p-2.5
                   ml-2
@@ -207,7 +207,7 @@
                   rounded-2xl
                 "
               >
-                Cari
+                {{karir('btn')}}
               </button>
             </form>
           </div>
@@ -252,6 +252,9 @@ import { doc, getDoc } from "firebase/firestore";
 import { onMounted } from "vue";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, child, get } from "firebase/database";
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import karirList from '../../assets/data/karir/karirList.json';
 export default {
   components: {
     MqResponsive,
@@ -271,9 +274,14 @@ export default {
     };
   },
   setup() {
-    // expose to template and other options API hooks
-    return {
-    };
+        const store = useStore();
+        const activeLanguage = computed(() => store.getters.activeLanguage);
+
+        const karir = (string) => {
+            return karirList[activeLanguage.value][string];
+        }
+        
+        return{karir}
   },
   async mounted(){
 

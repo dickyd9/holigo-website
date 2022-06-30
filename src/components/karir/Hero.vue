@@ -59,10 +59,10 @@
             <div class="grid basis-1/2 content-center">
                 <div data-aos="fade-up" data-aos-duration="1500">
                   <h1 class="text-[4rem] font-black">
-                    {{header}}
+                    {{hero('header')}}
                   </h1>
                   <span class="text-h6 max-w-xl">
-                      {{body}}
+                      {{hero('body')}}
                   </span>
   
                   <div id="search" class="pt-6 max-w-lg">
@@ -72,13 +72,13 @@
                               <Input name="search" />
                           </div>
                           <button 
-                                  class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-2xl">
-                              Cari
+                                  class="p-2.5 ml-2 w-24 text-sm font-medium text-white bg-primary-brand rounded-2xl">
+                              {{hero('btn')}}
                           </button>
                       </form>
                       <button type="submit" class="pt-5 text-primary-brand"> 
                           <div class="flex gap-2">
-                          Lihat semua lowongan <img :src="icon" alt="" class="h-6 hover:ml-2 hover:delay-300 hover:duration-300 hover:ease-in-out">
+                          {{hero('lowongan')}} <img :src="icon" alt="" class="h-6 hover:ml-2 hover:delay-300 hover:duration-300 hover:ease-in-out">
                           </div>
                       </button>
                   </div>
@@ -111,17 +111,18 @@
             <!-- content -->
             <div class="grid basis-1/2 content-center pt-8">
                   <h1 class="text-h4 font-black">
-                    {{header}}
+                    {{hero('body')}}
                   </h1>
                   <span class="text-p1 max-w-xl">
-                      {{body}}
+                      {{hero('body')}}
                   </span>
   
                   <div id="search" class="pt-6 max-w-lg">
                       <form class="flex items-center">   
                           <label for="simple-search" class="sr-only">Search</label>
                           <div class="relative w-full">
-                              <input type="text" id="simple-search" 
+                              <input type="text" id="simple-search"
+                              name="search" 
                               class="
                               bg-basic-background
                               text-basic-black
@@ -138,13 +139,13 @@
                               placeholder="Search" 
                               required>
                           </div>
-                          <button type="submit" class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-3xl">
-                              Cari
+                          <button class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-3xl">
+                              {{hero('btn')}}
                           </button>
                       </form>
                       <button type="submit" class="pt-5 text-primary-brand"> 
                           <div class="flex gap-2 hover:w-8">
-                          Lihat semua lowongan <img :src="icon" alt="" class="h-6">
+                          {{hero('lowongan')}} <img :src="icon" alt="" class="h-6">
                           </div>
                       </button>
                   </div>
@@ -157,10 +158,23 @@
 <script>
 import { MqResponsive } from "vue3-mq";
 import Input from "../Input.vue";
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import dataHero from '../../assets/data/karir/hero.json';
 export default {
     components: {
         MqResponsive,
         Input
+    },
+    setup() {
+        const store = useStore();
+        const activeLanguage = computed(() => store.getters.activeLanguage);
+
+        const hero = (string) => {
+            return dataHero[activeLanguage.value][string];
+        }
+        
+        return{hero}
     },
     data() {
         return {

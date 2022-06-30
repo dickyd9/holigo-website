@@ -9,7 +9,7 @@
       hover:bg-primary-green-l-10
       disable:bg-basic-background
       disable:text-color-grey2
-      w-40
+      w-auto
       px-6 
       py-3 
       rounded-3xl">

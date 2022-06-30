@@ -47,15 +47,15 @@
         <!-- Title -->
         <div data-aos="fade-up" data-aos-duration="1500">
           <div class="flex flex-col text-center justify-center pb-24">
-            <h1 class="text-h1 font-black text-text-grey6">{{header}}</h1>
+            <h1 class="text-h1 font-black text-text-grey6">{{dWhy('header')}}  <span class="text-primary-brand">holigo</span> ?</h1>
             <span class="pt-2 text-body3 text-text-grey6">
-              {{body}}</span>
+              {{dWhy('body')}}</span>
           </div>
         </div>
         <!-- Content -->
         <div data-aos="fade-up" data-aos-duration="1500">
           <div class="flex flex-row gap-5">
-            <Card class="relative" v-for="cardItem in card" :key="cardItem.id">
+            <Card class="relative" v-for="cardItem in dWhy('card')" :key="cardItem.id">
               <img
                 :src="cardItem.image"
                 alt=""
@@ -126,65 +126,21 @@
   </MqResponsive>
 </template>
 
-<script>
+<script setup>
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 import { MqResponsive } from "vue3-mq";
 import Card from "../Card.vue";
-export default {
-  name: "why",
-  components: {
-    Card,
-    VueperSlides, 
-    VueperSlide,
-    MqResponsive
-  },
-  data() {
-    return {
-      bg: "src/assets/img/Home/Backgrund/background_1.png",
-      header: "Kenapa harus",
-      body: "Apa yang membuat Holigo berbeda",
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import why from '../../assets/data/beranda/why.json';
+const store = useStore();
+const activeLanguage = computed(() => store.getters.activeLanguage);
 
-      card: [
-        {
-          id: 1,
-          image:
-            "src/assets/img/Home/WhyHoligo/website illust icon-harga terbaik 1.png",
-          header: "Harga Terbaik",
-          content:
-            "Travelling ga perlu mahal! Semua kebutuhan disediakan dengan harga yang budget-friendly.",
-        },
+const dWhy = (string) => {
+  return why[activeLanguage.value][string];
+}
 
-        {
-          id: 2,
-          image:
-            "src/assets/img/Home/WhyHoligo/website illust icon-metode pembayaran variatif 1.png",
-          header: "Metode pembayaran variatif",
-          content:
-            "Banyak jalan menuju transaksi berhasil, pilih metode pembayaran sesuai yang kamu mau!",
-        },
-
-        {
-          id: 3,
-          header: "Mudah digunakan",
-          image:
-            "src/assets/img/Home/WhyHoligo/website illust icon-mudah digunakan 1.png",
-          content:
-            "Aplikasinya simple dan gampang untuk digunakan siapa pun, kapan pun, dan di mana pun!",
-        },
-
-        {
-          id: 4,
-          header: "Pelayanan 24 Jam",
-          image:
-            "src/assets/img/Home/WhyHoligo/website illust icon-pelayanan 24 jam (1) 1.png",
-          content:
-            "Customer Service kami siap membantu semua kebutuhan kamu 24 jam setiap harinya!",
-        },
-      ],
-    };
-  },
-};
 </script>
 
 <style>

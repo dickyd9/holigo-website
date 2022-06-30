@@ -1,0 +1,51 @@
+{
+    "id": {
+        "header1": "Partner",
+        "header2": "Terpercaya",
+        "body": "Mau produk apa pun, semua udah kami sediain biar lifestyle kamu lebih simple",
+        "tab": 
+            [
+                {
+                    "id": 1,
+                    "name": "Transportasi"
+                },
+                {
+                    "id": 2,
+                    "name": "Hotel"
+                },
+                {
+                    "id": 3,
+                    "name": "Pulsa & Paket Data"
+                },
+                {
+                    "id": 4,
+                    "name": "Tagihan & Isi ulang"
+                }
+            ]
+    },
+
+    "en": {
+        "header1" : "Partner",
+        "header2" : "Trusted",
+        "body" : "Our  trusted partners for your maximum comfort & security.",
+        "tab": 
+            [
+                {
+                    "id": 1,
+                    "name": "Transportation"
+                },
+                {
+                    "id": 2,
+                    "name": "Hotel"
+                },
+                {
+                    "id": 3,
+                    "name": "Internet Data & Balance"
+                },
+                {
+                    "id": 4,
+                    "name": "Top Up & Bills"
+                }
+            ]
+    }
+}

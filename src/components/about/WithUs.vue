@@ -8,9 +8,9 @@
         >
           <div class="flex content-center">
             <div class=" py-20 pl-24">
-              <h1 class="text-h1 font-bold text-left">Siap tumbuhkan potensi kamu bersama?</h1>
+              <h1 class="text-h1 font-bold text-left">{{dataW('content')}}</h1>
 
-              <Button type="button" class="cursor-pointer mt-6">Yuk, Gabung</Button>
+              <Button type="button" class="cursor-pointer mt-6">{{dataW('btn')}}</Button>
             </div>
             <div class="basis-1/2">
               <img :src="bg" alt="" class="h-[500px] pt-10">
@@ -29,9 +29,9 @@
         >
           <div class="flex content-center">
             <div class=" py-20 pl-24">
-              <h1 class="text-h2 font-bold text-left">Siap tumbuhkan potensi kamu bersama?</h1>
+              <h1 class="text-h2 font-bold text-left">{{dataW('content')}}</h1>
 
-              <Button type="button" class="cursor-pointer mt-6">Yuk, Gabung</Button>
+              <Button type="button" class="cursor-pointer mt-6">{{dataW('btn')}}</Button>
             </div>
             <div class="basis-1/2">
               <img :src="bg" alt="" class="h-80 pt-10">
@@ -50,9 +50,9 @@
         >
           <div class="grid">
             <div class="pt-12 pb-6 px-10">
-              <h1 class="text-h4 font-bold text-left">Siap tumbuhkan potensi kamu bersama?</h1>
+              <h1 class="text-h4 font-bold text-left">{{dataW('content')}}</h1>
 
-              <Button type="button" class="cursor-pointer mt-6 text-text-button">Yuk, Gabung</Button>
+              <Button type="button" class="cursor-pointer mt-6 text-text-button">{{dataW('btn')}}</Button>
             </div>
             <div class="basis-1/2 flex justify-center">
               <img :src="bg" alt="" class="h-44">
@@ -68,11 +68,24 @@
 <script>
 import { MqResponsive } from "vue3-mq";
 import Button from '@/components/Button.vue';
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import withU from '../../assets/data/about/withUs.json';
 export default {
   name: "WithUs",
   components: {
         Button,
         MqResponsive
+    },
+    setup() {
+        const store = useStore();
+        const activeLanguage = computed(() => store.getters.activeLanguage);
+
+        const dataW = (string) => {
+            return withU[activeLanguage.value][string];
+        }
+        
+        return{dataW}
     },
   data() {
     return {

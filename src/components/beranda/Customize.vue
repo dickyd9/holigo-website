@@ -42,11 +42,11 @@
              <div class="flex mt-24 mx-20">
                 <div class="max-w-[700px] justify-around">
                     <h1 class="text-h1 font-bold"> 
-                        <span class="text-primary-brand">Costumize</span> {{header}}
+                        <span class="text-primary-brand">Costumize</span> {{costum('header2')}}
                     </h1>
 
                     <h1 class="text-body3 pt-4">
-                        {{body}}
+                        {{costum('body')}}
                     </h1>
                     
                     <div class="mt-6">
@@ -70,8 +70,8 @@
             <div class="pt-10 text-left px-6"> 
                 <div class="grid pb-2">
                     <h1 class="text-h4 font-black">
-                    <span class="text-primary-brand">Costumize</span> {{header}}</h1>
-                    <h1 class="text-p1 pt-2">{{body}}</h1>
+                    <span class="text-primary-brand">{{costum('header1')}}</span> {{costum('header2')}}</h1>
+                    <h1 class="text-p1 pt-2">{{costum('body')}}</h1>
                 </div>
                 <div class="py-4">
                     <Button>Request Trip</Button>
@@ -89,11 +89,25 @@
 <script>
 import { MqResponsive } from "vue3-mq";
 import Button from '@/components/Button.vue'
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import dataCos from '../../assets/data/beranda/custom.json';
+
 export default {
-    name: "why",
+    name: "customize",
     components: {
         Button,
-        MqResponsive
+        MqResponsive 
+    },
+    setup() {
+        const store = useStore();
+        const activeLanguage = computed(() => store.getters.activeLanguage);
+
+        const costum = (string) => {
+            return dataCos[activeLanguage.value][string];
+        }
+
+        return {costum}
     },
     data(){
         return{

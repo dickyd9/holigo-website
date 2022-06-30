@@ -1,0 +1,59 @@
+{
+    "id": {
+        "card": [
+            {
+                "id": 1,
+                "img": "src/assets/img/AboutUs/website-illust-3.png",
+                "header": "Holigo - Sahabat Holiday kamu",
+                "content": "Memberikan one-stop solution untuk semua kebutuhan kamu. Tiket pesawat, hotel, PPOB, dan sampai pembelian pulsa tersedia dalam satu platform simple yang gampang buat digunakan semua orang. Solusi liburan anti repot dan anti mahal!"
+            },
+            {
+                "id": 1,
+                "img": "src/assets/img/AboutUs/website-illust-4.png",
+                "header": "Mudah, Murah, Meriah",
+                "content": "Berbagai service lengkap disediakan dengan harga yang terjangkau. Holigo siap menjadi sahabat travelling yang menyediakan dan memudahkan semua kebutuhan travelling. Nikmati liburan murah dengan berbagai promo dan metode pembayaran yang tersedia!"
+            },
+            {
+                "id": 1,
+                "img": "src/assets/img/AboutUs/website-illust-2.png",
+                "header": "Selalu siap menemani",
+                "content": "Kenyamanan dalam transaksi menjadi prioritas Holigo. Pintu Holigo selalu terbuka 24 jam setiap hari. Apa pun pertanyaannya, Customer Service officer Holigo siap dihubungi kapan pun dan di mana pun. "
+            },
+            {
+                "id": 1,
+                "img": "src/assets/img/AboutUs/website-illust-1.png",
+                "header": "Berkembang bersama waktu",
+                "content": "Holigo selalu berinovasi dalam pengembangan teknologi untuk terus mengikuti adaptasi teknologi Indonesia agar mudah dan nyaman digunakan. Travelling sekarang jadi simple dan mudah!"
+            }
+        ]
+    },
+
+    "en": {
+        "card": [
+            {
+                "id": 1,
+                "img": "src/assets/img/AboutUs/website-illust-3.png",
+                "header": "Holigo - Your Holiday Bestie",
+                "content": "One-stop solution for all your travelling needs. untuk semua kebutuhan travelling. From Plane Tickets, accommodation like Hotels, PPOB, to prepaid phone balance all available in one simple platform that is easy to use for everyone. Affordable Holiday solution without all the fuss. "
+            },
+            {
+                "id": 2,
+                "img": "src/assets/img/AboutUs/website-illust-4.png",
+                "header": "Easy on your Budget & Easy to Use",
+                "content": "All kind of service available with affordable price. HoliGo is ready to be your Holiday Bestie, the one who’s ready to make your trip & life easier. Enjoy a pocket-friendly trip with all kinds of discounts & various payment methods available!"
+            },
+            {
+                "id": 3,
+                "img": "src/assets/img/AboutUs/website-illust-2.png",
+                "header": "Always Ready to Help",
+                "content": "Comfortable transaction is Holigo’s utmost priority. Our door is always open, all day everyday, 24/7 for you. Our Customer Service Officers are always ready to answer any question you have. "
+            },
+            {
+                "id": 1,
+                "img": "src/assets/img/AboutUs/website-illust-1.png",
+                "header": "Grow with the Flow",
+                "content": "Holigo is always innovating and growing with the flow of technological advancement and strives to be an ever-present easy to use app. Travelling is now simple & easy!"
+            }
+        ]
+    }
+}

@@ -1,18 +1,8 @@
-<script>
+<script setup>
 import { RouterLink, RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import { MqResponsive } from "vue3-mq";
-
-export default {
-  components:{
-    MqResponsive,
-    RouterView,
-    Navbar,
-    Footer,
-  }
-};
-
 </script>
 
 <template>
