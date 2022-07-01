@@ -31,7 +31,14 @@
                               placeholder="Search" 
                               required>
                           </div>
-                          <button type="submit" class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-2xl">
+                          <button type="submit" 
+                          class="p-2.5 ml-2 w-20 font-bold 
+                                text-text-grey6 
+                                bg-primary-brand
+                                hover:bg-primary-green-l-10
+                                disable:bg-basic-background
+                                disable:text-color-grey2 
+                                rounded-2xl">
                               Cari
                           </button>
                       </form>
@@ -72,11 +79,16 @@
                               <Input name="search" />
                           </div>
                           <button 
-                                  class="p-2.5 ml-2 w-24 text-sm font-medium text-white bg-primary-brand rounded-2xl">
+                                class="p-2.5 ml-2 w-24 text-sm text-text-grey6 font-bold
+                                bg-primary-brand
+                                hover:bg-primary-green-l-10
+                                disable:bg-basic-background
+                                disable:text-color-grey2 
+                                rounded-2xl">
                               {{hero('btn')}}
                           </button>
                       </form>
-                      <button type="submit" class="pt-5 text-primary-brand"> 
+                      <button class="pt-5 text-primary-brand"> 
                           <div class="flex gap-2">
                           {{hero('lowongan')}} <img :src="icon" alt="" class="h-6 hover:ml-2 hover:delay-300 hover:duration-300 hover:ease-in-out">
                           </div>
@@ -121,25 +133,15 @@
                       <form class="flex items-center">   
                           <label for="simple-search" class="sr-only">Search</label>
                           <div class="relative w-full">
-                              <input type="text" id="simple-search"
-                              name="search" 
-                              class="
-                              bg-basic-background
-                              text-basic-black
-                              border-none 
-                              text-sm 
-                              rounded-xl 
-                              focus:ring-primary-brand
-                              focus:border-primary-brand 
-                              block 
-                              w-full 
-                              pl-6 
-                              p-2.5 
-                              " 
-                              placeholder="Search" 
-                              required>
+                              <Input name="search" />
                           </div>
-                          <button class="p-2.5 ml-2 w-20 text-sm font-medium text-white bg-primary-brand rounded-3xl">
+                          <button 
+                                class="p-2.5 ml-2 w-20 text-sm text-text-grey6 font-bold 
+                                bg-primary-brand
+                                hover:bg-primary-green-l-10
+                                disable:bg-basic-background
+                                disable:text-color-grey2 
+                                rounded-3xl">
                               {{hero('btn')}}
                           </button>
                       </form>
@@ -180,8 +182,8 @@ export default {
         return {
             header: "Yuk, unlock potensi kamu bareng kami!",
             body: "Sigap, siap, santai, serius. Belajar dan asah kemampuan bersama-sama.",
-            image: "src/assets/img/Careers/website illust-unlock your potential color 2.png",
-            icon: "src/assets/img/icon/arrow right.png"
+            image: "/img/Careers/website illust-unlock your potential color 2.png",
+            icon: "/img/icon/arrow right.png"
         }
     },
     method: {

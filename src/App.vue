@@ -34,9 +34,4 @@ import { MqResponsive } from "vue3-mq";
   font-weight: normal;
 }
 
-.exact-active-link {
-  border-bottom: 2cm;
-  border-color: #00BD17;
-}
-
 </style>

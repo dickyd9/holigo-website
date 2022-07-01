@@ -4,7 +4,7 @@
 
       <div data-aos="fade-up" data-aos-duration="1500">
         <div class="container px-6 mx-auto justify-center text-center">
-          <h1 class="text-h3 font-bold">Daftar Lowongan</h1>
+          <h1 class="text-h3 font-bold">{{karir('header')}}</h1>
 
           <div id="card" class="p-6 mb-10 rounded-3xl overflow-hidden shadow-md">
             <form class="flex items-center">
@@ -34,24 +34,29 @@
                   p-2.5
                   ml-2
                   w-20
-                  text-sm
-                  font-medium
-                  text-white
+                  font-bold
+                  text-text-grey6 
                   bg-primary-brand
+                  hover:bg-primary-green-l-10
+                  disable:bg-basic-background
+                  disable:text-color-grey2 
                   rounded-2xl
                 "
               >
-                Cari
+                {{karir('btn')}}
               </button>
             </form>
 
             <div class="pt-4 text-left">
-              <h1 class="font-bold">Pilih sesuai kategori</h1>
+              <h1 class="font-bold">{{karir(cat)}}</h1>
             </div>
 
             <div id="category" class="pt-4 flex gap-2">
-              <a href="/" class="px-6 py-3 rounded-xl overflow-hidden shadow-md">
-                <h1>Cat1</h1>
+              <a @click="setCat()" :class="!categorySelected ?'bg-primary-brand text-basic-white':'hover:bg-primary-brand hover:text-basic-white'" class="cursor-pointer font-bold px-6 py-3 rounded-xl overflow-hidden shadow-md">
+                <h1>ALL</h1>
+              </a>
+              <a v-for="cat in category" :key="cat" :class="categorySelected == cat ?'bg-primary-brand text-basic-white':'hover:bg-primary-brand hover:text-basic-white'" @click="setCat(cat)" class="cursor-pointer font-bold px-6 py-3 rounded-xl overflow-hidden shadow-md">
+                <h1>{{cat}}</h1>
               </a>
             </div>
           </div>
@@ -103,10 +108,12 @@
                   p-2.5
                   ml-2
                   w-24
-                  text-sm
-                  font-medium
-                  text-white
+                  font-bold
+                  text-text-grey6 
                   bg-primary-brand
+                  hover:bg-primary-green-l-10
+                  disable:bg-basic-background
+                  disable:text-color-grey2 
                   rounded-2xl
                 "
               >
@@ -119,10 +126,10 @@
             </div>
 
             <div id="category" class="pt-4 flex gap-2">
-              <a @click="setCat()" :class="!categorySelected ?'bg-primary-brand text-basic-white':''" class="cursor-pointer px-6  py-3 rounded-xl overflow-hidden shadow-md">
+              <a @click="setCat()" :class="!categorySelected ?'bg-primary-brand text-basic-white':'hover:bg-primary-brand hover:text-basic-white'" class="cursor-pointer font-bold px-6 py-3 rounded-xl overflow-hidden shadow-md">
                 <h1>ALL</h1>
               </a>
-              <a v-for="cat in category" :key="cat" :class="categorySelected == cat ?'bg-primary-brand text-basic-white':''" @click="setCat(cat)" class="cursor-pointer px-6 py-3 rounded-xl overflow-hidden shadow-md">
+              <a v-for="cat in category" :key="cat" :class="categorySelected == cat ?'bg-primary-brand text-basic-white':'hover:bg-primary-brand hover:text-basic-white'" @click="setCat(cat)" class="cursor-pointer font-bold px-6 py-3 rounded-xl overflow-hidden shadow-md">
                 <h1>{{cat}}</h1>
               </a>
             </div>
@@ -158,7 +165,7 @@
   </MqResponsive>
 
   <MqResponsive target="xs-sm">
-    <section id="karirlist" class="h-full mb-20">
+    <section class="h-full mb-20">
       <div data-aos="fade-up" data-aos-duration="1500">
         <div class="container px-6 mx-auto justify-center text-center">
           <h1 class="text-h5 font-bold">{{karir('header')}}</h1>
@@ -200,10 +207,12 @@
                   p-2.5
                   ml-2
                   w-20
-                  text-sm
-                  font-medium
-                  text-white
+                  font-bold
+                  text-text-grey6 
                   bg-primary-brand
+                  hover:bg-primary-green-l-10
+                  disable:bg-basic-background
+                  disable:text-color-grey2 
                   rounded-2xl
                 "
               >
@@ -214,7 +223,7 @@
         </div>
       </div>
       <div data-aos="fade-up" data-aos-duration="1500">
-        <div id="list" class="container px-6 mx-auto mb-4">
+        <div id="karirList" class="container px-6 mx-auto mb-4">
           <div class="grid gap-6">
             <a :href="dt.url" class="flex p-6 shadow-md rounded-2xl" v-for="dt in data.careers" :key="dt.id">
               <h1 class="text-p1 font-bold">{{dt.id}}. </h1>

@@ -25,7 +25,7 @@
             <img :src="content('style')" class="w-20 pb-6">
             <div class="text-h2 font-black">{{content('header')}}</div>
             <span class="pt-2 text-body3">{{content('body')}}</span>
-            <Button type="button" class="cursor-pointer mt-6">{{content('btn')}}</Button>
+            <Button type="button" class="cursor-pointer mt-6 max-w-xs">{{content('btn')}}</Button>
         </div>
       </div>
     </section>
@@ -36,17 +36,17 @@
       <div class="container px-6 mx-auto ">
         <!-- image -->
         <div class="basis-1/2 items-center flex justify-center">
-          <img :src="translateString('image')" alt="" class="w-64"/>
+          <img :src="content('image')" alt="" class="w-64"/>
         </div>
 
           <div class="flex pt-6">
-            <img :src="translateString('style')" class="flex content-center w-20 pb-6">
+            <img :src="content('style')" class="flex content-center w-20 pb-6">
           </div>
 
         <!-- content -->
         <div class="grid basis-1/2 content-center">
-            <div class="text-h4 font-black">{{translateString('header')}}</div>
-            <span class="text-p2 pt-2">{{translateString('body')}}</span>
+            <div class="text-h4 font-black">{{content('header')}}</div>
+            <span class="text-p2 pt-2">{{content('body')}}</span>
             <Button type="button" class="cursor-pointer mt-6">Selengkapnya</Button>
         </div>
       </div>

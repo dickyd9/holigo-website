@@ -10,10 +10,10 @@
         :class="enabled ? 'translate-x-9' : 'translate-x-0'"
         class="pointer-events-none inline-block h-[30px] w-[30px] transform rounded-full bg-primary-brand shadow-lg ring-0 transition duration-200 ease-in-out"
       >
-        <span class="h-full grid content-center text-p3 text-white font-bold">{{enabled ? 'ID' : 'EN'}}</span>
+        <span class="h-full grid content-center text-p3 text-white font-bold">{{enabled ? 'EN' : 'ID'}}</span>
       </span>
         <span class="absolute grid content-center h-full w-full text-p3 px-3 font-bold"
-        :class="enabled ? 'flex justify-start'  : 'flex justify-end'">{{enabled ? 'EN' : 'ID'}}</span>
+        :class="enabled ? 'flex justify-start'  : 'flex justify-end'">{{enabled ? 'ID' : 'EN'}}</span>
     </Switch>
   </div>
 </template>
@@ -43,9 +43,9 @@ const changeActiveLanguage = (language) => {
 
 watch (enabled, (enabled, prev) => {
   if (enabled){
-    changeActiveLanguage('id');
-  } else {
     changeActiveLanguage('en');
+  } else {
+    changeActiveLanguage('id');
   }
 })
 </script>

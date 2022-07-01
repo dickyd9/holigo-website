@@ -104,7 +104,7 @@
       <div class="flex justify-center basis-1/2">
           <img 
               class="h-[33vh] pb-4" 
-              :src="heroItem.image" 
+              :src="image" 
               alt=""
           >
       </div>
@@ -114,20 +114,20 @@
           <!-- Text Title -->
           <div class="text-h4 font-black text-left">
             <div class="flex"> 
-             {{heroItem.header1}}<img :src="heroItem.pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
+             {{hero('header1')}}<img :src="pattern" alt="" class="w-8 h-8 md:w-16 md:h-16" />
            </div>
            <div class="text-basic-black flex flex-wrap">
-              your <div class="text-primary-brand pl-4"> {{heroItem.header2}}</div>
+              your <div class="text-primary-brand pl-4"> {{hero('header2')}}</div>
            </div>
           </div>
           <!-- Text body -->
           <span class="text-body4 font-medium text-left ">
-            {{heroItem.body}}
+            {{hero('body')}}
           </span>
 
           <!-- Product Flex -->
           <div class="flex gap-2 justify-center pt-6">
-            <div class="flex" v-for="productList in product" :key="productList.id">
+            <div class="flex" v-for="productList in hero('product')" :key="productList.id">
               <div id="icon" class="pr-2 w-14">
                 <img :src="productList.img" alt="">
               </div>
@@ -157,8 +157,8 @@ const hero = (string) => {
   return dataHero[activeLanguage.value][string];
 }
 
-const pattern = "src/assets/img/Home/pattern-1.png"
-const image = "src/assets/img/Home/website illust-hero color 1.png"
+const pattern = "/img/Home/pattern-1.png"
+const image = "/img/Home/website illust-hero color 1.png"
 </script>
 
 <style>

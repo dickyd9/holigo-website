@@ -76,8 +76,8 @@
       <!-- Title -->
       <div data-aos="fade-up" data-aos-duration="1500">
         <div id="text" class="text-center px-6">
-          <div class="text-h4 font-bold">{{ header }}</div>
-          <div class="text-p1">{{ body }}</div>
+          <div class="text-h4 font-bold">{{ dFor('header') }}</div>
+          <div class="text-p1">{{ dFor('body') }}</div>
         </div>
       </div>
       <!-- Content -->
@@ -93,7 +93,7 @@
             :gap="1">
 
             <vueper-slide 
-              v-for="(work, i) in card"
+              v-for="(work, i) in dFor('card')"
               :key="i"
             >
             <template #content>

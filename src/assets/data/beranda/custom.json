@@ -1,17 +1,17 @@
 {
     "id": {
-        "bg": "src/assets/img/Home/Backgrund/card_background_1.png",
+        "bg": "/img/Home/Backgrund/card_background_1.png",
         "header1": "Customize",
         "header2": "perjalanan kamu",
         "body": "Rancang perjalanan sesuai selera dan jadwal kamu, dan dapatkan harga terbaik supaya travel tetap on budget. Yuk langsung customize perjalanan kamu sekarang.",
-        "image": "src/assets/img/Home/website illust-customize your trip.png"
+        "image": "/img/Home/website illust-customize your trip.png"
     },
 
     "en": {
-        "bg": "src/assets/img/Home/Backgrund/card_background_1.png",
+        "bg": "/img/Home/Backgrund/card_background_1.png",
         "header1": "Customize",
         "header2": "your trip",
         "body": "Tailor the trip to your likings and schedule while getting the best deal of price to ensure your travel is still budget-friendly. Customize your trip with us now.",
-        "image": "src/assets/img/Home/website illust-customize your trip.png"
+        "image": "/img/Home/website illust-customize your trip.png"
     }
 }

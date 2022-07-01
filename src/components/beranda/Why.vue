@@ -2,7 +2,7 @@
   <MqResponsive :target="['xl']">
     <section
       id="why"
-      class="h-full pt-28 pb-44 mb-16 content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover" 
+      class="h-full pt-28 pb-44 mb-16 content-center bg-[url('/img/Home/Backgrund/background_1.png')] bg-cover" 
     >
     
       <div class="container px-6 mx-auto mt-12 justify-items-center">
@@ -41,7 +41,7 @@
   <MqResponsive target="md-lg">
     <section
       id="why"
-      class="h-full content-center bg-[url('src/assets/img/Home/Backgrund/background_1.png')] bg-cover pt-28 pb-56" 
+      class="h-full content-center bg-[url('/img/Home/Backgrund/background_1.png')] bg-cover pt-28 pb-56" 
     >
       <div class="container px-6 mx-auto justify-items-center">
         <!-- Title -->
@@ -81,12 +81,12 @@
       id="why"
       class="h-full" 
     >
-      <div class="container pt-16 pb-32 mx-auto bg-[url('src/assets/img/Home/Backgrund/background_why_holigo.png')] bg-cover">
+      <div class="container pt-16 pb-32 mx-auto bg-[url('/img/Home/Backgrund/background_why_holigo.png')] bg-cover">
         <!-- Title -->
         <div data-aos="fade-up" data-aos-duration="1500">
           <div class="flex flex-col text-center justify-center">
-            <h1 class="text-h4 font-black text-text-grey6">{{header}} <span class="text-primary-brand">holigo</span> ?</h1>
-            <span class="pt-4 text-p1 text-text-grey6">{{body}}</span>
+            <h1 class="text-h4 font-black text-text-grey6">{{dWhy('header')}} <span class="text-primary-brand">holigo</span> ?</h1>
+            <span class="pt-4 text-p1 text-text-grey6">{{dWhy('body')}}</span>
           </div>
         </div>
 
@@ -103,7 +103,7 @@
             :gap="1">
 
             <vueper-slide 
-              v-for="(work, i) in card"
+              v-for="(work, i) in dWhy('card')"
               :key="i"
             >
             <template #content>

@@ -1,11 +1,13 @@
 {
     "id": {
+        "inputText": "",
         "header": "Daftar Lowongan",
         "cat": "Pilih Sesuai Kategori",
-        "btn": "cari"
+        "btn": "Cari"
     },
 
     "en": {
+        "inputText": "Find your passion",
         "header": "Job vacancy",
         "cat": "Find by category",
         "btn": "Find job"

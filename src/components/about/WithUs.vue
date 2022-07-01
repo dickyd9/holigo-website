@@ -4,7 +4,7 @@
     <section class="grid justify-center mb-16" >
       <div class="container px-6 mx-auto">
         <div
-          class="bg-[url('/src/assets/img/AboutUS/background/background_card_website_1.png')] bg-cover h-[600px] w-auto"
+          class="bg-[url('/img/AboutUS/background/background_card_website_1.png')] bg-cover h-[600px] w-auto"
         >
           <div class="flex content-center">
             <div class=" py-20 pl-24">
@@ -25,7 +25,7 @@
     <section class="grid justify-center mb-16" >
       <div class="container px-6 mx-auto">
         <div
-          class="bg-[url('/src/assets/img/AboutUS/background/background_card_website_1.png')] bg-cover h-[400px] w-[1220px]"
+          class="bg-[url('/img/AboutUS/background/background_card_website_1.png')] bg-cover h-[400px] w-[1220px]"
         >
           <div class="flex content-center">
             <div class=" py-20 pl-24">
@@ -46,7 +46,7 @@
     <section class="grid justify-center mb-16" >
       <div class="container px-6 mx-auto">
         <div
-          class="bg-[url('/src/assets/img/AboutUS/background/background_card_mobile_1.png')] bg-cover h-[468px] w-full"
+          class="bg-[url('/img/AboutUS/background/background_card_mobile_1.png')] bg-cover h-[468px] w-full"
         >
           <div class="grid">
             <div class="pt-12 pb-6 px-10">
@@ -89,7 +89,7 @@ export default {
     },
   data() {
     return {
-      bg: "src/assets/img/AboutUs/website-illust-5.png",
+      bg: "/img/AboutUs/website-illust-5.png",
     };
   },
 };

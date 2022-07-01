@@ -1,0 +1,131 @@
+{
+    "id": {
+        "lang": "Pilih bahasa",
+        "contactUs": "Kontak Kami",
+        "menu": [
+            {
+              "link": "/",
+              "title": "Beranda"
+            },
+            {
+              "link": "/about",
+              "title": "Tentang Kami"
+            },
+            {
+              "link": "/karir",
+              "title": "Karir"
+            }
+          ],
+    
+          "contact": [
+            {
+              "id": 1,
+              "icon": "/img/icon/email.png",
+              "content": "Email",
+              "link": ""
+            },
+    
+            {
+              "id": 2,
+              "icon": "/img/icon/wa.png",
+              "content": "Whatsapp",
+              "link": ""
+            },
+    
+            {
+              "id": 3,
+              "icon": "/img/icon/loc.png",
+              "content": "Jl. Bukit Golf I No.17, Lengkong Karya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15310",
+              "link": ""
+            }
+          ],
+    
+          "social": [
+            {
+              "id": 1,
+              "icon": "/img/icon/Ig.png",
+              "content": "Instagram",
+              "link": "https://instagram.com/holigo.id"
+            },
+    
+            {
+              "id": 2,
+              "icon": "/img/icon/Tw.png",
+              "content": "Twitter",
+              "link": ""
+            },
+    
+            {
+              "id": 3,
+              "icon": "/img/icon/Fb.png",
+              "content": "Facebook",
+              "link": ""
+            }
+          ]
+    },
+
+    "en": {
+        "lang": "Choose Language",
+        "contactUs": "Contact Us",
+        "menu": [
+            {
+              "link": "/",
+              "title": "Home"
+            },
+            {
+              "link": "/about",
+              "title": "About Us"
+            },
+            {
+              "link": "/karir",
+              "title": "Carrers"
+            }
+          ],
+    
+          "contact": [
+            {
+              "id": 1,
+              "icon": "/img/icon/email.png",
+              "content": "Email",
+              "link": ""
+            },
+    
+            {
+              "id": 2,
+              "icon": "/img/icon/wa.png",
+              "content": "Whatsapp",
+              "link": ""
+            },
+    
+            {
+              "id": 3,
+              "icon": "/img/icon/loc.png",
+              "content": "Jl. Bukit Golf I No.17, Lengkong Karya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15310",
+              "link": ""
+            }
+          ],
+    
+          "social": [
+            {
+              "id": 1,
+              "icon": "/img/icon/Ig.png",
+              "content": "Instagram",
+              "link": "https://instagram.com/holigo.id"
+            },
+    
+            {
+              "id": 2,
+              "icon": "/img/icon/Tw.png",
+              "content": "Twitter",
+              "link": ""
+            },
+    
+            {
+              "id": 3,
+              "icon": "/img/icon/Fb.png",
+              "content": "Facebook",
+              "link": ""
+            }
+          ]
+    }
+}

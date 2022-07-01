@@ -1,16 +1,16 @@
 {
     "id": {
         "btn": "Selengkapnya",
-        "style" :"src/assets/img/Home/illustration_ destination.png",
-        "image" : "src/assets/img/Home/website illust-sahabat holiday color 2.png",
+        "style" :"img/Home/illustration_ destination.png",
+        "image" : "img/Home/website illust-sahabat holiday color 2.png",
         "header" : "Sahabat holiday kamu",
         "body" : "Memberikan one-stop solution untuk semua kebutuhan kamu. Tiket pesawat, hotel, PPOB, dan sampai pembelian pulsa tersedia dalam satu platform simple yang gampang buat digunakan semua orang. Solusi liburan anti repot dan anti mahal!"
     },
 
     "en": {
         "btn": "More",
-        "style" :"src/assets/img/Home/illustration_ destination.png",
-        "image" : "src/assets/img/Home/website illust-sahabat holiday color 2.png",
+        "style" :"img/Home/illustration_ destination.png",
+        "image" : "img/Home/website illust-sahabat holiday color 2.png",
         "header" : "Your Holiday Bestie",
         "body" : "One-stop solution for all your travelling needs. untuk semua kebutuhan travelling. From Plane Tickets, accommodation like Hotels, PPOB, to prepaid phone balance all available in one simple platform that is easy to use for everyone. Affordable Holiday solution without all the fuss."
     }

@@ -2,7 +2,7 @@
 <MqResponsive :target="['xl']">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover"
+    class="h-full bg-[url('/img/Home/Backgrund/background_2.png')] bg-cover"
   >
     <div class="container mx-auto pt-24">
       
@@ -68,7 +68,7 @@
 <MqResponsive target="md-lg">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
+    class="h-full bg-[url('/img/Home/Backgrund/background_2.png')] bg-cover mb-24"
   >
     <div class="container mx-auto pt-20">
       <!-- Title -->
@@ -139,12 +139,12 @@
 <MqResponsive target="xs-sm">
   <section
     id="work"
-    class="h-full bg-[url('src/assets/img/Home/Backgrund/background_benefit_holigo.png')] bg-cover mb-8"
+    class="h-full bg-[url('/img/Home/Backgrund/background_benefit_holigo.png')] bg-cover mb-8"
   >
     <div class="container mx-auto pt-20">
       <div id="text" class="text-center text-text-grey6">
         <div class="text-h4 font-bold">
-          <span class="text-primary-brand">Mending</span> {{ header }}
+          <span class="text-primary-brand">{{work('header1')}}</span> {{ work('header2') }}
         </div>
       </div>
 
@@ -159,7 +159,7 @@
           :gap="1">
 
           <vueper-slide 
-            v-for="(work, i) in card"
+            v-for="(work, i) in work('card')"
             :key="i"
           >
           <template #content>
@@ -180,7 +180,7 @@
       </div>
         <div class="flex justify-center">
           <Button class="mt-8 mb-24">
-            Yuk, Gabung!
+            {{work('btn')}}
           </Button>
         </div>
     </div>
@@ -215,54 +215,54 @@ export default {
   data() {
     return {
       currentSlide: 0,
-      bg: "src/assets/img/Home/Backgrund/background_2.png",
+      bg: "/img/Home/Backgrund/background_2.png",
       header: "kerja di holigo karena...",
       body: "Alasan kenapa kamu cocok tumbuh bareng Holigo",
 
-      arrowLeft: "src/assets/img/icon/pagination_icon_left.png",
-      arrowRight: "src/assets/img/icon/pagination_icon_right.png",
+      arrowLeft: "/img/icon/pagination_icon_left.png",
+      arrowRight: "/img/icon/pagination_icon_right.png",
 
 
 
       card: [
         {
           id: 1,
-          img: "src/assets/img/Home/Budaya holigo/website illust-serius tapi santai.png",
+          img: "/img/Home/Budaya holigo/website illust-serius tapi santai.png",
           header: "Santai Tapi Serius",
           content: "Work hard, Play hard bersama - sama",
         },
 
         {
           id: 2,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli kenyamanan.png",
+          img: "/img/Home/Budaya holigo/website illust icon-peduli kenyamanan.png",
           header: "Peduli Kenyamananmu",
           content: "Kamu boleh menggunakan casual yang santai ",
         },
 
         {
           id: 3,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli dengan kesehatan.png",
+          img: "/img/Home/Budaya holigo/website illust icon-peduli dengan kesehatan.png",
           header: "Peduli Kesehatan",
           content: "Kami peduli dengan kesehatan kamu",
         },
 
         {
           id: 4,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli dengan hakmu.png",
+          img: "/img/Home/Budaya holigo/website illust icon-peduli dengan hakmu.png",
           header: "Peduli Hak Kamu",
           content: "Kami peduli hak kamu sebagai tenaga kerja",
         },
 
         {
           id: 5,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-semua disediakan.png",
+          img: "/img/Home/Budaya holigo/website illust icon-semua disediakan.png",
           header: "Semua Disediain",
           content: "Laptop, coffee, dan lainnya kami sediain",
         },
 
         {
           id: 6,
-          img: "src/assets/img/Home/Budaya holigo/website illust icon-peduli potensi.png",
+          img: "/img/Home/Budaya holigo/website illust icon-peduli potensi.png",
           header: "Peduli Potensimu",
           content: "Kami mau potensi kamu terus berkembang",
         },

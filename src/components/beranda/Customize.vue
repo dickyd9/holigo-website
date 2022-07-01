@@ -66,7 +66,7 @@
 
 <MqResponsive target="xs-sm">
     <section class="grid justify-center mb-24">
-        <div class="container px-6 bg-[url('src/assets/img/Home/Backgrund/background_card_mobile.png')] bg-contain">
+        <div class="container px-6 bg-[url('/img/Home/Backgrund/background_card_mobile.png')] bg-contain">
             <div class="pt-10 text-left px-6"> 
                 <div class="grid pb-2">
                     <h1 class="text-h4 font-black">
@@ -111,10 +111,10 @@ export default {
     },
     data(){
         return{
-            bg: "src/assets/img/Home/Backgrund/card_background_1.png",
+            bg: "img/Home/Backgrund/card_background_1.png",
             header: "perjalanan kamu",
             body: "Rancang perjalanan sesuai selera dan jadwal kamu, dan dapatkan harga terbaik supaya travel tetap on budget. Yuk langsung customize perjalanan kamu sekarang.",
-            image: "src/assets/img/Home/website illust-customize your trip.png",
+            image: "/img/Home/website illust-customize your trip.png",
         };
     }
 }

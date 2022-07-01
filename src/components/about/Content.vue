@@ -10,7 +10,7 @@
             </div>
             <div data-aos="fade-up" data-aos-duration="1500">\
                 <div class="grid basis-1/2 content-center">
-                    <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
+                    <img :src="style" class="w-20 mb-6">
                     <h1 class="text-h3 font-black">{{content.header}}</h1>
                     <span class="pt-2">{{content.content}}</span>
                 </div>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="grid basis-1/2 content-center">
                     <div data-aos="fade-up" data-aos-duration="1500">
-                        <img src="../../assets/img/Home/illustration_ destination.png " class="w-20 mb-6">
+                        <img :src="style" class="w-20 mb-6">
                         <h1 class="text-h3 font-black">{{content.header}}</h1>
                         <span class="pt-2">{{content.content}}</span>
                     </div>
@@ -75,31 +75,32 @@ export default {
     },
     data() {
         return {
+        style: "/img/Home/illustration_ destination.png",
         contentList: [
                         {  
                             "id": 1,
-                            "image": "src/assets/img/AboutUs/website-illust-3.png",
+                            "image": "/img/AboutUs/website-illust-3.png",
                             "header": "Holigo - Sahabat Holiday kamu",
                             "content": "Memberikan one-stop solution untuk semua kebutuhan kamu. Tiket pesawat, hotel, PPOB, dan sampai pembelian pulsa tersedia dalam satu platform simple yang gampang buat digunakan semua orang. Solusi liburan anti repot dan anti mahal!"
                         },
 
                         {
                             "id": 2,
-                            "image": "src/assets/img/AboutUs/website-illust-4.png",
+                            "image": "/img/AboutUs/website-illust-4.png",
                             "header": "Mudah, Murah, Meriah",
                             "content": "Memberikan one-stop solution untuk semua kebutuhan kamu. Tiket pesawat, hotel, PPOB, dan sampai pembelian pulsa tersedia dalam satu platform simple yang gampang buat digunakan semua orang. Solusi liburan anti repot dan anti mahal!"
                         },
 
                         {
                             "id": 3,
-                            "image": "src/assets/img/AboutUs/website-illust-2.png",
+                            "image": "/img/AboutUs/website-illust-2.png",
                             "header": "Selalu siap menemani",
                             "content": "Kenyamanan dalam transaksi menjadi prioritas Holigo. Pintu Holigo selalu terbuka 24 jam setiap hari. Apa pun pertanyaannya, Customer Service officer Holigo siap dihubungi kapan pun dan di mana pun. "
                         },
 
                         {
                             "id": 4,
-                            "image": "src/assets/img/AboutUs/website-illust-1.png",
+                            "image": "/img/AboutUs/website-illust-1.png",
                             "header": "Berkembang bersama waktu",
                             "content": "Holigo selalu berinovasi dalam pengembangan teknologi untuk terus mengikuti adaptasi teknologi Indonesia agar mudah dan nyaman digunakan. Travelling sekarang jadi simple dan mudah!"
                         }

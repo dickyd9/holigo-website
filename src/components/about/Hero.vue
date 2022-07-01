@@ -35,7 +35,7 @@
 
     <MqResponsive target="xs-sm">
         <section id="hero" 
-        class="h-[100vh] flex flex-wrap bg-[url('/src/assets/img/AboutUs/hero-background.png')] bg-cover">
+        class="h-[100vh] flex flex-wrap bg-[url('/img/AboutUs/hero-background.png')] bg-cover">
             <div data-aos="fade-up" data-aos-duration="1500">
                 <div class="container px-6 mx-auto">
                     <div class="grid justify-items-center items-center py-72">
@@ -75,7 +75,7 @@ export default {
     },
     data() {
         return {
-            bg: "src/assets/img/AboutUs/hero-background.png",
+            bg: "/img/AboutUs/hero-background.png",
             header: "kebutuhan dalam satu aplikasi",
             body: "One-stop solution untuk semua kebutuhan lifestyle kamu lengkap dalam satu aplikasi yang simple."
         };

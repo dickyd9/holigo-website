@@ -2,7 +2,7 @@ import {createStore} from "vuex";
 
 export const store = createStore({
   state: {
-    activeLanguage: 'en',
+    activeLanguage: 'id',
   },
   getters:{
     activeLanguage(state) {

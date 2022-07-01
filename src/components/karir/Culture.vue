@@ -102,42 +102,42 @@ export default {
       culturList: [
                       {  
                           "id": 1,
-                          "image": "src/assets/img/Careers/budaya holigo/website illust-serius tapi santai.png",
+                          "image": "/img/Careers/budaya holigo/website illust-serius tapi santai.png",
                           "header": "Santai Tapi Serius",
                           "content": "Work hard, Play hard bersama -sama "
                       },
 
                       {  
                           "id": 2,
-                          "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli kenyamanan.png",
+                          "image": "/img/Careers/budaya holigo/website illust icon-peduli kenyamanan.png",
                           "header": "Peduli Kenyamananmu",
                           "content": "Kamu boleh menggunakan casual yang santai "
                       },
 
                       {  
                           "id": 3,
-                          "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli dengan kesehatan.png",
+                          "image": "/img/Careers/budaya holigo/website illust icon-peduli dengan kesehatan.png",
                           "header": "Peduli Kesehatan Kamu",
                           "content": "Kami peduli dengan kesehatan kamu"
                       },
 
                       {  
                           "id": 4,
-                          "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli dengan hakmu.png",
+                          "image": "/img/Careers/budaya holigo/website illust icon-peduli dengan hakmu.png",
                           "header": "Peduli Hak Kamu",
                           "content": "Kami peduli hak kamu sebagai tenaga kerja"
                       },
 
                       {  
                           "id": 5,
-                          "image": "src/assets/img/Careers/budaya holigo/website illust icon-semua disediakan.png",
+                          "image": "/img/Careers/budaya holigo/website illust icon-semua disediakan.png",
                           "header": "Semua Disediain",
                           "content": "Laptop, Coffee, dan lainnya kami sediain"
                       },
 
                       {  
                           "id": 6,
-                          "image": "src/assets/img/Careers/budaya holigo/website illust icon-peduli potensi.png",
+                          "image": "/img/Careers/budaya holigo/website illust icon-peduli potensi.png",
                           "header": "Peduli Potensimu",
                           "content": "Kami mau potensi kamu terus berkembang"
                       }

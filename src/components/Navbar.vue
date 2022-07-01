@@ -37,7 +37,7 @@
             md:mt-0
           "
         >
-          <router-link :to="link.link" v-for="link in nav" :key="link.id">
+          <router-link :to="link.link" v-for="link in navL('nav')" :key="link.id">
             <li class="
                   font-bold 
                   text-basic-white 
@@ -90,20 +90,20 @@
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                  v-if="!showMenu">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               v-else>
-              <line x1="1" y1="11" 
-                    x2="11" y2="1" 
+              <line x1="1" y1="20" 
+                    x2="20" y2="1" 
                     stroke="black" 
-                    stroke-width="2"/>
+                    stroke-width="3"/>
                     
               <line x1="1" y1="1" 
-                    x2="11" y2="11" 
+                    x2="20" y2="20" 
                     stroke="black" 
-                    stroke-width="2"/>
+                    stroke-width="3"/>
           </svg>
           </button>
         </div>
@@ -119,7 +119,7 @@
           space-y-4"
     v-if="$route.path == '/about'"
     >
-      <router-link :to="link.link" v-for="link in nav" :key="link.id">
+      <router-link :to="link.link" v-for="link in navL('nav')" :key="link.id">
         <li class="
               list-none
               font-bold
@@ -133,7 +133,7 @@
           </li>
         <li class="list-none font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> {{link.content}} </li>
       </router-link>
-      <Toggle/>
+      <Toggle class="pb-12"/>
     </ul>
     <!-- else -->
     <ul
@@ -145,7 +145,7 @@
           space-y-4"
     v-else
     >
-      <router-link :to="link.link" v-for="link in nav" :key="link.id">
+      <router-link :to="link.link" v-for="link in navL('nav')" :key="link.id">
         <li class="
               list-none
               font-bold
@@ -159,7 +159,7 @@
           </li>
         <li class="list-none font-bold hover:text-primary-brand hover:border-b-2 hover:border-b-primary-brand" v-else> {{link.content}} </li>
       </router-link>
-    <Toggle/>
+    <Toggle class="pb-10"/>
     </ul>
     </nav>
   </header>
@@ -169,11 +169,25 @@
 <script>
 import { MqResponsive } from "vue3-mq";
 import Toggle from '../components/Toggle.vue';
+import { computed } from "@vue/reactivity";
+import { useStore } from 'vuex';
+import navbar from '../assets/data/navbar.json';
+
 export default {
   components: {
         MqResponsive,
         Toggle
     },
+  setup(){  
+    const store = useStore();
+    const activeLanguage = computed(() => store.getters.activeLanguage);
+
+    const navL = (string) => {
+      return navbar[activeLanguage.value][string];
+    }
+
+    return {navL}
+  },
   data() {
     return {
       nav: [
@@ -244,7 +258,9 @@ export default {
 </script>
 
 
-<style scoped>
-
-
+<style>
+.exact-active-link {
+  border-bottom: 2px solid #00BD17;
+  pointer-events: none;
+}
 </style>

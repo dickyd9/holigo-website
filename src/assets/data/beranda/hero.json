@@ -1,6 +1,6 @@
 {
     "id": {
-        "pattern": "src/assets/img/Home/pattern-1.png",
+        "pattern": "p/img/Home/pattern-1.png",
         "header1": "Holigo simplify",
         "header2": "lifestyle",
         "body": "simple nyaman dan dapat di andalkan untuk kebutuhan traveling kamu.",
@@ -8,21 +8,21 @@
         [
             {
                 "id": 1,
-                "img": "src/assets/img/Home/website illust-15k+ hotel 1.png",
+                "img": "/img/Home/website illust-15k+ hotel 1.png",
                 "title": "15K+",
                 "body": "Pilihan Hotel"
             },
     
             {
                 "id": 2,
-                "img": "src/assets/img/Home/website illust-75+ maskapai 1.png",
+                "img": "/img/Home/website illust-75+ maskapai 1.png",
                 "title": "75+",
                 "body": "Maskapai Penerbangan"
             },
     
             {
                 "id": 3,
-                "img": "src/assets/img/Home/website illust icon-20+ produk 1.png",
+                "img": "/img/Home/website illust icon-20+ produk 1.png",
                 "title": "20+",
                 "body": "Product Kami"
             }
@@ -30,7 +30,7 @@
     },
 
     "en": {
-        "pattern": "src/assets/img/Home/pattern-1.png",
+        "pattern": "img/Home/pattern-1.png",
         "header1": "Holigo simplify",
         "header2": "lifestyle",
         "body": "Simple, convenient, and reliable for all your travelling needs.",
@@ -38,21 +38,21 @@
         [
             {
                 "id": 1,
-                "img": "src/assets/img/Home/website illust-15k+ hotel 1.png",
+                "img": "img/Home/website illust-15k+ hotel 1.png",
                 "title": "15K+",
                 "body": "Choice Of Hotel"
             },
     
             {
                 "id": 2,
-                "img": "src/assets/img/Home/website illust-75+ maskapai 1.png",
+                "img": "img/Home/website illust-75+ maskapai 1.png",
                 "title": "75+",
                 "body": "Worldwide Airlanes"
             },
     
             {
                 "id": 3,
-                "img": "src/assets/img/Home/website illust icon-20+ produk 1.png",
+                "img": "img/Home/website illust icon-20+ produk 1.png",
                 "title": "20+",
                 "body": "Lifestyle Products"
             }

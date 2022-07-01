@@ -1,0 +1,45 @@
+{
+    "id": {
+        "nav": [
+            {  
+              "id": 1,
+              "link": "/",
+              "content": "Beranda"
+            },
+    
+            {  
+              "id": 2,
+              "link": "/about",
+              "content": "Tentang Kami"
+            },
+    
+            {  
+              "id": 3,
+              "link": "/karir",
+              "content": "Karir"
+            }
+          ]
+    },
+
+    "en": {
+        "nav": [
+            {  
+              "id": 1,
+              "link": "/",
+              "content": "Home"
+            },
+    
+            {  
+              "id": 2,
+              "link": "/about",
+              "content": "About Us"
+            },
+    
+            {  
+              "id": 3,
+              "link": "/karir",
+              "content": "Carrers"
+            }
+          ]
+    }
+}
